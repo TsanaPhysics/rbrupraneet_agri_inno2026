@@ -173,9 +173,10 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             <div class="container">
                 <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Climate Data Hacking</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">Workshop กิจกรรมที่ 1: การวิเคราะห์ข้อมูลสภาพภูมิอากาศด้วย Python สำหรับนักเรียน</p>
-                <div style="margin-top: 2rem;">
-                    <a href="data/chanthaburi_climate_sample.csv" class="btn btn-primary" download>Download Dataset</a>
-                    <a href="scratch/workshop_starter.py" class="btn btn-secondary" style="border-color: white; color: white;" download>Starter Script</a>
+                <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="docs/climate_hacking_full_manual.md" class="btn btn-primary" style="background: white; color: var(--workshop-accent); border: none;">📖 Full Manual (คู่มือฉบับเต็ม)</a>
+                    <a href="data/chanthaburi_climate_sample.csv" class="btn btn-secondary" style="border-color: white; color: white;" download>Dataset (.CSV)</a>
+                    <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-secondary" style="border-color: white; color: white;" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </section>

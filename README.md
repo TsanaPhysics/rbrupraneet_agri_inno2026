@@ -65,4 +65,18 @@ rbru-agri-innovation/
 ## หมายเหตุ
 
 ไฟล์เดิม (`index.html`, `styles.css`, `script.js`) ยังคงอยู่เป็นการสำรองข้อมูล คุณสามารถลบออกได้เมื่อแน่ใจว่าระบบใหม่ทำงานได้อย่างถูกต้อง
-# rbrupraneet_agri_inno2026
+## หลักสูตรและสื่อการเรียนรู้ (Curriculum Materials)
+
+โปรเจ็กต์นี้ประกอบด้วยหลักสูตรการเรียนรู้เต็มรูปแบบสำหรับการทำ Digital Transformation ในภาคเกษตร:
+
+### 🌦️ Workshop 1: Climate Data Hacking
+กิจกรรมวิเคราะห์ข้อมูลสภาพภูมิอากาศเพื่อการวางแผนการเพาะปลูก:
+- **📖 คู่มือฉบับเต็ม:** [หมวดวิทยาศาสตร์ข้อมูลเกษตร](docs/climate_hacking_full_manual.md)
+- **🐍 Python Notebooks:**
+  - [Session 1: พื้นฐาน Python & Agri-Math](notebooks/session1_basics.ipynb)
+  - [Session 2: การเชื่อมต่อ API & Cloud](notebooks/session2_api.ipynb)
+  - [Session 3: การวิเคราะห์ข้อมูลด้วย Pandas](notebooks/session3_data.ipynb)
+  - [Session 4: การสร้าง AI Smart Advisor](notebooks/session4_advisor.ipynb)
+
+---
+*Created by Antigravity AI for RBRU-Praneet Digital Agri-Innovation Center*
