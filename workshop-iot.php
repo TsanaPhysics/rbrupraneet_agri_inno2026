@@ -188,12 +188,11 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
                 <!-- Content Area -->
                 <div class="guide-content">
                     
-                    <!-- Session 1 -->
-                    <div id="session-1" class="session-card">
-                        <span class="session-tag">Session 1 (3 Hours)</span>
-                        <h2>ฮาร์ดแวร์เพื่อโลกสีเขียว</h2>
-                        <p>ทำความรู้จักกับบอร์ด ESP32, พื้นฐานอิเล็กทรอนิกส์ และการเขียนโปรแกรมควบคุม Digital I/O ขั้นต้น</p>
-                        
+                        <div class="theory-panel" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: โลกของสัญญาณดิจิทัล (Digital I/O)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการทำเกษตรอัจฉริยะ บอร์ด ESP32 ทำหน้าที่เป็น "สมอง" ที่สั่งการผ่านสัญญาณไฟฟ้า 0 หรือ 1 (Low/High) การควบคุมขา Pin ให้เป็น 1 จะทำให้กระแสไหลไปเปิดอุปกรณ์ เช่น ปั๊มน้ำ หรือวาล์วไฟฟ้า นี่คือจุดเริ่มต้นของการสร้างระบบอัตโนมัติ</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 iot_s1.ipynb (MicroPython)</span>
@@ -211,7 +210,15 @@ while True:
     led.value(not led.value())
     time.sleep(1)</code></pre>
                         </div>
-                    </div>
+
+                        <div class="code-walkthrough" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
+                            <h5 style="color: var(--text-primary); margin-bottom: 0.5rem;">🔍 เจาะลึกโค้ด (Code Walkthrough)</h5>
+                            <ul style="padding-left: 1.2rem;">
+                                <li><code>from machine import Pin</code>: การเรียกใช้คลังคำสั่งเพื่อจัดการฮาร์ดแวร์โดยตรง</li>
+                                <li><code>Pin(2, Pin.OUT)</code>: ตั้งค่าขาหมายเลข 2 ของ ESP32 ให้ทำหน้าที่เป็น "ขาออก" (Output)</li>
+                                <li><code>led.value(not led.value())</code>: ตรรกะการสลับสถานะไฟฟ้า (Toggle) เพื่อสร้างไฟกระพริบ</li>
+                            </ul>
+                        </div>
 
                     <!-- Session 2 -->
                     <div id="session-2" class="session-card">

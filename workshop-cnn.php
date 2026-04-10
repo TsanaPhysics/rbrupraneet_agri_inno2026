@@ -200,6 +200,11 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
                         <h2>ดวงตาของปัญญาประดิษฐ์</h2>
                         <p>เรียนรู้วิธีที่คอมพิวเตอร์ "มองเห็น" ภาพผ่าน OpenCV แปรรูปข้อมูลภาพเบื้องต้น (Pre-processing) เพื่อเตรียมเข้าสู่โครงข่ายประสาทเทียม</p>
                         
+                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: คอมพิวเตอร์มองเห็นได้อย่างไร?</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">คอมพิวเตอร์มองภาพไม่ใช่เป็นรูป แต่เป็น "ตารางตัวเลข" (Matrix) ของพิกเซล โดยแต่ละพิกเซลจะมีค่าความสว่างของสี แดง (R), เขียว (G), และน้ำเงิน (B) การแปรรูปภาพ (Pre-processing) เช่น การแปลงเป็น RGB จึงสำคัญมากเพื่อให้ AI เข้าใจข้อมูลสีที่ถูกต้องของขอบใบไม้</p>
+                        </div>
+                        
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 cnn_s1.ipynb</span>
@@ -220,6 +225,15 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(img_rgb)
 plt.axis('off')
 plt.show()</code></pre>
+                        </div>
+
+                        <div class="code-walkthrough" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
+                            <h5 style="color: var(--text-primary); margin-bottom: 0.5rem;">🔍 เจาะลึกโค้ด (Code Walkthrough)</h5>
+                            <ul style="padding-left: 1.2rem;">
+                                <li><code>cv2.imread</code>: การอ่านไฟล์ภาพจากหน่วยความจำเข้ามาเป็นข้อมูลตัวเลข</li>
+                                <li><code>cv2.cvtColor</code>: การสลับช่องสีจาก BGR (ค่าเริ่มต้นของ OpenCV) เป็น RGB เพื่อให้สีดูเป็นธรรมชาติ</li>
+                                <li><code>plt.imshow</code>: คำสั่งจาก Library Matplotlib เพื่อวาดภาพพิกเซลออกมาให้มนุษย์ดู</li>
+                            </ul>
                         </div>
                     </div>
 

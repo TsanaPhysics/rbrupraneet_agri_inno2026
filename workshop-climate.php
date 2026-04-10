@@ -200,6 +200,11 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
                         <h2>ปฐมบทนักโปรแกรมเมอร์เกษตร</h2>
                         <p>เริ่มต้นเรียนรู้พื้นฐาน Python ที่จำเป็นสำหรับการจัดการข้อมูลเกษตร เช่น ตัวแปร (Variables) และการคำนวณพื้นฐาน</p>
                         
+                        <div class="theory-panel" style="background: rgba(249, 115, 22, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: ดัชนีความร้อน (Heat Index)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ดัชนีความร้อน คือ อุณหภูมิที่สิ่งมีชีวิตรู้สึกจริงจากการรวมกันของ "อุณหภูมิ" และ "ความชื้น" (Apparent Temperature) ในพื้นที่จันทบุรีที่มีความชื้นสูง ค่า HI จะสูงกว่าอุณหภูมิจริงมาก ซึ่งเป็นปัจจัยวิกฤตที่ทำให้ดอกทุเรียนร่วงได้</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 session1_basics.ipynb</span>
@@ -221,6 +226,15 @@ print(f"ความรู้สึกจริง: {heat_index:.2f} °C")
 
 if heat_index > 35:
     print("แจ้งเตือน: อากาศร้อนเกินไปสำหรับทุเรียนอ่อน!")</code></pre>
+                        </div>
+
+                        <div class="code-walkthrough" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
+                            <h5 style="color: var(--text-primary); margin-bottom: 0.5rem;">🔍 เจาะลึกโค้ด (Code Walkthrough)</h5>
+                            <ul style="padding-left: 1.2rem;">
+                                <li><code>temp</code> & <code>humidity</code>: การประกาศตัวแปรเพื่อเก็บค่าคงที่จากเซ็นเซอร์</li>
+                                <li><code>heat_index</code>: การคำนวณปรับแต่งอุณหภูมิด้วยค่าความชื้น (Mathematical Modeling)</li>
+                                <li><code>if heat_index > 35</code>: การใช้ตรรกะตัดสินใจแบบอัตโนมัติ (Automated Decision Making)</li>
+                            </ul>
                         </div>
                     </div>
 
