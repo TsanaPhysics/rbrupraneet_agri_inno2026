@@ -37,18 +37,25 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 
-// ===== Navbar Background on Scroll =====
+// ===== Navbar Premium Interactivity =====
 const navbar = document.querySelector('.navbar');
+const mobileToggle = document.querySelector('.mobile-toggle');
+const navLinksContainer = document.querySelector('.nav-links');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
+
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navLinksContainer.classList.toggle('active');
+    });
+}
 
 // ===== Activity Cards Toggle =====
 const activityCards = document.querySelectorAll('.activity-card');
