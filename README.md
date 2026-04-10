@@ -78,5 +78,23 @@ rbru-agri-innovation/
   - [Session 3: การวิเคราะห์ข้อมูลด้วย Pandas](notebooks/session3_data.ipynb)
   - [Session 4: การสร้าง AI Smart Advisor](notebooks/session4_advisor.ipynb)
 
+### 👁️ Workshop 2: Deep Dive Lab (CNN)
+ปัญญาประดิษฐ์เพื่อการจำแนกโรคพืช:
+- **📖 คู่มือฉบับเต็ม:** [หมวดคอมพิวเตอร์วิทัศน์เกษตร](docs/cnn_plant_disease_manual.md)
+- **🐍 Python Notebooks:**
+  - [Session 1: พื้นฐาน Computer Vision](notebooks/cnn_s1.ipynb)
+  - [Session 2: การทวีคูณข้อมูล (Augmentation)](notebooks/cnn_s2.ipynb)
+  - [Session 3: โครงสร้าง Neural Network](notebooks/cnn_s3.ipynb)
+  - [Session 4: การประเมินผลและการใช้จริง](notebooks/cnn_s4.ipynb)
+
+### 📟 Workshop 3: AI-IoT Prototyping
+การสร้างต้นแบบเซ็นเซอร์อัจฉริยะ:
+- **📖 คู่มือฉบับเต็ม:** [หมวดวิศวกรรมฮาร์ดแวร์เกษตร](docs/iot_smart_sensor_manual.md)
+- **🐍 Python Notebooks:**
+  - [Session 1: ESP32 & MicroPython](notebooks/iot_s1.ipynb)
+  - [Session 2: การเชื่อมต่อเซ็นเซอร์](notebooks/iot_s2.ipynb)
+  - [Session 3: ระบบคลาวด์และ MQTT](notebooks/iot_s3.ipynb)
+  - [Session 4: ตรรกะ Edge AI รดน้ำอัตโนมัติ](notebooks/iot_s4.ipynb)
+
 ---
 *Created by Antigravity AI for RBRU-Praneet Digital Agri-Innovation Center*

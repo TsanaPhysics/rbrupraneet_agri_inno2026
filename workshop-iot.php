@@ -167,9 +167,10 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             <div class="container">
                 <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">AI-IoT Prototyping</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">กิจกรรมที่ 3: การสร้างต้นแบบเซ็นเซอร์อัจฉริยะและการวิเคราะห์ข้อมูลแบบ Edge Computing</p>
-                <div style="margin-top: 2rem;">
-                    <button class="btn btn-primary">Hardware BOM List</button>
-                    <a href="<?php echo $github_base; ?>" class="btn btn-secondary" style="border-color: white; color: white;">Circuit Diagrams</a>
+                <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="docs/iot_smart_sensor_manual.md" class="btn btn-primary" style="background: white; color: var(--workshop-accent); border: none;">📖 Full Manual (คู่มือฉบับเต็ม)</a>
+                    <button class="btn btn-secondary" style="border-color: white; color: white;">Hardware BOM List</button>
+                    <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-secondary" style="border-color: white; color: white;" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </section>
