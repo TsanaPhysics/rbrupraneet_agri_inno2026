@@ -19,70 +19,91 @@ require_once "languages/{$lang_code}.php";
             min-height: 100vh;
         }
         .sim-box {
-            background: white;
-            border-radius: 30px;
+            background: #0f172a;
+            border-radius: 40px;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.05);
             position: relative;
         }
-        .sim-header {
-            padding: 20px 30px;
-            background: #fff;
-            border-bottom: 1px solid #f1f5f9;
+        .mode-row {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            justify-content: center;
         }
         .mode-pill {
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
+            flex: 1;
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 24px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: 800;
             cursor: pointer;
-            transition: all 0.3s;
-            background: #f1f5f9;
-            color: #64748b;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: white;
+            color: #475569;
+            border: 2px solid transparent;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+        .mode-pill:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
         .mode-pill.active {
             background: var(--primary-gradient);
             color: white;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+            box-shadow: 0 15px 35px rgba(249, 115, 22, 0.3);
+        }
+        .mode-icon {
+            font-size: 1.8rem;
         }
         #lab-canvas {
             width: 100%;
-            height: 500px;
-            background: #e2e8f0;
+            height: auto;
+            aspect-ratio: 16/7; /* Wider for row layout */
+            background: #1e293b;
             display: block;
             cursor: crosshair;
         }
-        .sim-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px);
+        .status-grid {
+            display: grid;
+            grid-template-cols: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        @media (min-width: 768px) {
+            .status-grid {
+                grid-template-cols: repeat(3, 1fr);
+            }
+        }
+        .status-card {
+            background: white;
+            padding: 25px;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-            color: white;
-            text-align: center;
-            padding: 40px;
+            gap: 12px;
+            transition: all 0.3s;
         }
-        .glass-result {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            right: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 20px 30px;
-            border-radius: 20px;
-            border: 1px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            display: none;
-            z-index: 50;
+        .status-card:hover {
+            border-color: #f97316;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+        .score-display {
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -91,57 +112,78 @@ require_once "languages/{$lang_code}.php";
 
     <main class="lab-container">
         <div class="container">
-            <div class="section-header text-center mb-12">
-                <span class="badge">Virtual Simulation</span>
-                <h1 class="font-black text-4xl mb-4">Digital Twin <span class="text-primary">Sandbox</span></h1>
-                <p class="text-slate-500">ทดลองสแกนและวิเคราะห์ฟาร์มจำลองด้วยเทคโนโลยี AI ในโลก 3D เสมือนจริง</p>
+            <div class="section-header text-center mb-10">
+                <span class="badge">Next-Gen Simulation</span>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-4">
+                    <h1 class="font-black text-5xl italic">Digital Twin <span class="text-primary underline">Sandbox</span></h1>
+                    <div class="score-display">
+                        <span class="opacity-50 mr-2">MISSION SCORE:</span>
+                        <span id="val-score" class="text-primary">0</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 max-w-2xl mx-auto">ยกระดับการเรียนรู้ด้วยปัญญาประดิษฐ์และห้องวิจัยเสมือนจริงในรูปแบบแถวแนวนอนที่สะอาดตาและใช้งานง่าย</p>
             </div>
 
-            <div class="sim-box">
-                <div class="sim-header">
-                    <div class="flex gap-3">
-                        <div class="mode-pill active" onclick="switchMode('DRONE')">🚁 AI Drone Scan</div>
-                        <div class="mode-pill" onclick="switchMode('BOT')">🤖 Soil Inspector</div>
+            <div class="mission-hub">
+                <!-- Mode Selection Row -->
+                <div class="mode-row">
+                    <div class="mode-pill active" onclick="switchMode('DRONE')">
+                        <span class="mode-icon">🚁</span>
+                        <span>AI Drone Scan</span>
                     </div>
-                    <div class="text-sm font-bold text-slate-400">SCORE: <span id="val-score" class="text-primary">0</span></div>
+                    <div class="mode-pill" onclick="switchMode('BOT')">
+                        <span class="mode-icon">🤖</span>
+                        <span>Soil Inspector</span>
+                    </div>
                 </div>
 
-                <div style="position: relative;">
-                    <canvas id="lab-canvas" width="1200" height="600"></canvas>
-                    
-                    <div id="sim-start-overlay" class="sim-overlay">
-                        <h2 class="text-3xl font-black mb-4">Launch Mission 🚀</h2>
-                        <p class="mb-8 opacity-70">บังคับตัวละครเพื่อเริ่มการสำรวจพื้นที่และวิเคราะห์สถานภาพพืช</p>
-                        <button onclick="startSim()" class="btn-primary">START SIMULATOR</button>
-                    </div>
-
-                    <div id="sim-result" class="glass-result">
-                        <div class="flex justify-between items-center mb-2">
-                            <span id="res-tag" class="badge">Diagnosis</span>
-                            <span id="res-acc" class="text-xs font-bold text-emerald-500">ACCURACY: 98%</span>
+                <!-- Simulation Main Area -->
+                <div class="sim-box">
+                    <div style="position: relative;">
+                        <canvas id="lab-canvas" width="1400" height="600"></canvas>
+                        
+                        <div id="sim-start-overlay" class="sim-overlay">
+                            <div class="bg-white/10 p-12 rounded-[60px] backdrop-blur-2xl border border-white/20 text-center">
+                                <h2 class="text-4xl font-black mb-4">READY TO DEPLOY? 🚀</h2>
+                                <p class="mb-8 opacity-70">ยืนยันเพื่อเข้าสู่พื้นที่จำลองและเริ่มการสำรวจทันที</p>
+                                <button onclick="startSim()" class="btn btn-primary" style="padding: 22px 60px; font-size: 1.3rem; border-radius: 50px;">INITIALIZE MISSION</button>
+                            </div>
                         </div>
-                        <h3 id="res-title" class="text-xl font-bold text-slate-800">SCANNING...</h3>
-                        <p id="res-desc" class="text-sm text-slate-500">Analyzing biological markers in the area...</p>
+
+                        <div id="sim-result" class="glass-result">
+                            <div class="flex justify-between items-center mb-4">
+                                <span id="res-tag" class="badge">Analysing...</span>
+                                <span id="res-acc" class="text-xs font-black text-emerald-500">TELEMETRY LINK ACTIVE</span>
+                            </div>
+                            <h3 id="res-title" class="text-2xl font-black text-slate-800">WAITING FOR INPUT</h3>
+                            <p id="res-desc" class="text-slate-500 font-bold">กรุณาเลื่อนตำแหน่งสแกนไปยังเป้าหมายที่คุณต้องการตรวจสอบ</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Controls Info -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="glass-compact p-6 rounded-3xl">
-                    <div class="text-2xl mb-2">⌨️</div>
-                    <h4 class="font-bold">Controls</h4>
-                    <p class="text-xs text-slate-500">ARROWS: Move<br>SPACE: Scan / Inspect</p>
-                </div>
-                <div class="glass-compact p-6 rounded-3xl">
-                    <div class="text-2xl mb-2">🎯</div>
-                    <h4 class="font-bold">Objective</h4>
-                    <p class="text-xs text-slate-500">ตรวจพบทุเรียนที่เป็นโรคและเสนอแนวทางแก้ไขที่ถูกต้อง</p>
-                </div>
-                <div class="glass-compact p-6 rounded-3xl">
-                    <div class="text-2xl mb-2">📊</div>
-                    <h4 class="font-bold">Mission Status</h4>
-                    <p class="text-xs text-slate-500" id="log-msg">Ready for deployment</p>
+                <!-- Status Grid Row -->
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl">🎯</div>
+                            <h4 class="font-black text-lg">Objective</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed font-bold italic">ตรวจพบทุเรียนที่เป็นโรคและเสนอแนวทางแก้ไขที่ถูกต้องแม่นยำผ่านระบบสแกนอัตโนมัติ</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl">⌨️</div>
+                            <h4 class="font-black text-lg">Controls</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed font-bold">ลูกศร: เคลื่อนที่ตัวละคร<br>SPACE: เริ่มการสแกนพื้นที่เป้าหมาย</p>
+                    </div>
+                    <div class="status-card border-l-4 border-l-primary">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">📡</div>
+                            <h4 class="font-black text-lg">System Status</h4>
+                        </div>
+                        <div id="log-msg" class="text-xs font-black text-emerald-500 uppercase tracking-widest">Optimal / No Errors</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,23 +198,62 @@ require_once "languages/{$lang_code}.php";
         const resBox = document.getElementById('sim-result');
         
         // Assets Mapping
-        const assets = {
-            tile: new Image(),
-            bot: new Image(),
-            drone: new Image(),
-            treeH: new Image(),
-            treeD: new Image()
+        const assetPaths = {
+            tile: 'assets/images/sim/tile_grass.png',
+            bot: 'assets/images/sim/agri_bot.png',
+            drone: 'assets/images/sim/agri_drone.png',
+            treeH: 'assets/images/sim/tree_healthy.png',
+            treeD: 'assets/images/sim/tree_diseased.png'
         };
-        assets.tile.src = 'assets/images/sim/tile_grass.png';
-        assets.bot.src = 'assets/images/sim/agri_bot.png';
-        assets.drone.src = 'assets/images/sim/agri_drone.png';
-        assets.treeH.src = 'assets/images/sim/tree_healthy.png';
-        assets.treeD.src = 'assets/images/sim/tree_diseased.png';
+
+        const assets = {};
+        let loadedCount = 0;
+        const totalAssets = Object.keys(assetPaths).length;
+
+        function processTransparency(img) {
+            const tempCanvas = document.createElement('canvas');
+            const tCtx = tempCanvas.getContext('2d');
+            tempCanvas.width = img.width;
+            tempCanvas.height = img.height;
+            tCtx.drawImage(img, 0, 0);
+
+            const imgData = tCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+            const data = imgData.data;
+
+            for (let i = 0; i < data.length; i += 4) {
+                const r = data[i], g = data[i+1], b = data[i+2];
+                
+                // Advanced Color Distance: remove bright near-neutral/white pixels
+                // Stricter check to catch greyish areas in corners
+                const brightness = (r + g + b) / 3;
+                const saturation = Math.max(Math.abs(r-g), Math.abs(g-b), Math.abs(b-r));
+                
+                if (brightness > 200 && saturation < 30) {
+                    data[i + 3] = 0;
+                }
+            }
+
+            tCtx.putImageData(imgData, 0, 0);
+            return tempCanvas; 
+        }
+
+        // Initialize Loading
+        Object.keys(assetPaths).forEach(key => {
+            const img = new Image();
+            img.src = assetPaths[key];
+            img.onload = () => {
+                assets[key] = processTransparency(img);
+                loadedCount++;
+                if(loadedCount === totalAssets) {
+                    console.log("All assets processed with transparency.");
+                }
+            };
+        });
 
         let state = {
             running: false,
             mode: 'DRONE', // DRONE, BOT
-            bot: { ix: 2, iy: 2 },
+            bot: { ix: 1, iy: 1 }, // Centered start
             grid: [],
             score: 0,
             frame: 0,
@@ -180,8 +261,9 @@ require_once "languages/{$lang_code}.php";
             activeScan: false
         };
 
-        const TILE_W = 200;
-        const TILE_H = 100;
+        // NEW DIMENSIONS: Doubled spacing for more "breathing room"
+        const TILE_W = 400; 
+        const TILE_H = 200;
         const OFFSET_X = 600;
         const OFFSET_Y = 100;
 
@@ -203,9 +285,10 @@ require_once "languages/{$lang_code}.php";
 
         function initGrid() {
             state.grid = [];
-            const size = 5;
+            const size = 3; // Reduced grid size for better focus
             for(let x=0; x<size; x++) {
                 for(let y=0; y<size; y++) {
+                    // Place trees with interleaving or just pure 3x3
                     state.grid.push({
                         ix: x, iy: y,
                         type: 'tree',
@@ -228,9 +311,9 @@ require_once "languages/{$lang_code}.php";
             state.frame++;
 
             if(state.keys['ArrowUp'] && state.bot.iy > 0) state.bot.iy -= 1;
-            if(state.keys['ArrowDown'] && state.bot.iy < 4) state.bot.iy += 1;
+            if(state.keys['ArrowDown'] && state.bot.iy < 2) state.bot.iy += 1;
             if(state.keys['ArrowLeft'] && state.bot.ix > 0) state.bot.ix -= 1;
-            if(state.keys['ArrowRight'] && state.bot.ix < 4) state.bot.ix += 1;
+            if(state.keys['ArrowRight'] && state.bot.ix < 2) state.bot.ix += 1;
 
             if(state.keys[' ']) performScan();
             
@@ -269,14 +352,29 @@ require_once "languages/{$lang_code}.php";
             }, 1000);
         }
 
+        function loop() {
+            update();
+            draw();
+            if(state.running) requestAnimationFrame(loop);
+        }
+
         function draw() {
             ctx.clearRect(0,0,1200,600);
             
-            // Draw Tiles
+            if (loadedCount < totalAssets) {
+                ctx.fillStyle = "white";
+                ctx.textAlign = "center";
+                ctx.fillText("Loading 3D Assets...", 600, 300);
+                return;
+            }
+
+            // Draw Base Tiles with extra care
             for(let x=0; x<5; x++) {
                 for(let y=0; y<5; y++) {
                     let p = isoToScreen(x, y);
-                    ctx.drawImage(assets.tile, p.x - TILE_W/2, p.y - 120, TILE_W, 200);
+                    // Drawing ground with slight overlap to prevent gaps, 
+                    // but the primary scene is handled by the trees/objects.
+                    ctx.drawImage(assets.tile, p.x - TILE_W, p.y - TILE_H, TILE_W*2, TILE_H*2);
                 }
             }
 
@@ -289,14 +387,15 @@ require_once "languages/{$lang_code}.php";
                 let p = isoToScreen(e.ix, e.iy);
                 if(e.type === 'player') {
                     if(state.mode === 'DRONE') {
-                        let h = Math.sin(state.frame * 0.1) * 10;
-                        ctx.drawImage(assets.drone, p.x - 70, p.y - 150 + h, 140, 140);
+                        let h = Math.sin(state.frame * 0.1) * 15;
+                        ctx.drawImage(assets.drone, p.x - 80, p.y - 180 + h, 160, 160);
                     } else {
-                        ctx.drawImage(assets.bot, p.x - 60, p.y - 110, 120, 120);
+                        ctx.drawImage(assets.bot, p.x - 70, p.y - 130, 140, 140);
                     }
                 } else {
                     let img = e.status === 'Healthy' ? assets.treeH : assets.treeD;
-                    ctx.drawImage(img, p.x - 100, p.y - 180, 200, 200);
+                    // Trees are 1024px assets, scale them appropriately for the isometric grid
+                    ctx.drawImage(img, p.x - 120, p.y - 220, 240, 240);
                 }
             });
         }
