@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBRU-Praneet Digital Agri-Innovation Center | ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล</title>
+    <meta name="description"
+        content="ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัลรำไพพรรณี-ประณีตวิทยาคม - พัฒนาทักษะด้าน AI, IoT และ Data Science เพื่อเกษตรสมัยใหม่">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">🌾</div>
+                <div class="brand-text">
+                    <div class="brand-name">RBRU-Praneet</div>
+                    <div class="brand-subtitle">Digital Agri-Innovation</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">หน้าหลัก</a>
+                <a href="#about" class="nav-link">เกี่ยวกับโครงการ</a>
+                <a href="#activities" class="nav-link">กิจกรรม</a>
+                <a href="#contact" class="nav-link">ติดต่อ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">✨</span>
+                    <span>Digital Agriculture Innovation</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">ศูนย์พัฒนานวัตกรรม</span><br>
+                    <span class="highlight-text">เกษตรดิจิทัล</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    รำไพพรรณี-ประณีตวิทยาคม
+                </h2>
+                <p class="hero-description">
+                    พัฒนาทักษะด้าน <strong>AI</strong>, <strong>IoT</strong> และ <strong>Data Science</strong><br>
+                    เพื่อสร้างนวัตกรรมเกษตรสมัยใหม่สู้โลกรวน
+                </p>
+                <div class="hero-cta">
+                    <a href="#activities" class="btn btn-primary">
+                        <span>เริ่มต้นเรียนรู้</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>เกี่ยวกับโครงการ</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">กิจกรรมหลัก</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">ทักษะสำคัญ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">นวัตกรรมต้นแบบ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="/Users/chewathassana/.gemini/antigravity/brain/ab6163ae-6b83-4693-971f-c1aa4668dd12/hero_scientists_robot_1764163634531.png"
+                        alt="Thai Young Scientists with JC AI Robot Cat" class="hero-image">
+                    <div class="visual-sphere">
+                        <div class="sphere-ring ring-1"></div>
+                        <div class="sphere-ring ring-2"></div>
+                        <div class="sphere-ring ring-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Project</span>
+                <h2 class="section-title">เกี่ยวกับโครงการ</h2>
+                <p class="section-description">
+                    โครงการที่ผสานเทคโนโลยีล้ำสมัยเข้ากับเกษตรกรรม<br>
+                    เพื่อสร้างนวัตกรรมที่ตอบโจทย์ท้าทายของโลกรวน
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>วิเคราะห์ข้อมูลสภาพอากาศและสภาพแวดล้อมด้วยเทคโนโลยี Python</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🤖</div>
+                    <h3>AI Development</h3>
+                    <p>พัฒนาโมเดล AI เพื่อจำแนกโรคพืชและวิเคราะห์สุขภาพพืช</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">📡</div>
+                    <h3>IoT Integration</h3>
+                    <p>สร้างระบบเซ็นเซอร์อัจฉริยะเพื่อเก็บข้อมูลแบบเรียลไทม์</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Learning Journey</span>
+                <h2 class="section-title">กิจกรรมที่ดำเนินการ</h2>
+                <p class="section-description">
+                    4 กิจกรรมหลักที่จะพาคุณก้าวสู่โลกของนวัตกรรมเกษตรดิจิทัล
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <!-- Activity 1 -->
+                <div class="activity-card" data-activity="1">
+                    <div class="activity-image">
+                        <img src="/Users/chewathassana/.gemini/antigravity/brain/ab6163ae-6b83-4693-971f-c1aa4668dd12/activity_climate_data_1764163735264.png"
+                            alt="Climate Data Analysis Activity">
+                    </div>
+                    <div class="activity-number">01</div>
+                    <div class="activity-icon">🌦️</div>
+                    <h3 class="activity-title">Climate Data Hacking Workshop</h3>
+                    <p class="activity-subtitle">ถอดรหัสสภาพอากาศด้วย Python</p>
+                    <p class="activity-description">
+                        เรียนรู้การเขียนโค้ดพื้นฐานเพื่อวิเคราะห์ข้อมูลสภาพอากาศจริง
+                        ค้นหาแนวโน้มความเสี่ยงต่าง ๆ เช่น ภาวะฝนทิ้งช่วง หรือวันที่อุณหภูมิสูงผิดปกติ
+                    </p>
+                    <button class="activity-toggle">
+                        <span class="toggle-text">รายละเอียด</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="activity-details">
+                        <div class="details-section">
+                            <h4>🎯 เป้าหมาย</h4>
+                            <ul>
+                                <li>สร้างทักษะการวิเคราะห์ข้อมูล (Data Analysis)</li>
+                                <li>เรียนรู้การเขียนโปรแกรมเบื้องต้นด้วย Python</li>
+                                <li>ทำความเข้าใจการแสดงผลข้อมูลด้วยกราฟ</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>📚 สิ่งที่จะได้เรียนรู้</h4>
+                            <ul>
+                                <li>การนำข้อมูลฝน อุณหภูมิ มาวิเคราะห์</li>
+                                <li>การสร้างกราฟและการตีความข้อมูล</li>
+                                <li>การระบุแนวโน้มความเสี่ยงทางสภาพอากาศ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="activity-card" data-activity="2">
+                    <div class="activity-image">
+                        <img src="/Users/chewathassana/.gemini/antigravity/brain/ab6163ae-6b83-4693-971f-c1aa4668dd12/activity_ai_training_1764163805056.png"
+                            alt="AI CNN Training Activity">
+                    </div>
+                    <div class="activity-number">02</div>
+                    <div class="activity-icon">🧠</div>
+                    <h3 class="activity-title">Deep Dive Lab CNN Training Workshop</h3>
+                    <p class="activity-subtitle">ฝึกสอนโมเดล AI สำหรับวิเคราะห์โรคพืช</p>
+                    <p class="activity-description">
+                        ดำดิ่งสู่โลกของ Computer Vision โดยฝึกสอนโมเดล Convolutional Neural Network (CNN)
+                        เพื่อจำแนกภาพถ่ายใบพืชที่เป็นโรคออกจากใบพืชปกติ
+                    </p>
+                    <button class="activity-toggle">
+                        <span class="toggle-text">รายละเอียด</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="activity-details">
+                        <div class="details-section">
+                            <h4>🎯 เป้าหมาย</h4>
+                            <ul>
+                                <li>สร้างทักษะการพัฒนาโมเดล AI (AI Model Development)</li>
+                                <li>เข้าใจหลักการของ Computer Vision</li>
+                                <li>ฝึกสอนโมเดลจำแนกภาพด้วยตนเอง</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>📚 สิ่งที่จะได้เรียนรู้</h4>
+                            <ul>
+                                <li>หลักการของ Convolutional Neural Network</li>
+                                <li>การเตรียมข้อมูลภาพพืชสำหรับการฝึกสอน</li>
+                                <li>การประเมินความแม่นยำของโมเดล AI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="activity-card" data-activity="3">
+                    <div class="activity-image">
+                        <img src="/Users/chewathassana/.gemini/antigravity/brain/ab6163ae-6b83-4693-971f-c1aa4668dd12/activity_iot_workshop_1764163906440.png"
+                            alt="IoT Prototyping Activity">
+                    </div>
+                    <div class="activity-number">03</div>
+                    <div class="activity-icon">⚙️</div>
+                    <h3 class="activity-title">AI-IoT Prototyping Workshop</h3>
+                    <p class="activity-subtitle">สร้างต้นแบบระบบเกษตรอัจฉริยะ</p>
+                    <p class="activity-description">
+                        เชื่อมโลกซอฟต์แวร์ (AI) เข้ากับโลกฮาร์ดแวร์ (IoT)
+                        เรียนรู้การติดตั้งเซ็นเซอร์วัดความชื้นดินและอุณหภูมิอากาศ
+                        เพื่อนำข้อมูลมาใช้ร่วมกับ AI
+                    </p>
+                    <button class="activity-toggle">
+                        <span class="toggle-text">รายละเอียด</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="activity-details">
+                        <div class="details-section">
+                            <h4>🎯 เป้าหมาย</h4>
+                            <ul>
+                                <li>สร้างทักษะการสร้างต้นแบบฮาร์ดแวร์ (Hardware Prototyping)</li>
+                                <li>เข้าใจการทำงานของระบบเกษตรอัจฉริยะ</li>
+                                <li>ผสานความรู้ด้าน AI และ IoT เข้าด้วยกัน</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>📚 สิ่งที่จะได้เรียนรู้</h4>
+                            <ul>
+                                <li>การประกอบและติดตั้งเซ็นเซอร์ IoT</li>
+                                <li>การเก็บข้อมูลจากสภาพแวดล้อมจริง</li>
+                                <li>การนำข้อมูลเซ็นเซอร์มาใช้กับระบบ AI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="activity-card" data-activity="4">
+                    <div class="activity-image">
+                        <img src="/Users/chewathassana/.gemini/antigravity/brain/ab6163ae-6b83-4693-971f-c1aa4668dd12/activity_showcase_1764163962239.png"
+                            alt="Tech Showcase Presentation">
+                    </div>
+                    <div class="activity-number">04</div>
+                    <div class="activity-icon">🏆</div>
+                    <h3 class="activity-title">RBRU-Praneet Tech Showcase</h3>
+                    <p class="activity-subtitle">นำเสนอต้นแบบนวัตกรรมเกษตรดิจิทัล</p>
+                    <p class="activity-description">
+                        เวทีปล่อยของให้นักเรียนได้นำเสนอต้นแบบนวัตกรรมเกษตรดิจิทัลสู้โลกรวน
+                        ต่อหน้าคณะกรรมการ ผู้บริหาร และเกษตรกร
+                    </p>
+                    <button class="activity-toggle">
+                        <span class="toggle-text">รายละเอียด</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="activity-details">
+                        <div class="details-section">
+                            <h4>🎯 เป้าหมาย</h4>
+                            <ul>
+                                <li>สร้างทักษะการนำเสนอและการสื่อสาร</li>
+                                <li>รับฟังความคิดเห็นจากผู้เชี่ยวชาญ</li>
+                                <li>ชิงรางวัลและโอกาสในการต่อยอด</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>📚 สิ่งที่จะได้เรียนรู้</h4>
+                            <ul>
+                                <li>การสรุปและนำเสนอผลงานอย่างมืออาชีพ</li>
+                                <li>การตอบคำถามและรับมือกับความคิดเห็น</li>
+                                <li>การต่อยอดนวัตกรรมสู่การใช้งานจริง</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">พร้อมที่จะสร้างนวัตกรรมไปกับเรา?</h2>
+                <p class="cta-description">
+                    ร่วมเป็นส่วนหนึ่งของการพัฒนาเกษตรกรรมดิจิทัลยุคใหม่
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <span>ติดต่อสอบถาม</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🌾</div>
+                        <div class="brand-text">
+                            <div class="brand-name">RBRU-Praneet</div>
+                            <div class="brand-subtitle">Digital Agri-Innovation Center</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล<br>
+                        รำไพพรรณี-ประณีตวิทยาคม
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>โครงการ</h4>
+                        <a href="#about">เกี่ยวกับเรา</a>
+                        <a href="#activities">กิจกรรม</a>
+                        <a href="#contact">ติดต่อ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>ทักษะที่พัฒนา</h4>
+                        <a href="#activities">Data Analysis</a>
+                        <a href="#activities">AI Development</a>
+                        <a href="#activities">IoT Prototyping</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RBRU-Praneet Digital Agri-Innovation Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../scirbru_globe"
+		},
+		{
+			"path": "../soil_nutrient2026"
+		},
+		{
+			"path": "../research2026"
+		}
+	],
+	"settings": {}
+}

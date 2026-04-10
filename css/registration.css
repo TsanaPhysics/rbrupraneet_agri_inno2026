@@ -1,0 +1,68 @@
+/* ===== Registration Section ===== */
+.registration-section {
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+    background: var(--bg-secondary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--bg-primary);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.registration-form .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    border: none;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.registration-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}

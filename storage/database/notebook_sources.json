@@ -1,0 +1,50 @@
+[
+    {
+        "title": "ข้อมูลทั่วไปของศูนย์ (General Info)",
+        "content": "ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล (RBRU-Praneet) ตั้งอยู่ที่อาคาร 36 คณะวิทยาศาสตร์ฯ มรภ.รำไพพรรณี มีเป้าหมายเพื่อพัฒนาทักษะ AI, IoT ให้กับเยาวชนและเกษตรกร",
+        "type": "note",
+        "tags": [
+            "general",
+            "location",
+            "rbru"
+        ],
+        "id": 1,
+        "created_at": "2026-01-07 15:36:27"
+    },
+    {
+        "title": "หลักสูตร Python for Data Science",
+        "content": "หลักสูตรนี้เน้นการสอนภาษา Python พื้นฐาน จนถึงการใช้ Library เช่น Pandas, Matplotlib ในการวิเคราะห์ข้อมูลสภาพอากาศ เหมาะสำหรับผู้เริ่มต้น",
+        "type": "note",
+        "tags": [
+            "course",
+            "python",
+            "data"
+        ],
+        "id": 2,
+        "created_at": "2026-01-07 15:36:27"
+    },
+    {
+        "title": "การจัดการโรคพืชด้วย AI",
+        "content": "เราใช้เทคโนโลยี Deep Learning (CNN) ในการจำแนกโรคพืช โดยใช้ Image Processing ตรวจจับลักษณะผิดปกติบนใบพืช เช่น จุดเหลือง หรือรอยไหม้\r\n\r\n## AI Search: โรคในทุเรียน\r\n## Rockets in the Urinary Tract: Causes, Symptoms, and Treatment\r\n\r\n**Rockets** are a group of chemical compounds that are responsible for maintaining the structure of the urinary tract. They play a vital role in transporting urine from the kidneys to the bladder, and they also help to protect the bladder from irritation.\r\n\r\n**Causes of Urinary Tract Diseases:**\r\n\r\n* **Bacterial infections:** Bacteria, such as Escherichia coli and Staphylococcus, are the most common cause of urinary tract infections (UTIs). These infections can spread through sexual contact, urinary tract contact, or exposure to contaminated objects.\r\n* **Viruses:** Viruses, such as HIV, can also cause UTIs.\r\n* **Fungal infections:** Fungi, such as Candida albicans, can also cause UTIs.\r\n* **Chemical irritants:** Certain chemicals, such as alcohol, cleaning products, and certain medications, can irritate the urinary tract and cause UTIs.\r\n* **Kidney stones:** Kidney stones are hard, mineral deposits that form in the kidneys. They can be caused by a buildup of toxins or by dehydration.\r\n* **Birth control pills:** Birth control pills can cause UTIs by disrupting the normal balance of bacteria in the urinary tract.\r\n* **Infections caused by sexually transmitted diseases:** UTIs can also be caused by sexually transmitted diseases, such as gonorrhea and syphilis.\r\n\r\n**Symptoms of Urinary Tract Diseases:**\r\n\r\n* **Painful urination**\r\n* **Frequency of urination**\r\n* **Blood in the urine**\r\n* **Frequent urination at night**\r\n* **Straining during urination**\r\n* **Swelling or redness of the genitals**\r\n* **Fever**\r\n* **Weight loss**\r\n* **Fatigue**\r\n\r\n**Treatment for Urinary Tract Diseases:**\r\n\r\n* **Antibiotics:** Antibiotics are the most common treatment for UTIs. They can be taken orally or intravenously.\r\n* **Pain relievers:** Pain relievers, such as ibuprofen and acetaminophen, can help to relieve pain and discomfort.\r\n* **Fluid replacement:** Staying hydrated is important for preventing dehydration.\r\n* **Dietary changes:** Certain foods, such as dairy products and spicy foods, can irritate the urinary tract.\r\n* **Sitz baths:** Sitz baths are warm water baths that can help to relieve pain and inflammation.\r\n\r\n**Prevention of Urinary Tract Diseases:**\r\n\r\n* **Avoid sexually transmitted diseases:** Always use condoms during sexual activity.\r\n* **Drink plenty of fluids:** Staying hydrated helps to prevent dehydration and urinary tract infections.\r\n* **Wash your hands frequently:** Wash your hands with soap and water or use a sanitizer before touching your genital area.\r\n* **Avoid irritating substances:** Avoid using harsh soaps, chemicals, and detergents on your skin.\r\n* **Get vaccinated against HPV:** HPV is a sexually transmitted virus that can cause genital warts, which can sometimes become cancerous.",
+        "type": "note",
+        "tags": [
+            ""
+        ],
+        "id": 3,
+        "created_at": "2026-01-07 15:36:27",
+        "updated_at": "2026-01-07 17:58:04"
+    },
+    {
+        "title": "การตรวจวิเคราะห์คุณภาพดิน",
+        "content": "dkการวิเคราะห์คุณภาพดินด้วยสมาร์ทโฟน\r\n\r\n--- AI: Soil Nutrient Analysis using smartphone (llama3.2:3b) ---\r\n**Soil Nutrient Analysis Using Smartphones: A Game-Changer for Sustainable Agriculture**\r\n=====================================================================================\r\n\r\nThe advent of smartphones has revolutionized the way we analyze soil nutrients, enabling farmers to make data-driven decisions about crop management and fertilization. This article delves into the practical applications, benefits, and scientific context of using smartphones for soil nutrient analysis.\r\n\r\n**What is Soil Nutrient Analysis?**\r\n---------------------------------\r\n\r\nSoil nutrient analysis is a crucial step in maintaining optimal soil health and promoting plant growth. It involves measuring the levels of essential nutrients such as nitrogen (N), phosphorus (P), potassium (K), calcium (Ca), magnesium (Mg), and sulfur (S) in the soil. These nutrients are vital for plant growth, development, and productivity.\r\n\r\n**How Do Smartphones Aid Soil Nutrient Analysis?**\r\n------------------------------------------------\r\n\r\nSmartphones have made it possible to analyze soil nutrients using simple, portable, and affordable devices. Several apps and sensors have been developed to detect various parameters, including:\r\n\r\n*   pH levels\r\n*   Electrical conductivity (EC)\r\n*   Nutrient concentrations (e.g., N, P, K, Ca, Mg, S)\r\n\r\nThese smartphones are equipped with:\r\n\r\n*   Multifunctional sensors that can measure multiple parameters simultaneously\r\n*   Advanced algorithms for data analysis and interpretation\r\n*   User-friendly interfaces for easy navigation\r\n\r\n**Practical Applications of Smartphone-Based Soil Nutrient Analysis**\r\n--------------------------------------------------------------------\r\n\r\n1.  **Fertilization Optimization**: Smartphones enable farmers to quickly analyze soil nutrients, allowing them to make informed decisions about fertilizer application.\r\n2.  **Soil Monitoring**: Regular monitoring of soil nutrient levels helps farmers identify potential problems and take corrective action.\r\n3.  **Crop Yield Prediction**: By analyzing soil nutrient data, farmers can predict crop yields and plan accordingly.\r\n4.  **Sustainability and Environmental Monitoring**: Smartphones help farmers monitor soil health, reducing the need for synthetic fertilizers and promoting sustainable agricultural practices.\r\n\r\n**Benefits of Smartphone-Based Soil Nutrient Analysis**\r\n---------------------------------------------------------\r\n\r\n1.  **Convenience**: Smartphone-based analysis is faster, more convenient, and cost-effective compared to traditional laboratory methods.\r\n2.  **Accessibility**: Smartphones can be used in remote areas where access to laboratory facilities may be limited.\r\n3.  **Real-time Data**: Smartphones provide instant results, enabling farmers to take prompt action.\r\n4.  **Reduced Environmental Impact**: By reducing the need for synthetic fertilizers and promoting sustainable practices.\r\n\r\n**Scientific Context: Limitations and Future Directions**\r\n---------------------------------------------------------\r\n\r\nWhile smartphones have revolutionized soil nutrient analysis, there are limitations to consider:\r\n\r\n*   Accuracy: Smartphone-based sensors may not be as accurate as laboratory equipment.\r\n*   Calibration: Sensors require regular calibration to ensure accurate results.\r\n*   Data Interpretation: Farmers need training on interpreting data from smartphone apps.\r\n\r\nTo overcome these limitations, researchers and developers are working on improving smartphone technology, developing more accurate sensors, and creating user-friendly interfaces for data interpretation.\r\n\r\n**Conclusion**\r\n----------\r\n\r\nSoil nutrient analysis using smartphones has transformed the way farmers approach agricultural practices. By leveraging advanced technologies, farmers can make informed decisions about crop management, fertilization, and sustainability. As research continues to improve smartphone-based analysis, we can expect even more practical applications and benefits in the future.",
+        "tags": [
+            "ai",
+            "soil",
+            "nutrient"
+        ],
+        "type": "note",
+        "id": 4,
+        "created_at": "2026-01-07 17:11:24",
+        "updated_at": "2026-01-07 17:45:06"
+    }
+]
