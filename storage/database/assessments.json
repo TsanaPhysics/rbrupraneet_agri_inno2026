@@ -1,0 +1,10 @@
+[
+    {"student_id": "STU001", "course_code": "CNN", "activity_type": "pre_test", "score": 2, "timestamp": "2026-03-20 09:00:00"},
+    {"student_id": "STU001", "course_code": "CNN", "activity_type": "post_test", "score": 5, "timestamp": "2026-03-22 16:00:00"},
+    {"student_id": "STU002", "course_code": "CNN", "activity_type": "pre_test", "score": 1, "timestamp": "2026-03-20 09:05:00"},
+    {"student_id": "STU002", "course_code": "CNN", "activity_type": "post_test", "score": 4, "timestamp": "2026-03-22 16:05:00"},
+    {"student_id": "STU003", "course_code": "CNN", "activity_type": "pre_test", "score": 3, "timestamp": "2026-03-20 09:10:00"},
+    {"student_id": "STU003", "course_code": "CNN", "activity_type": "post_test", "score": 5, "timestamp": "2026-03-22 16:10:00"},
+    {"student_id": "STU004", "course_code": "CNN", "activity_type": "pre_test", "score": 0, "timestamp": "2026-03-20 09:15:00"},
+    {"student_id": "STU004", "course_code": "CNN", "activity_type": "post_test", "score": 3, "timestamp": "2026-03-22 16:15:00"}
+]

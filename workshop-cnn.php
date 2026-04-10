@@ -297,6 +297,32 @@ print(f"Prediction result: {results[0]}")</code></pre>
                         </div>
                     </div>
 
+                    <!-- Smartphone Vision Lab (Ported Feature) -->
+                    <div class="mt-20 p-10 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden group border border-white/5">
+                        <div class="absolute top-0 right-0 w-80 h-80 bg-orange-500 opacity-10 blur-[100px] -mr-40 -mt-40 group-hover:opacity-20 transition-opacity duration-700"></div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+                                <div class="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center text-4xl shadow-inner">📱</div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-black mb-2">Smartphone Vision Hub</h3>
+                                    <p class="text-slate-400">Deploy and test your models in the real orchard</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 mb-10 leading-relaxed text-lg">
+                                เมื่อฝึกฝนโมเดลเสร็จสิ้น นักเรียนสามารถส่งออกโมเดล (TFLite/Keras) เพื่อทดสอบผ่านสมาร์ทโฟน 
+                                โดยใช้กล้องสแกนใบต้นไม้ในพื้นที่จริงเพื่อจำแนกโรคทุเรียนได้ทันทีผ่านระบบ Web-based Inference ที่เราจัดเตรียมไว้ให้
+                            </p>
+                            <div class="flex flex-wrap items-center gap-6">
+                                <a href="virtual-lab.php" class="btn btn-primary" style="background: var(--primary-gradient); border: none; padding: 15px 35px; border-radius: 50px;">
+                                    <span class="mr-2">🚀</span> Launch Test Simulation
+                                </a>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-emerald-400">
+                                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                    Camera Interface Ready
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

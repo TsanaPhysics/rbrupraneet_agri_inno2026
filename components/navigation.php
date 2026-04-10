@@ -20,8 +20,9 @@
                 <div class="dropdown-menu">
                     <ul class="dropdown-list">
                         <li><a href="workshop-climate.php" class="dropdown-item"><span class="item-icon">🌦️</span> <?php echo $lang['nav_workshop_1']; ?></a></li>
-                        <li><a href="workshop-cnn.php" class="dropdown-item"><span class="item-icon">🍃</span> <?php echo $lang['nav_workshop_2']; ?></a></li>
-                        <li><a href="workshop-iot.php" class="dropdown-item"><span class="item-icon">🤖</span> <?php echo $lang['nav_workshop_3']; ?></a></li>
+                            <li><a href="workshop-iot.php" class="dropdown-item"><span class="item-icon">🤖</span> <?php echo $lang['nav_workshop_3']; ?></a></li>
+                            <li><a href="virtual-lab.php" class="dropdown-item"><span class="item-icon">🎮</span> Digital Twin Lab</a></li>
+                            <li><a href="showcase.php" class="dropdown-item"><span class="item-icon">🚀</span> <?php echo $lang['nav_workshop_4']; ?></a></li>
                         <li><a href="index.php#activities" class="dropdown-item"><span class="item-icon">📌</span> <?php echo $lang['nav_activities']; ?></a></li>
                     </ul>
                 </div>
