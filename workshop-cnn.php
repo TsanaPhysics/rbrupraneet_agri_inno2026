@@ -174,9 +174,9 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
                 <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Deep Dive Lab: CNN</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">กิจกรรมที่ 2: ปัญญาประดิษฐ์เพื่อการจำแนกโรคพืชด้วยเทคนิค Deep Learning</p>
                 <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="docs/cnn_plant_disease_manual.md" class="btn btn-primary" style="background: white; color: var(--workshop-accent); border: none;">📖 Full Manual (คู่มือฉบับเต็ม)</a>
-                    <button class="btn btn-secondary" style="border-color: white; color: white;">Sample Dataset</button>
-                    <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-secondary" style="border-color: white; color: white;" target="_blank">View on GitHub</a>
+                    <a href="docs/cnn_plant_disease_manual.md" class="btn btn-primary" style="background: var(--workshop-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);">📖 Full Manual (คู่มือฉบับเต็ม)</a>
+                    <button class="btn btn-glass">🖼️ Sample Dataset</button>
+                    <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-glass" target="_blank">🐙 View on GitHub</a>
                 </div>
             </div>
         </section>
