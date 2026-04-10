@@ -15,6 +15,7 @@ $lang = array(
     'nav_workshop_1' => 'เวิร์กช็อป Climate',
     'nav_workshop_2' => 'เวิร์กช็อป CNN',
     'nav_workshop_3' => 'เวิร์กช็อป AI-IoT',
+    'nav_workshop_4' => 'Showcase 2026',
 
     // Hero Section
     'hero_title' => 'ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล',
