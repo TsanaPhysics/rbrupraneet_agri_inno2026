@@ -245,12 +245,11 @@ print(f"Moisture: {moisture}%")</code></pre>
                         </div>
                     </div>
 
-                    <!-- Session 3 -->
-                    <div id="session-3" class="session-card">
-                        <span class="session-tag">Session 3 (3 Hours)</span>
-                        <h2>ส่งข้อมูลสู่ก้อนเมฆ (Cloud Hosting)</h2>
-                        <p>เชื่อมต่อบอร์ดเข้ากับ Wi-Fi และส่งข้อมูลไปยัง Dashboard แบบเรียลไทม์ผ่านโปรโตคอล MQTT</p>
-                        
+                        <div class="theory-panel" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: ความปลอดภัยของข้อมูล IoT (MQTT Security)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในระบบอุตสาหกรรมการเกษตร ข้อมูลเซ็นเซอร์คือความลับทางการค้า เราต้องป้องกันการดักฟังด้วยการใช้ TLS/SSL และการทำ Data Hashing ก่อนส่งขึ้น Cloud เพื่อให้มั่นใจว่าคำสั่งรดน้ำมาจาก "สมองกล" ของเราจริงๆ ไม่ใช่การโจมตีจากภายนอก</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 iot_s3.ipynb</span>
@@ -261,24 +260,32 @@ print(f"Moisture: {moisture}%")</code></pre>
                                 </div>
                             </div>
                             <pre><code class="language-python">import network
+import hashlib
 from umqtt.simple import MQTTClient
 
-wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
-wlan.connect('SSID', 'PASS')
+# ฟังก์ชันเข้ารหัสข้อมูลก่อนส่ง (Hashing)
+def secure_payload(data):
+    return hashlib.sha256(data.encode()).hexdigest()
 
-client = MQTTClient('esp32_01', 'broker.hivemq.com')
+client = MQTTClient('esp32_rbru', 'broker.hivemq.com', port=1883)
 client.connect()
-client.publish('rbru/agri/data', 'Hello Cloud!')</code></pre>
+payload = secure_payload("Moisture: 45%")
+client.publish('rbru/secure/orchard', payload)
+print("🔐 Encrypted data sent to Cloud")</code></pre>
                         </div>
                     </div>
 
                     <!-- Session 4 -->
                     <div id="session-4" class="session-card">
                         <span class="session-tag">Session 4 (3 Hours)</span>
-                        <h2>การตัดสินใจที่ชาญฉลาด (Edge AI)</h2>
-                        <p>เขียนอัลกอริทึมการตัดสินใจรดน้ำอัตโนมัติ โดยใช้ตรรกะ AI ร่วมกับข้อมูลเซ็นเซอร์หลายตัวพร้อมกัน</p>
+                        <h2>การประหยัดพลังงานและการตัดสินใจ (Deep Sleep & Logic)</h2>
+                        <p>เรียนรู้การใช้โหมดประหยัดพลังงานขั้นสูง (Deep Sleep) เพื่อการใช้งานในพื้นที่ที่ไม่มีไฟฟ้า และการเขียนตรรกะตัดสินใจที่ซับซ้อนแม่นยำขึ้น</p>
                         
+                        <div class="theory-panel" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การประหยัดพลังงานระดับอุตสาหกรรม (Deep Sleep)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">เซ็นเซอร์ในสวนทุเรียนมักทำงานด้วยแบตเตอรี่หรือโซลาร์เซลล์ การประหยัดพลังงานจึงสำคัญที่สุด เราจะใช้โหมด Deep Sleep เพื่อปิดการทำงานของ CPU เกือบทั้งหมด และตื่นขึ้นมาส่งข้อมูลเพียงเสี้ยววินาที เพื่อให้แบตเตอรี่ใช้งานได้นานหลายเดือน</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 iot_s4.ipynb</span>
@@ -288,12 +295,44 @@ client.publish('rbru/agri/data', 'Hello Cloud!')</code></pre>
                                     <button class="code-btn" onclick="copyCode(this)">Copy</button>
                                 </div>
                             </div>
-                            <pre><code class="language-python">def auto_pump(moisture, rain_forecast):
-    if moisture < 40 and rain_forecast < 30:
-        return True # เปิดปั๊ม
-    return False # ปิดปั๊ม
+                            <pre><code class="language-python">import machine
+import time
 
-print(f"Pump Action: {auto_pump(25, 10)}")</code></pre>
+# อ่านค่าและส่งข้อมูล
+read_and_send()
+
+print("💤 Entering Deep Sleep for 1 hour...")
+# สั่งให้ ESP32 หลับลึกเป็นเวลา 1 ชั่วโมง (3600000ms)
+machine.deepsleep(3600000)</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- 3D Digital Twin Simulator Preview -->
+                    <div class="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-blue-950 text-white relative overflow-hidden group border border-blue-500/20">
+                        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+                            <img src="assets/images/simulators/iot_3d_preview.png" alt="3D Digital Twin Simulator" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+                                <div class="w-20 h-20 rounded-3xl bg-blue-500/20 backdrop-filter blur-xl flex items-center justify-center text-4xl shadow-inner border border-white/20">🖥️</div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-black mb-2">3D Digital Twin Command Hub</h3>
+                                    <p class="text-blue-300">ควบคุมสวนทุเรียนจากปลายนิ้วผ่านโลกคู่ขนานดิจิทัล</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 mb-10 leading-relaxed text-lg max-width: 600px;">
+                                เชื่อมต่อข้อมูลจากเซ็นเซอร์ ESP32 จริงของคุณเข้ากับโมเดล Digital Twin แบบ 3 มิติ 
+                                เมื่อคุณสั่งรดน้ำในโลกเสมือน ระบบจะส่งคำสั่งผ่าน MQTT กลับมายังฮาร์ดแวร์จริงในสวน พร้อมแสดงผลลัพธ์ผ่านเส้นสตรีมข้อมูลที่สวยงาม
+                            </p>
+                            <div class="flex flex-wrap items-center gap-6">
+                                <a href="virtual-lab.php?scenario=iot" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); border: none; padding: 15px 35px; border-radius: 50px;">
+                                    <span class="mr-2">🔌</span> Connect Hardware
+                                </a>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-blue-400">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                    MQTT Stream Active
+                                </div>
+                            </div>
                         </div>
                     </div>
 

@@ -25,13 +25,13 @@
 - **เรียนรู้:** การอ่านค่า Analog (ADC) และการสอบเทียบค่า (Calibration)
 - **Highlight:** เปลี่ยนค่าไฟฟ้าให้เป็นค่าเปอร์เซ็นต์ความชื้นในดิน
 
-### 3. [Session 3: Cloud & MQTT](../notebooks/iot_s3.ipynb)
-- **เรียนรู้:** โปรโตคอล MQTT และการส่งข้อมูลเข้าสู่ Internet
-- **Highlight:** ส่งข้อมูลฟาร์มขึ้น Dashboard ระดับโลก (Real-time Monitoring)
+### 3. [Session 3: Secure Cloud & MQTT](../notebooks/iot_s3.ipynb)
+- **เรียนรู้:** โปรโตคอล MQTT และการทำ Data Hashing (SHA-256) เพื่อความปลอดภัย
+- **Highlight:** ส่งข้อมูลฟาร์มเข้าสู่ระบบ Secure Cloud พร้อมระบบยืนยันตัวตนระดับอุตสาหกรรม
 
-### 4. [Session 4: Edge AI Irrigation](../notebooks/iot_s4.ipynb)
-- **เรียนรู้:** การเขียนโปรแกรมตัดสินใจ (Decision Logic) และระบบแจ้งเตือน LINE
-- **Highlight:** **Final Project!** ระบบรดน้ำอัตโนมัติที่คำนึงถึงพยากรณ์อากาศ
+### 4. [Session 4: Power Optimization & Digital Twin](../notebooks/iot_s4.ipynb)
+- **เรียนรู้:** การใช้โหมด Deep Sleep และการเชื่อมต่อข้อมูลกับ XR Simulation
+- **Highlight:** **Capstone Project!** ระบบรดน้ำไร้สายที่ทำงานได้หลายเดือนด้วยแบตเตอรี่ พร้อมการควบคุมผ่าน Digital Twin
 
 ---
 

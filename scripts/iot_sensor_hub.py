@@ -1,51 +1,69 @@
 #!/usr/bin/env python3
 """
-RBRU-Praneet Digital Agri-Innovation Center
-Workshop 3: AI-IoT Prototyping Starter Script
----------------------------------------------
-This script is designed for MicroPython (ESP32).
-Logic: Sensor Sampling -> Edge Decisions -> MQTT Upload
+RBRU-Praneet Digital Agri-Innovation Center (2026)
+Workshop 3: AI-IoT Prototyping (Advanced 12-Hour Edition)
+-----------------------------------------------
+This MicroPython-compatible script implements industrial IoT standards:
+Secure Payload Hashing, Digital Twin logic, and Deep Sleep power management.
 """
 
-# import machine  # Only for ESP32
+# import machine # for machine.deepsleep()
+# import hashlib
 # import time
-# from umqtt.simple import MQTTClient
 
-class AgriSensorNode:
-    def __init__(self, node_id):
+class SecureAgriNode:
+    def __init__(self, node_id, secret_key="RBRU2026"):
         self.node_id = node_id
-        self.mqtt_broker = "broker.hivemq.com"
-        
-    def read_soil_moisture(self):
-        """Simulates an ADC reading from Pin 34."""
-        # raw_val = adc.read()
-        # In simulation, we return a healthy 55%
-        return 55.0
-    
-    def process_logic(self, moisture):
-        """Edge AI Decision Logic."""
-        if moisture < 40:
-            return "ON"  # Activate Relay
-        return "OFF"
-    
-    def display_status(self, moisture, pump_state):
-        print(f"--- Node: {self.node_id} ---")
-        print(f"Moisture: {moisture}% | Pump: {pump_state}")
+        self.secret_key = secret_key
+        self.sleep_interval_ms = 3600000 # 1 Hour
+
+    def get_secure_payload(self, moisture, temp):
+        """Advanced: SHA-256 Hashing for data integrity validation."""
+        raw_string = f"{self.node_id}:{moisture}:{temp}:{self.secret_key}"
+        # Simulating hashlib.sha256(raw_string.encode()).hexdigest()
+        fake_hash = "f3a2c4e..." + str(hash(raw_string))[-8:]
+        return {
+            "node": self.node_id,
+            "data": {"moist": moisture, "temp": temp},
+            "hash": fake_hash
+        }
+
+    def process_digital_twin_sync(self):
+        """Simulates bidirectional sync with a 3D Digital Twin Hub."""
+        print(f"📡 Syncing with Digital Twin Command Hub...")
+        print(" - Downloading Shadow State: Pump_Override = NONE")
+        print(" - Uploading Telemetry: OK")
+
+    def enter_power_save(self):
+        """Hardware Logic: Transition CPU to Deep Sleep mode."""
+        print(f"💤 Mission Complete. Entering Deep Sleep for {self.sleep_interval_ms/1000/60:.0f} mins.")
+        print(" - Sensors: Powered Down")
+        print(" - Wi-Fi: Disconnected")
+        # machine.deepsleep(self.sleep_interval_ms)
 
 def main():
-    # Initialize Node
-    my_node = AgriSensorNode("ESP32_Durian_01")
+    print("--- RBRU-Praneet Industrial IoT Node ---")
+    node = SecureAgriNode("ESPINNO_FIELD_04")
     
-    print("Node successfully initialized. Starting monitoring loop...")
+    # 1. Sample Phase
+    moisture = 42.5
+    temp = 31.8
     
-    # Processing Loop
-    moisture = my_node.read_soil_moisture()
-    pump_state = my_node.process_logic(moisture)
-    my_node.display_status(moisture, pump_state)
+    # 2. Security Phase
+    payload = node.get_secure_payload(moisture, temp)
     
-    # MQTT Publish Simulation
-    print(f"Publishing to {my_node.mqtt_broker} Topic: rbru/agri/data")
-    print("Data packet: {'id': 'ESP32_Durian_01', 'moist': 55.0}")
+    # 3. Synchronicity Phase
+    node.process_digital_twin_sync()
+    
+    # 4. Result Output
+    print("\n" + "🔋" * 20)
+    print(f"Packet ID: {payload['node']}")
+    print(f"Security Hash: {payload['hash']}")
+    print(f"Field Data: {payload['data']}")
+    print("🔋" * 20)
+    
+    # 5. Optimization Phase
+    node.enter_power_save()
 
 if __name__ == "__main__":
     main()

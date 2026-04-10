@@ -19,17 +19,17 @@
 - **เรียนรู้:** การอ่านพิกเซล, การแปลงสี (Grayscale), และ OpenCV
 - **Highlight:** ฝึกประมวลผลใบไม้เพื่อหาพื้นที่โรคเบื้องต้น
 
-### 2. [Session 2: Data Augmentation](../notebooks/cnn_s2.ipynb)
-- **เรียนรู้:** การบิด หมุน และปรับสีภาพอัตโนมัติด้วย TensorFlow
-- **Highlight:** แก้ปัญหา "ภาพน้อย" ให้กลายเป็น "ภาพมาก" เพื่อความฉลาดของ AI
+### 2. [Session 2: Advanced Data Augmentation](../notebooks/cnn_s2.ipynb)
+- **เรียนรู้:** เทคนิคการบิด หมุน ปรับแสง และการจัดสรรข้อมูล (Train/Val/Test Split)
+- **Highlight:** สร้าง Synthetic Data เพื่อให้ AI ทนทานต่อสภาพแสงที่แตกต่างกันในสวนจริง
 
-### 3. [Session 3: Neural Architecture](../notebooks/cnn_s3.ipynb)
-- **เรียนรู้:** โครงสร้าง CNN (Convolution, Pooling, Dense) 
-- **Highlight:** ประกอบร่างสมองกลเพื่อจำแนกประเภทโรคทุเรียน
+### 3. [Session 3: Transfer Learning Architecture](../notebooks/cnn_s3.ipynb)
+- **เรียนรู้:** การใช้งานโมเดลสำเร็จรูป (MobileNet-V2 / ResNet) และการทำ Fine-tuning
+- **Highlight:** ยืมพลังสมองกลระดับโลกมาช่วยจำแนกโรคทุเรียนเมืองจันท์
 
-### 4. [Session 4: Deployment & Evaluation](../notebooks/cnn_s4.ipynb)
-- **เรียนรู้:** การวัดความแม่นยำ (Accuracy) และการแปลงไฟล์เป็น TFLite
-- **Highlight:** พร้อมส่งโมเดลเข้าสู่ **Smartphone Vision Hub** เพื่อใช้งานจริงในสวน
+### 4. [Session 4: Edge Optimization & TFLite](../notebooks/cnn_s4.ipynb)
+- **เรียนรู้:** การทำ Quantization และการส่งออกโมเดลสำหรับอุปกรณ์เคลื่อนที่
+- **Highlight:** เปลี่ยนโมเดลขนาดใหญ่ให้กลายเป็นไฟล์จิ๋วที่พร้อมทำงานบนโดรนและสมาร์ทโฟน
 
 ---
 

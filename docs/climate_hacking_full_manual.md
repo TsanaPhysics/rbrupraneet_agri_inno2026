@@ -26,13 +26,13 @@
 - **เจาะลึก:** รูปแบบข้อมูล JSON และการใช้งาน Library `requests`
 - **Highlight:** จำลองการดึงข้อมูลสด (Real-time) จาก API กรมอุตุนิยมวิทยา
 
-### 3. [Session 3: นักสืบข้อมูล (Data Detective)](../notebooks/session3_data.ipynb)
-- **เจาะลึก:** การใช้งาน `Pandas` เพื่อวิเคราะห์ข้อมูลตาราง (Dataframes)
-- **Highlight:** คืนเวลาให้อดีตด้วยการวิเคราะห์ข้อมูลฝนย้อนหลัง 10 ปีของเมืองจันท์
+### 3. [Session 3: นักสืบข้อมูลขั้นสูง (Digital Forensics)](../notebooks/session3_data.ipynb)
+- **เจาะลึก:** การใช้เทคนิค Moving Average และ Standard Deviation เพื่อวิเคราะห์แนวโน้มข้อมูล
+- **Highlight:** ค้นหาจุดผิดปกติ (Anomaly) ในสถิติฝน 10 ปี เพื่อระบุปีที่ประสบภัยแล้งหรือน้ำท่วมที่ไม่ได้มาตามฤดูกาล
 
-### 4. [Session 4: ระบบปรึกษาเกษตรอัจฉริยะ](../notebooks/session4_advisor.ipynb)
-- **เจาะลึก:** การออกแบบ Logic ซับซ้อน และการแสดงผลด้วยกราฟ (Matplotlib)
-- **Highlight:** **Final Project!** พัฒนา AI Advisor ที่ให้คำแนะนำตามพยากรณ์อากาศจริง
+### 4. [Session 4: ระบบสนับสนุนการตัดสินใจอัจฉริยะ (DSS)](../notebooks/session4_advisor.ipynb)
+- **เจาะลึก:** การออกแบบระบบ Logic แบบหลายเงื่อนไข (Multi-conditional logic) เพื่อพิจารณาสภาพอากาศร่วมกับระยะการเติบโตของทุเรียน
+- **Highlight:** **Capstone Project!** พัฒนา AI Advisor ที่สามารถส่งคำแจ้งเตือนล่วงหน้า (Early Warning) ได้แบบอัตโนมัติ
 
 ---
 

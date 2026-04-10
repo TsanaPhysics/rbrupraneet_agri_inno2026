@@ -1,55 +1,66 @@
 #!/usr/bin/env python3
 """
-RBRU-Praneet Digital Agri-Innovation Center
-Workshop 2: CNN for Plant Disease Starter Script
-------------------------------------------------
-This script demonstrates image preprocessing and model inference logic.
+RBRU-Praneet Digital Agri-Innovation Center (2026)
+Workshop 2: CNN for Plant Disease (Advanced 12-Hour Edition)
+-----------------------------------------------
+This script demonstrates an advanced AI pipeline: from Transfer Learning 
+feature extraction to Edge-ready TFLite model optimization.
 """
 
 import os
 
-# Note: In a real environment, students would use:
-# import cv2
-# import tensorflow as tf
+class PlantVisionEngine:
+    def __init__(self, model_version="MobileNet-V2-Alpha"):
+        self.model_version = model_version
+        self.categories = ["Healthy Durian Leaf", "Leaf Spot (Fungal)", "Red Rust (Algae)"]
 
-def preprocess_image(image_path):
-    """Simulates image reading and normalization."""
-    basename = os.path.basename(image_path)
-    print(f"--- Processing: {basename} ---")
-    
-    # Simulating OpenCV steps:
-    # 1. Read
-    # 2. Resize to (128, 128)
-    # 3. Normalize pixels (0-1 range)
-    print("Normalizing pixel values...")
-    return f"Processed_{basename}"
+    def augment_concepts(self):
+        """Advanced: Simulates the logic of Data Augmentation to prevent overfitting."""
+        print("🔧 Applying Augmentation Pipeline:")
+        print(" - Horizontal/Vertical Flip")
+        print(" - Random Brightness (Simulating outdoor sunlight)")
+        print(" - Zoom & Shear (Simulating varied distances)")
 
-def mock_inference(processed_image):
-    """Simulates a CNN model's prediction."""
-    # Dummy probability output
-    # Categories: [Normal, Leaf Spot, Red Rust]
-    probabilities = [0.05, 0.90, 0.05]
-    
-    # Get the index of the highest probability
-    prediction_idx = 1
-    labels = ["Healthy Leaf", "Leaf Spot Detected", "Red Rust Detected"]
-    
-    return labels[prediction_idx], probabilities[prediction_idx]
+    def optimize_for_edge(self, keras_model):
+        """Simulates TFLite conversion for smartphone deployment."""
+        print(f"📦 Commencing Model Compression ({keras_model}):")
+        print(" - Quantization Strategy: Float16")
+        print(" - Target: ARM64 (Mobile)")
+        return "leaf_ai_v2_optimized.tflite"
+
+    def predict_with_confidence(self, image_input):
+        """Simulates high-precision inference across all categories."""
+        # Simulated logits
+        scores = [0.02, 0.94, 0.04]
+        top_idx = scores.index(max(scores))
+        
+        return {
+            'label': self.categories[top_idx],
+            'confidence': scores[top_idx],
+            'status': 'CRITICAL' if scores[top_idx] > 0.8 and top_idx != 0 else 'STABLE'
+        }
 
 def main():
-    print("--- RBRU Plant Vision Hub ---")
+    print("--- RBRU-Praneet AI Vision Research Hub ---")
+    engine = PlantVisionEngine()
     
-    # Test simulation
-    test_leaf = "durian_leaf_01.jpg"
+    # Workflow Simulation
+    engine.augment_concepts()
+    optimized_file = engine.optimize_for_edge("RBRU_Durian_ResNet50")
     
-    processed = preprocess_image(test_leaf)
-    result, confidence = mock_inference(processed)
+    print(f"\n🚀 Simulation: Performing field scan...")
+    result = engine.predict_with_confidence("sample_leaf_48480.jpg")
     
-    print("-" * 30)
-    print(f"FINDING: {result}")
-    print(f"CONFIDENCE: {confidence * 100:.2f}%")
-    print("-" * 30)
-    print("Next Step: Apply fungicide targeting Leaf Spot if confidence > 80%.")
+    # Results Breakdown
+    print("\n" + "💠" * 20)
+    print(f"🔍 Detection: {result['label']}")
+    print(f"📈 Confidence: {result['confidence']*100:.1f}%")
+    print(f"🚨 Priority: {result['status']}")
+    print("💠" * 20)
+    
+    if result['status'] == 'CRITICAL':
+        print("\nACTION REQUIRED: Isolated fungal infection detected.")
+        print("Recommended: Apply focused Hexaconazole treatment.")
 
 if __name__ == "__main__":
     main()

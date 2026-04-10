@@ -281,6 +281,11 @@ print(f"ปริมาณฝนวันนี้: {weather['rain_mm']} mm")</c
                         <h2>นักสืบข้อมูล (Data Detective)</h2>
                         <p>ใช้ห้องสมุด Pandas เพื่ออ่านและวิเคราะห์ข้อมูลพยากรณ์อากาศย้อนหลัง 10 ปี เพื่อหาความผิดปกติของฤดูกาล</p>
                         
+                        <div class="theory-panel" style="background: rgba(79, 172, 254, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การวิเคราะห์ความผิดปกติ (Anomaly Detection)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการวิเคราะห์ข้อมูลเกษตรแม่นยำ (Precision Agri) เราต้องหาข้อมูลที่ "ผิดปกติ" (Outliers) เช่น ปีที่ฝนตกหนักเกินปกติ หรือช่วงที่อุณหภูมิพุ่งสูงกะทันหัน ซึ่งอาจบ่งบอกถึงความเสี่ยงของศัตรูพืช การใช้ค่าเฉลี่ยเคลื่อนที่ (Moving Average) จะช่วยให้เราเห็นเทรนด์ที่แท้จริงท่ามกลางข้อมูลที่ผันผวน</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 session3_data.ipynb</span>
@@ -291,15 +296,18 @@ print(f"ปริมาณฝนวันนี้: {weather['rain_mm']} mm")</c
                                 </div>
                             </div>
                             <pre><code class="language-python">import pandas as pd
+import numpy as np
 
-# อ่านข้อมูลจากไฟล์ที่ดาวน์โหลดมา
+# อ่านข้อมูลและคำนวณค่าเฉลี่ยเคลื่อนที่ (Moving Average)
 df = pd.read_csv('chanthaburi_climate_sample.csv')
+df['Moving_Avg'] = df['Rainfall_mm'].rolling(window=3).mean()
 
-# ค้นหาเดือนที่ฝนตกหนักที่สุด (Heavy Rain)
-heavy_rain_months = df[df['Status'] == 'Heavy Rain']
+# ค้นหาช่วงที่ฝนตก "เกินปกติ" (Anomaly)
+threshold = df['Rainfall_mm'].mean() + (2 * df['Rainfall_mm'].std())
+anomalies = df[df['Rainfall_mm'] > threshold]
 
-print("--- รายงานความผิดปกติของฝน ---")
-print(heavy_rain_months[['Year', 'Month', 'Rainfall_mm']])</code></pre>
+print("--- ตรวจพบความผิดปกติของปริมาณฝน ---")
+print(anomalies[['Year', 'Month', 'Rainfall_mm']])</code></pre>
                         </div>
                     </div>
 
@@ -309,6 +317,11 @@ print(heavy_rain_months[['Year', 'Month', 'Rainfall_mm']])</code></pre>
                         <h2>สร้างระบบแจ้งเตือนอัจฉริยะ</h2>
                         <p>โปรเจกต์จบ: เขียนโปรแกรมวิเคราะห์แนวโน้มล่วงหน้าและส่งคำแนะนำให้กับเกษตรกร</p>
                         
+                        <div class="theory-panel" style="background: rgba(79, 172, 254, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: ระบบสนับสนุนการตัดสินใจ (Decision Support System)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">หัวใจของ "Digital Farmer" คือการเปลี่ยนข้อมูลเป็น "คำสั่งการ" ระบบ DSS จะใช้ตรรกะแบบ Fuzzy หรือ Decision Tree เพื่อพิจารณาทั้งระยะการเจริญเติบโตของพืชและสภาพอากาศพร้อมกัน เพื่อส่งคำแนะนำที่แม่นยำที่สุดผ่าน LINE หรือ Dashboard</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 session4_advisor.ipynb</span>
@@ -318,17 +331,50 @@ print(heavy_rain_months[['Year', 'Month', 'Rainfall_mm']])</code></pre>
                                     <button class="code-btn" onclick="copyCode(this)">Copy</button>
                                 </div>
                             </div>
-                            <pre><code class="language-python">def farm_advisor(rain_prediction, crop_stage):
-    if crop_stage == "flowering" and rain_prediction > 50:
-        return "⚠️ อันตราย: ฝนชะดอก! รีบจัดเตรียมสารป้องกันหรือผ้าพลาสติก"
-    elif rain_prediction < 10:
-        return "💧 ปกติ: สภาพอากาศเหมาะกับการให้น้ำตามรอบ"
-    else:
-        return "✅ สถานะ: เฝ้าระวังทั่วไป"
+                            <pre><code class="language-python">def farm_advisor(rain_prediction, humidity, crop_stage):
+    # ตรรกะแบบผสมผสาน (Hybrid Logic)
+    if crop_stage == "flowering":
+        if rain_prediction > 50 or humidity > 85:
+            return "🚨 ALERT: สภาพอากาศเสี่ยงต่อการเกิดเชื้อราและดอกร่วง! รีบฉีดพ่นสารป้องกัน"
+        return "✨ OPTIMAL: สภาพอากาศดีมากสำหรับการผสมเกสร"
+    
+    elif crop_stage == "fruiting":
+        if rain_prediction < 10:
+            return "💧 ADVISE: ต้องการน้ำสม่ำเสมอเพื่อการขยายขนาดผล"
+        return "✅ STATUS: สภาพอากาศปกติ"
 
-# ทดสอบระบบ
-message = farm_advisor(65, "flowering")
-print(f"AI Advisor: {message}")</code></pre>
+# ทดสอบระบบ Advisor
+message = farm_advisor(65, 90, "flowering")
+print(f"RBRU-AI Advisor: {message}")</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- 3D XR Simulator Preview -->
+                    <div class="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-indigo-950 text-white relative overflow-hidden group border border-white/10">
+                        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+                            <img src="assets/images/simulators/climate_3d_preview.png" alt="3D Climate Simulator" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+                                <div class="w-20 h-20 rounded-3xl bg-blue-500/20 backdrop-filter blur-xl flex items-center justify-center text-4xl shadow-inner border border-white/20">👓</div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-black mb-2">3D Climate XR Simulator</h3>
+                                    <p class="text-blue-300">สัมผัสโมเดลพยากรณ์อากาศในโลกเสมือนจริง</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 mb-10 leading-relaxed text-lg max-width: 600px;">
+                                ข้อมูลที่คุณวิเคราะห์ด้วย Python จะถูกส่งต่อไปยังระบบจำลอง 3D Twin เพื่อให้นักเรียนสามารถมองเห็นภาพ "ความร้อนสะสม" และ "ทิศทางลม" 
+                                ในสวนทุเรียนจำลองได้แบบ 360 องศา ช่วยให้ตัดสินใจวางแผนการเพาะปลูกในโลกจริงได้อย่างแม่นยำยิ่งขึ้น
+                            </p>
+                            <div class="flex flex-wrap items-center gap-6">
+                                <a href="virtual-lab.php?scenario=climate" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border: none; padding: 15px 35px; border-radius: 50px;">
+                                    <span class="mr-2">🕹️</span> Enter Simulation
+                                </a>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-blue-400">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                    Real-time Data Ready
+                                </div>
+                            </div>
                         </div>
                     </div>
 

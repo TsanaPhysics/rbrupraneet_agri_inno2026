@@ -237,12 +237,11 @@ plt.show()</code></pre>
                         </div>
                     </div>
 
-                    <!-- Session 2 -->
-                    <div id="session-2" class="session-card">
-                        <span class="session-tag">Session 2 (3 Hours)</span>
-                        <h2>การทวีคูณข้อมูล (Data Augmentation)</h2>
-                        <p>แก้ปัญหาข้อมูลไม่พอด้วยการดัดแปลงภาพต้นฉบับ (หมุน, พลิก, ปรับแสง) เพื่อให้ AI ของเรามีความฉลาดและแม่นยำยิ่งขึ้น</p>
-                        
+                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การแก้ปัญหาข้อมูลน้อย (Data Scarcity)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการทำ AI การเกษตร เรามักจะมีภาพโรคพืชจำกัด การใช้ Data Augmentation เพื่อสร้างภาพจำลองขึ้นมาใหม่ (เช่น การพลิกภาพ, การซูม, การปรับแสง) จะช่วยให้ AI เรียนรู้พิกเซลที่หลากหลายขึ้น ลดการเกิด Overfitting และทำให้โมเดล "ฉลาด" ขึ้นในสภาพแสงจริง</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 cnn_s2.ipynb</span>
@@ -254,14 +253,17 @@ plt.show()</code></pre>
                             </div>
                             <pre><code class="language-python">from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-# สร้าง Generator สำหรับสุ่มเปลี่ยนลักษณะภาพ
+# สร้าง Generator ขั้นสูง (Advanced Augmentation)
 train_datagen = ImageDataGenerator(
     rotation_range=40,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    shear_range=0.2,
+    zoom_range=0.2,
     horizontal_flip=True,
     fill_mode='nearest'
 )</code></pre>
                         </div>
-                    </div>
 
                     <!-- Session 3 -->
                     <div id="session-3" class="session-card">
@@ -291,12 +293,11 @@ model.summary()</code></pre>
                         </div>
                     </div>
 
-                    <!-- Session 4 -->
-                    <div id="session-4" class="session-card">
-                        <span class="session-tag">Session 4 (3 Hours)</span>
-                        <h2>การวัดผลและการนำไปใช้จริง</h2>
-                        <p>วิเคราะห์ Accuracy/Loss Curve และทดลองใช้ AI ที่เราสร้างขึ้นทำนายโรคพืชจากภาพถ่ายจริงในสวน</p>
-                        
+                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การปรับจูนและส่งออกโมเดล (Optimization & TFLite)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">เมื่อเทรนโมเดลเสร็จ เราต้องทำการ "บีบอัด" (Quantization) เพื่อให้โมเดลมีขนาดเล็กพอที่จะทำงานบนมือถือหรืออุปกรณ์ Edge ได้รวดเร็ว โดยไม่เสียความแม่นยำมากนัก การใช้ TFLite คือมาตรฐานอุตสาหกรรมสำหรับการนำ AI ลงสู่พื้นที่จริง</p>
+                        </div>
+
                         <div class="code-container">
                             <div class="code-header">
                                 <span>📁 cnn_s4.ipynb</span>
@@ -306,11 +307,18 @@ model.summary()</code></pre>
                                     <button class="code-btn" onclick="copyCode(this)">Copy</button>
                                 </div>
                             </div>
-                            <pre><code class="language-python"># โหลดโมเดลที่เทรนเสร็จแล้วมาทำนาย
-results = model.predict(test_images)
-print(f"Prediction result: {results[0]}")</code></pre>
+                            <pre><code class="language-python">import tensorflow as tf
+
+# แปลงโมเดลเป็น TFLite (Mobile Optimization)
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()
+
+# บันทึกไฟล์เพื่อนำไปใช้บนสมาร์ทโฟน
+with open('leaf_ai_model.tflite', 'wb') as f:
+    f.write(tflite_model)
+
+print("✅ Optimization Complete: Model ready for Smartphone deployment!")</code></pre>
                         </div>
-                    </div>
 
                     <!-- Smartphone Vision Lab (Ported Feature) -->
                     <div class="mt-20 p-10 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden group border border-white/5">
@@ -334,6 +342,35 @@ print(f"Prediction result: {results[0]}")</code></pre>
                                 <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-emerald-400">
                                     <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                                     Camera Interface Ready
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D AI Vision Simulator Preview -->
+                    <div class="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-emerald-950 text-white relative overflow-hidden group border border-emerald-500/20">
+                        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+                            <img src="assets/images/simulators/cnn_3d_preview.png" alt="3D AI Vision Simulator" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+                                <div class="w-20 h-20 rounded-3xl bg-emerald-500/20 backdrop-filter blur-xl flex items-center justify-center text-4xl shadow-inner border border-white/20">🛸</div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-black mb-2">3D AI Vision Drone Lab</h3>
+                                    <p class="text-emerald-300">จำลองการตรวจจับโรคพืชด้วยฝูงโดรนอัจฉริยะ</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 mb-10 leading-relaxed text-lg max-width: 600px;">
+                                สัมผัสประสบการณ์การนำโมเดล CNN ที่คุณสร้างขึ้นไปติดตั้งบน "โดรนจำลอง" เพื่อบินสำรวจยอดต้นทุเรียน 
+                                ระบบ XR จะแสดง Bounding Box และ Confidence Score แบบเรียลไทม์เหนือกิ่งก้านไม้ในสภาพแวดล้อม 3 มิติเสมือนจริง
+                            </p>
+                            <div class="flex flex-wrap items-center gap-6">
+                                <a href="virtual-lab.php?scenario=drone" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border: none; padding: 15px 35px; border-radius: 50px;">
+                                    <span class="mr-2">🚀</span> Launch Drone Scan
+                                </a>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-emerald-400">
+                                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                    Inference Engine Live
                                 </div>
                             </div>
                         </div>
