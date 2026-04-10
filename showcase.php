@@ -152,9 +152,9 @@ require_once "db_connect.php";
                 <span class="section-tag" style="background: var(--showcase-accent); color: white;">Grand Finale Event</span>
                 <h1 style="font-size: 4rem; font-weight: 800; margin-bottom: 1rem; text-shadow: 0 5px 15px rgba(0,0,0,0.3);">Tech Showcase 2026</h1>
                 <p style="font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">มหกรรมแสดงผลงานนวัตกรรมดิจิทัลเกษตรและพิธีมอบรางวัลโครงงานยอดเยี่ยม</p>
-                <div style="margin-top: 2.5rem;">
-                    <button class="btn btn-primary" style="background: var(--showcase-accent);">Register to Attend</button>
-                    <button class="btn btn-secondary" style="border-color: white; color: white;">Event Map</button>
+                <div style="margin-top: 2.5rem; display: flex; gap: 15px; justify-content: center;">
+                    <button class="btn btn-primary" style="background: var(--showcase-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">Register to Attend</button>
+                    <button class="btn btn-glass">🗺️ Event Map</button>
                 </div>
             </div>
         </section>

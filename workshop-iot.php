@@ -168,8 +168,8 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
                 <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">AI-IoT Prototyping</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">กิจกรรมที่ 3: การสร้างต้นแบบเซ็นเซอร์อัจฉริยะและการวิเคราะห์ข้อมูลแบบ Edge Computing</p>
                 <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="docs/iot_smart_sensor_manual.md" class="btn btn-primary" style="background: var(--workshop-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);">📖 Full Manual (คู่มือฉบับเต็ม)</a>
-                    <button class="btn btn-glass">📟 Hardware BOM List</button>
+                    <a href="docs/iot_smart_sensor_manual.md" class="btn btn-primary" style="background: var(--workshop-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">📖 Full Manual (คู่มือฉบับเต็ม)</a>
+                    <a href="scripts/iot_sensor_hub.py" class="btn btn-glass">🐍 Download MicroPython Script (.py)</a>
                     <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-glass" target="_blank">🐙 View on GitHub</a>
                 </div>
             </div>
