@@ -12,6 +12,9 @@ $lang = array(
     'nav_activities' => 'กิจกรรม',
     'nav_contact' => 'ติดต่อสอบถาม',
     'nav_login' => 'เข้าสู่ระบบ',
+    'nav_workshop_1' => 'เวิร์กช็อป Climate',
+    'nav_workshop_2' => 'เวิร์กช็อป CNN',
+    'nav_workshop_3' => 'เวิร์กช็อป AI-IoT',
 
     // Hero Section
     'hero_title' => 'ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล',

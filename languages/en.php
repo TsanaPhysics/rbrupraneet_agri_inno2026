@@ -12,6 +12,9 @@ $lang = array(
     'nav_activities' => 'Activities',
     'nav_contact' => 'Contact Us',
     'nav_login' => 'Login',
+    'nav_workshop_1' => 'Climate Workshop',
+    'nav_workshop_2' => 'CNN Workshop',
+    'nav_workshop_3' => 'AI-IoT Workshop',
 
     // Hero Section
     'hero_title' => 'Digital Agri-Innovation Center',

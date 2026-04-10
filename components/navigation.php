@@ -19,7 +19,9 @@
                 <div class="nav-link has-dropdown"><?php echo $lang['nav_workshop']; ?> <span class="dropdown-icon">▼</span></div>
                 <div class="dropdown-menu">
                     <ul class="dropdown-list">
-                        <li><a href="workshop-climate.php" class="dropdown-item"><span class="item-icon">🌦️</span> เวิร์กช็อป Climate</a></li>
+                        <li><a href="workshop-climate.php" class="dropdown-item"><span class="item-icon">🌦️</span> <?php echo $lang['nav_workshop_1']; ?></a></li>
+                        <li><a href="workshop-cnn.php" class="dropdown-item"><span class="item-icon">🍃</span> <?php echo $lang['nav_workshop_2']; ?></a></li>
+                        <li><a href="workshop-iot.php" class="dropdown-item"><span class="item-icon">🤖</span> <?php echo $lang['nav_workshop_3']; ?></a></li>
                         <li><a href="index.php#activities" class="dropdown-item"><span class="item-icon">📌</span> <?php echo $lang['nav_activities']; ?></a></li>
                     </ul>
                 </div>
