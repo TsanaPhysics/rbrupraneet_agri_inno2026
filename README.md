@@ -73,28 +73,36 @@ rbru-agri-innovation/
 กิจกรรมวิเคราะห์ข้อมูลสภาพภูมิอากาศเพื่อการวางแผนการเพาะปลูก:
 - **📖 คู่มือฉบับเต็ม:** [หมวดวิทยาศาสตร์ข้อมูลเกษตร](docs/climate_hacking_full_manual.md)
 - **🐍 Python Notebooks:**
-  - [Session 1: พื้นฐาน Python & Agri-Math](notebooks/session1_basics.ipynb)
-  - [Session 2: การเชื่อมต่อ API & Cloud](notebooks/session2_api.ipynb)
-  - [Session 3: การวิเคราะห์ข้อมูลด้วย Pandas](notebooks/session3_data.ipynb)
-  - [Session 4: การสร้าง AI Smart Advisor](notebooks/session4_advisor.ipynb)
+  - [Session 1: พื้นฐาน Python & Agri-Math](notebooks/climate/session1_basics.ipynb)
+  - [Session 2: การเชื่อมต่อ API & Cloud](notebooks/climate/session2_api.ipynb)
+  - [Session 3: การวิเคราะห์ข้อมูลด้วย Pandas](notebooks/climate/session3_data.ipynb)
+  - [Session 4: การสร้าง AI Smart Advisor](notebooks/climate/session4_advisor.ipynb)
 
 ### 👁️ Workshop 2: Deep Dive Lab (CNN)
 ปัญญาประดิษฐ์เพื่อการจำแนกโรคพืช:
 - **📖 คู่มือฉบับเต็ม:** [หมวดคอมพิวเตอร์วิทัศน์เกษตร](docs/cnn_plant_disease_manual.md)
 - **🐍 Python Notebooks:**
-  - [Session 1: พื้นฐาน Computer Vision](notebooks/cnn_s1.ipynb)
-  - [Session 2: การทวีคูณข้อมูล (Augmentation)](notebooks/cnn_s2.ipynb)
-  - [Session 3: โครงสร้าง Neural Network](notebooks/cnn_s3.ipynb)
-  - [Session 4: การประเมินผลและการใช้จริง](notebooks/cnn_s4.ipynb)
+  - [Session 1: พื้นฐาน Computer Vision](notebooks/cnn/cnn_s1.ipynb)
+  - [Session 2: การทวีคูณข้อมูล (Augmentation)](notebooks/cnn/cnn_s2.ipynb)
+  - [Session 3: โครงสร้าง Neural Network](notebooks/cnn/cnn_s3.ipynb)
+  - [Session 4: การประเมินผลและการใช้จริง](notebooks/cnn/cnn_s4.ipynb)
 
 ### 📟 Workshop 3: AI-IoT Prototyping
 การสร้างต้นแบบเซ็นเซอร์อัจฉริยะ:
 - **📖 คู่มือฉบับเต็ม:** [หมวดวิศวกรรมฮาร์ดแวร์เกษตร](docs/iot_smart_sensor_manual.md)
 - **🐍 Python Notebooks:**
-  - [Session 1: ESP32 & MicroPython](notebooks/iot_s1.ipynb)
-  - [Session 2: การเชื่อมต่อเซ็นเซอร์](notebooks/iot_s2.ipynb)
-  - [Session 3: ระบบคลาวด์และ MQTT](notebooks/iot_s3.ipynb)
-  - [Session 4: ตรรกะ Edge AI รดน้ำอัตโนมัติ](notebooks/iot_s4.ipynb)
+  - [Session 1: ESP32 & MicroPython](notebooks/iot/iot_s1.ipynb)
+  - [Session 2: การเชื่อมต่อเซ็นเซอร์](notebooks/iot/iot_s2.ipynb)
+  - [Session 3: ระบบคลาวด์และ MQTT](notebooks/iot/iot_s3.ipynb)
+  - [Session 4: ตรรกะ Edge AI รดน้ำอัตโนมัติ](notebooks/iot/iot_s4.ipynb)
+
+### 💧 หลักสูตรระบบน้ำอัตโนมัติ 2568 (Automatic Watering System Curriculum 2568)
+หลักสูตรฝึกอบรมเชิงปฏิบัติการติดตั้งระบบน้ำอัจฉริยะระดับแปลงใหญ่:
+- **📖 บทสรุปและคลังข้อมูลหลักสูตร:** [หมวดวิศวกรรมระบบน้ำอัตโนมัติ 2568](aiiot2026/README.md)
+  - สรุปรายละเอียดกำหนดการสอน (แผนการสอน วันที่ 1, 2, 3-4) และสไลด์บรรยาย
+  - คลังใบงานปฏิบัติการ (Lab 1 ถึง Lab 8) ทั้งในรูปแบบไฟล์ Word และ PDF
+  - สเปรดชีตคำนวณความต้องการใช้น้ำทุเรียน (FAO-56) สูญเสียแรงดันในท่อ และคำนวณผสมปุ๋ย
+  - แพ็กเกจเครื่องมือจำลองไฟฟ้ากำลังและการสื่อสารอุตสาหกรรม (Modbus & CADe_SIMU)
 
 ---
 *Created by Antigravity AI for RBRU-Praneet Digital Agri-Innovation Center*

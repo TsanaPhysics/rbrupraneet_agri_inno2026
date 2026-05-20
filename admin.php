@@ -64,6 +64,7 @@ echo '<div class="admin-container">';
 echo '<h2>Admin Dashboard - Registrations</h2>';
 echo '<div style="margin-bottom: 20px;">';
 echo '<a href="participant_list.php" target="_blank" class="btn btn-secondary" style="margin-right: 10px;">View Public Participant List</a>';
+echo '<a href="budget_report.php" target="_blank" class="btn btn-warning" style="margin-right: 10px;">Project Budget Report</a>';
 echo '<a href="index.php" class="btn btn-primary">Back to Site</a>';
 echo '</div>';
 

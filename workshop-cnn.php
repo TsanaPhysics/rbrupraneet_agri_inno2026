@@ -7,8 +7,8 @@ require_once "db_connect.php";
 // GitHub Configuration
 $github_user = "TsanaPhysics";
 $github_repo = "rbrupraneet_agri_inno2026";
-$github_base = "https://github.com/$github_user/$github_repo/blob/main/notebooks/";
-$colab_base = "https://colab.research.google.com/github/$github_user/$github_repo/blob/main/notebooks/";
+$github_base = "https://github.com/$github_user/$github_repo/blob/main/notebooks/cnn/";
+$colab_base = "https://colab.research.google.com/github/$github_user/$github_repo/blob/main/notebooks/cnn/";
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang_code; ?>">
@@ -16,28 +16,36 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Dive Lab: CNN for Plant Disease | Interactive Workshop</title>
+    <title>Deep Dive Lab: CNN | AIDA xAI Center</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/sections.css">
     <!-- Prism.js for Code Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    
+
     <style>
         :root {
-            --code-bg: #1e1e1e;
-            --workshop-accent: #10b981; /* Green for CNN/Agriculture */
+            --code-bg: #0f172a;
+            --workshop-accent: #10b981;
+            --workshop-amber: #34d399;
+            --workshop-gold: #059669;
+            --workshop-soft: rgba(16, 185, 129, 0.05);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-2xl: 32px;
         }
 
         .workshop-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/activities/cnn_plant_lab.png');
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.9)), url('assets/images/cnn_hero_green.png');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,18 +59,18 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             border-radius: var(--radius-2xl);
             padding: 2.5rem;
             margin-bottom: 3rem;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .session-tag {
             background: var(--workshop-accent);
             color: white;
-            padding: 4px 12px;
+            padding: 4px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
             margin-bottom: 1rem;
         }
@@ -73,18 +81,18 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             border-radius: var(--radius-lg);
             overflow: hidden;
             background: var(--code-bg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .code-header {
-            background: #2d2d2d;
-            padding: 10px 20px;
+            background: #1e293b;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: #eee;
             font-size: 0.8rem;
-            border-bottom: 1px solid #3d3d3d;
+            border-bottom: 1px solid #334155;
         }
 
         .code-actions {
@@ -94,10 +102,10 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         }
 
         .code-btn {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #ccc;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.75rem;
@@ -109,15 +117,9 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         }
 
         .code-btn:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             border-color: var(--workshop-accent);
-        }
-
-        .btn-colab:hover {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border-color: #10b981;
         }
 
         pre[class*="language-"] {
@@ -129,37 +131,221 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
 
         .interactive-guide {
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 100px 1fr;
             gap: 3rem;
             margin-top: 3rem;
         }
 
         .guide-nav {
             position: sticky;
-            top: 100px;
+            top: 120px;
             height: fit-content;
+            max-height: calc(100vh - 160px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-right: 15px;
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 20px;
         }
 
+        .guide-nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .guide-nav::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+        }
+
+        .guide-nav::-webkit-scrollbar-thumb {
+            background: var(--workshop-accent);
+            border-radius: 10px;
+        }
+
+
         .nav-item {
-            padding: 1.2rem;
+            padding: 10px;
             border-radius: var(--radius-lg);
-            margin-bottom: 0.8rem;
             cursor: pointer;
-            transition: all 0.3s;
-            border-left: 4px solid transparent;
-            background: rgba(0,0,0,0.02);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+            width: 90px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
         .nav-item.active {
-            background: rgba(16, 185, 129, 0.08);
-            color: var(--workshop-accent);
-            border-left-color: var(--workshop-accent);
-            font-weight: 600;
+            background: var(--workshop-soft);
+            border-color: var(--workshop-accent);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 15px 25px rgba(16, 185, 129, 0.2);
         }
 
-        @media (max-width: 992px) {
-            .interactive-guide { grid-template-columns: 1fr; }
-            .guide-nav { display: none; }
+        .nav-icon {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 5px;
+        }
+
+        .nav-item span {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--slate);
+            text-transform: uppercase;
+        }
+
+        .nav-item.active span {
+            color: var(--workshop-accent);
+        }
+
+        /* NEW: Reveal Solution Styles */
+        .reveal-box {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .solution-content {
+            display: none;
+            color: var(--workshop-gold);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .solution-content.show {
+            display: block;
+        }
+
+        .btn-reveal {
+            background: var(--workshop-accent);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-reveal:hover {
+            background: var(--workshop-gold);
+        }
+
+        /* NEW: Lab Tables */
+        .lab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+
+        .lab-table th {
+            background: var(--workshop-soft);
+            color: var(--workshop-gold);
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid var(--workshop-accent);
+        }
+
+        .lab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .btn-hologram {
+            position: relative;
+            padding: 14px 35px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #fff !important;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 2px solid rgba(16, 185, 129, 0.5);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3), inset 0 0 15px rgba(16, 185, 129, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-hologram:hover {
+            transform: translateY(-5px) scale(1.05);
+            border-color: var(--workshop-amber);
+            box-shadow: 0 0 30px rgba(235, 120, 0, 0.6), inset 0 0 20px rgba(235, 120, 0, 0.4);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .theory-panel {
+            background: var(--workshop-soft);
+            border-left: 4px solid var(--workshop-accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-md);
+        }
+
+        .mag-img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .xr-simulator-box {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 2.5rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(16, 185, 129, 0.05);
+            text-align: center;
+        }
+
+        .xr-simulator-box::before {
+            content: '3D XR SIMULATOR';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--workshop-gold);
+            letter-spacing: 2px;
+            background: #1e293b;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 4px 15px;
+            border-radius: 20px;
+        }
+
+        .xr-simulator-box img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
@@ -171,210 +357,94 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         <!-- Workshop Hero -->
         <section class="workshop-hero">
             <div class="container">
-                <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Deep Dive Lab: CNN</h1>
-                <p style="font-size: 1.2rem; opacity: 0.9;">กิจกรรมที่ 2: ปัญญาประดิษฐ์เพื่อการจำแนกโรคพืชด้วยเทคนิค Deep Learning</p>
-                <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="docs/cnn_plant_disease_manual.md" class="btn btn-primary" style="background: var(--workshop-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">📖 Full Manual (คู่มือฉบับเต็ม)</a>
-                    <a href="scripts/cnn_disease_finder.py" class="btn btn-glass">🐍 Download Starter Code (.py)</a>
-                    <a href="https://github.com/TsanaPhysics/rbrupraneet_agri_inno2026/tree/main/notebooks" class="btn btn-glass" target="_blank">🐙 View on GitHub</a>
+                <h1
+                    style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">
+                    Deep Dive Lab: CNN</h1>
+                <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.9; margin-bottom: 2.5rem;">
+                    ปัญญาประดิษฐ์จำแนกโรคพืชด้วย Deep Learning
+                </p>
+                <div
+                    style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+                    <a href="manual-cnn-pocketbook.php" target="_blank" class="btn-hologram">
+                        <span>📖</span> คู่มือพิมพ์ฉบับสมบูรณ์
+                    </a>
+                    <a href="scripts/cnn_starter.py" class="btn-hologram" style="border-color: var(--workshop-gold);">
+                        <span>🔰</span> Starter Script
+                    </a>
+                    <a href="scripts/rbru_cnn_master.py" target="_blank" class="btn-hologram"
+                        style="border-color: #ef4444; background: rgba(239, 68, 68, 0.1);">
+                        <span>🔥</span> Master Code (รวมดึง API & DSS)
+                    </a>
+                    <a href="data/leaf_disease_dataset.zip" class="btn-hologram"
+                        style="border-color: var(--workshop-amber);">
+                        <span>📊</span> DATASET (.CSV)
+                    </a>
                 </div>
             </div>
         </section>
 
+        <?php
+        $sessions_json = file_get_contents('data/cnn_sessions.json');
+        $cnn_sessions = json_decode($sessions_json, true) ?? [];
+        ?>
         <section class="container" style="padding: 4rem 1rem;">
             <div class="interactive-guide">
-                <!-- Side Nav -->
+                <!-- Side Nav with 3D Icons -->
                 <aside class="guide-nav">
-                    <div class="nav-item active" onclick="scrollToSession('session-1')">Session 1: Computer Vision</div>
-                    <div class="nav-item" onclick="scrollToSession('session-2')">Session 2: Data Augmentation</div>
-                    <div class="nav-item" onclick="scrollToSession('session-3')">Session 3: Neural Architecture</div>
-                    <div class="nav-item" onclick="scrollToSession('session-4')">Session 4: Deployment AI</div>
+                    <?php foreach ($cnn_sessions as $index => $s): ?>
+                        <div class="nav-item <?= $index === 0 ? 'active' : '' ?>"
+                            onclick="scrollToSession('<?= $s['id'] ?>')" title="<?= htmlspecialchars($s['title']) ?>">
+                            <img src="<?= $s['xr_image'] ?>" class="nav-icon" alt="<?= $s['id'] ?>">
+                            <span>S.<?= $index + 1 ?></span>
+                        </div>
+                    <?php endforeach; ?>
                 </aside>
 
                 <!-- Content Area -->
                 <div class="guide-content">
-                    
-                    <!-- Session 1 -->
-                    <div id="session-1" class="session-card">
-                        <span class="session-tag">Session 1 (3 Hours)</span>
-                        <h2>ดวงตาของปัญญาประดิษฐ์</h2>
-                        <p>เรียนรู้วิธีที่คอมพิวเตอร์ "มองเห็น" ภาพผ่าน OpenCV แปรรูปข้อมูลภาพเบื้องต้น (Pre-processing) เพื่อเตรียมเข้าสู่โครงข่ายประสาทเทียม</p>
-                        
-                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: คอมพิวเตอร์มองเห็นได้อย่างไร?</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">คอมพิวเตอร์มองภาพไม่ใช่เป็นรูป แต่เป็น "ตารางตัวเลข" (Matrix) ของพิกเซล โดยแต่ละพิกเซลจะมีค่าความสว่างของสี แดง (R), เขียว (G), และน้ำเงิน (B) การแปรรูปภาพ (Pre-processing) เช่น การแปลงเป็น RGB จึงสำคัญมากเพื่อให้ AI เข้าใจข้อมูลสีที่ถูกต้องของขอบใบไม้</p>
-                        </div>
-                        
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 cnn_s1.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>cnn_s1.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>cnn_s1.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
+                    <?php foreach ($cnn_sessions as $index => $s): ?>
+                        <div id="<?= $s['id'] ?>" class="session-card">
+                            <span class="session-tag">Session <?= $index + 1 ?> (1 Hour)</span>
+                            <h2 style="color: var(--workshop-gold);"><?= htmlspecialchars($s['title']) ?></h2>
+                            <p><?= htmlspecialchars($s['desc']) ?></p>
+
+                            <div class="theory-panel"
+                                style="background: var(--workshop-soft); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin: 2rem 0 1rem; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--workshop-gold); margin-bottom: 0.5rem;">🧠 ตัวอย่างการสร้างโค้ด
+                                    (Learning Examples)</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">ในบทนี้มี <?= count($s['examples']) ?>
+                                    ตัวอย่างที่ไล่ระดับความซับซ้อน ให้นักเรียนลองฝึกพิมพ์ผ่าน Editor หรือ Colab</p>
                             </div>
-                            <pre><code class="language-python">import cv2
-import matplotlib.pyplot as plt
 
-# โหลดภาพใบพืชเพื่อวิเคราะห์
-img = cv2.imread('leaf.jpg')
-img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-# แสดงผลเบื้องต้น
-plt.imshow(img_rgb)
-plt.axis('off')
-plt.show()</code></pre>
-                        </div>
-
-                        <div class="code-walkthrough" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
-                            <h5 style="color: var(--text-primary); margin-bottom: 0.5rem;">🔍 เจาะลึกโค้ด (Code Walkthrough)</h5>
-                            <ul style="padding-left: 1.2rem;">
-                                <li><code>cv2.imread</code>: การอ่านไฟล์ภาพจากหน่วยความจำเข้ามาเป็นข้อมูลตัวเลข</li>
-                                <li><code>cv2.cvtColor</code>: การสลับช่องสีจาก BGR (ค่าเริ่มต้นของ OpenCV) เป็น RGB เพื่อให้สีดูเป็นธรรมชาติ</li>
-                                <li><code>plt.imshow</code>: คำสั่งจาก Library Matplotlib เพื่อวาดภาพพิกเซลออกมาให้มนุษย์ดู</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การแก้ปัญหาข้อมูลน้อย (Data Scarcity)</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการทำ AI การเกษตร เรามักจะมีภาพโรคพืชจำกัด การใช้ Data Augmentation เพื่อสร้างภาพจำลองขึ้นมาใหม่ (เช่น การพลิกภาพ, การซูม, การปรับแสง) จะช่วยให้ AI เรียนรู้พิกเซลที่หลากหลายขึ้น ลดการเกิด Overfitting และทำให้โมเดล "ฉลาด" ขึ้นในสภาพแสงจริง</p>
-                        </div>
-
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 cnn_s2.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>cnn_s2.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>cnn_s2.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
+                            <?php foreach ($s['examples'] as $ex_idx => $ex): ?>
+                                <h4 style="color: var(--workshop-amber); margin-top: 1.5rem;">🔹
+                                    <?= htmlspecialchars($ex['title']) ?>
+                                </h4>
+                                <div class="code-container" style="margin-bottom: 1.5rem;">
+                                    <div class="code-header">
+                                        <span>📁 <?= $s['id'] ?>_ex<?= $ex_idx + 1 ?>.py</span>
+                                        <div class="code-actions">
+                                            <a href="<?= $github_base ?><?= $s['id'] ?>_ex<?= $ex_idx + 1 ?>.ipynb"
+                                                target="_blank" class="code-btn">GitHub</a>
+                                            <a href="<?= $colab_base ?><?= $s['id'] ?>_ex<?= $ex_idx + 1 ?>.ipynb"
+                                                target="_blank" class="code-btn">Colab</a>
+                                            <button class="code-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                    </div>
+                                    <pre><code class="language-python"><?= htmlspecialchars($ex['code']) ?></code></pre>
                                 </div>
-                            </div>
-                            <pre><code class="language-python">from tensorflow.keras.preprocessing.image import ImageDataGenerator
+                            <?php endforeach; ?>
 
-# สร้าง Generator ขั้นสูง (Advanced Augmentation)
-train_datagen = ImageDataGenerator(
-    rotation_range=40,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    shear_range=0.2,
-    zoom_range=0.2,
-    horizontal_flip=True,
-    fill_mode='nearest'
-)</code></pre>
-                        </div>
-
-                    <!-- Session 3 -->
-                    <div id="session-3" class="session-card">
-                        <span class="session-tag">Session 3 (3 Hours)</span>
-                        <h2>สร้างสมองกลด้วย CNN</h2>
-                        <p>ลงลึกโครงสร้าง Convolutional Neural Network (Conv2D, Pooling, Dense) และเริ่มการเทรนโมเดลด้วย TensorFlow</p>
-                        
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 cnn_s3.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>cnn_s3.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>cnn_s3.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
-                            </div>
-                            <pre><code class="language-python">from tensorflow.keras import layers, models
-
-model = models.Sequential([
-    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
-    layers.MaxPooling2D((2, 2)),
-    layers.Flatten(),
-    layers.Dense(3, activation='softmax') # จำแนก 3 หมวดหมู่
-])
-
-model.summary()</code></pre>
-                        </div>
-                    </div>
-
-                        <div class="theory-panel" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การปรับจูนและส่งออกโมเดล (Optimization & TFLite)</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">เมื่อเทรนโมเดลเสร็จ เราต้องทำการ "บีบอัด" (Quantization) เพื่อให้โมเดลมีขนาดเล็กพอที่จะทำงานบนมือถือหรืออุปกรณ์ Edge ได้รวดเร็ว โดยไม่เสียความแม่นยำมากนัก การใช้ TFLite คือมาตรฐานอุตสาหกรรมสำหรับการนำ AI ลงสู่พื้นที่จริง</p>
-                        </div>
-
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 cnn_s4.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>cnn_s4.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>cnn_s4.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
-                            </div>
-                            <pre><code class="language-python">import tensorflow as tf
-
-# แปลงโมเดลเป็น TFLite (Mobile Optimization)
-converter = tf.lite.TFLiteConverter.from_keras_model(model)
-tflite_model = converter.convert()
-
-# บันทึกไฟล์เพื่อนำไปใช้บนสมาร์ทโฟน
-with open('leaf_ai_model.tflite', 'wb') as f:
-    f.write(tflite_model)
-
-print("✅ Optimization Complete: Model ready for Smartphone deployment!")</code></pre>
-                        </div>
-
-                    <!-- Smartphone Vision Lab (Ported Feature) -->
-                    <div class="mt-20 p-10 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden group border border-white/5">
-                        <div class="absolute top-0 right-0 w-80 h-80 bg-orange-500 opacity-10 blur-[100px] -mr-40 -mt-40 group-hover:opacity-20 transition-opacity duration-700"></div>
-                        <div class="relative z-10">
-                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-                                <div class="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center text-4xl shadow-inner">📱</div>
-                                <div class="text-center md:text-left">
-                                    <h3 class="text-3xl font-black mb-2">Smartphone Vision Hub</h3>
-                                    <p class="text-slate-400">Deploy and test your models in the real orchard</p>
-                                </div>
-                            </div>
-                            <p class="text-slate-300 mb-10 leading-relaxed text-lg">
-                                เมื่อฝึกฝนโมเดลเสร็จสิ้น นักเรียนสามารถส่งออกโมเดล (TFLite/Keras) เพื่อทดสอบผ่านสมาร์ทโฟน 
-                                โดยใช้กล้องสแกนใบต้นไม้ในพื้นที่จริงเพื่อจำแนกโรคทุเรียนได้ทันทีผ่านระบบ Web-based Inference ที่เราจัดเตรียมไว้ให้
-                            </p>
-                            <div class="flex flex-wrap items-center gap-6">
-                                <a href="virtual-lab.php" class="btn btn-primary" style="background: var(--primary-gradient); border: none; padding: 15px 35px; border-radius: 50px;">
-                                    <span class="mr-2">🚀</span> Launch Test Simulation
-                                </a>
-                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-emerald-400">
-                                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                                    Camera Interface Ready
-                                </div>
+                            <div class="xr-simulator-box">
+                                <h4 style="color: white; margin-bottom: 0.5rem; text-transform: uppercase;">XR Output:
+                                    ผลลัพธ์ที่จับต้องได้</h4>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                                    <?= htmlspecialchars($s['xr_caption']) ?>
+                                </p>
+                                <img src="<?= $s['xr_image'] ?>" alt="XR Simulator Preview">
                             </div>
                         </div>
-                    </div>
-
-                    <!-- 3D AI Vision Simulator Preview -->
-                    <div class="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-emerald-950 text-white relative overflow-hidden group border border-emerald-500/20">
-                        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
-                            <img src="assets/images/simulators/cnn_3d_preview.png" alt="3D AI Vision Simulator" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-                                <div class="w-20 h-20 rounded-3xl bg-emerald-500/20 backdrop-filter blur-xl flex items-center justify-center text-4xl shadow-inner border border-white/20">🛸</div>
-                                <div class="text-center md:text-left">
-                                    <h3 class="text-3xl font-black mb-2">3D AI Vision Drone Lab</h3>
-                                    <p class="text-emerald-300">จำลองการตรวจจับโรคพืชด้วยฝูงโดรนอัจฉริยะ</p>
-                                </div>
-                            </div>
-                            <p class="text-slate-300 mb-10 leading-relaxed text-lg max-width: 600px;">
-                                สัมผัสประสบการณ์การนำโมเดล CNN ที่คุณสร้างขึ้นไปติดตั้งบน "โดรนจำลอง" เพื่อบินสำรวจยอดต้นทุเรียน 
-                                ระบบ XR จะแสดง Bounding Box และ Confidence Score แบบเรียลไทม์เหนือกิ่งก้านไม้ในสภาพแวดล้อม 3 มิติเสมือนจริง
-                            </p>
-                            <div class="flex flex-wrap items-center gap-6">
-                                <a href="virtual-lab.php?scenario=drone" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border: none; padding: 15px 35px; border-radius: 50px;">
-                                    <span class="mr-2">🚀</span> Launch Drone Scan
-                                </a>
-                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-emerald-400">
-                                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                                    Inference Engine Live
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -385,37 +455,42 @@ print("✅ Optimization Complete: Model ready for Smartphone deployment!")</code
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-    
+
     <script>
         function copyCode(btn) {
+
             const pre = btn.parentElement.nextElementSibling;
             const code = pre.textContent;
             navigator.clipboard.writeText(code).then(() => {
                 const originalText = btn.textContent;
                 btn.textContent = 'Copied!';
-                btn.style.borderColor = '#10b981';
+                btn.style.color = '#fbbf24';
                 setTimeout(() => {
                     btn.textContent = originalText;
-                    btn.style.borderColor = '#555';
+                    btn.style.color = '#ccc';
                 }, 2000);
             });
         }
 
         function scrollToSession(id) {
-            const element = document.getElementById(id);
+            const el = document.getElementById(id);
             const offset = 100;
             const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
+            const elementRect = el.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
             const offsetPosition = elementPosition - offset;
 
-            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
 
+        // Scroll spy logic
         window.addEventListener('scroll', () => {
             const sessions = ['session-1', 'session-2', 'session-3', 'session-4'];
             let current = '';
-            
+
             sessions.forEach(id => {
                 const element = document.getElementById(id);
                 const rect = element.getBoundingClientRect();

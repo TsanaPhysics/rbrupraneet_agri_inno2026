@@ -40,6 +40,7 @@ checkAdminAuth();
             <a href="manage_notebook.php"><i class="bi bi-journal-text"></i> NotebookLM (AI Brain)</a>
             <a href="manage_activities.php"><i class="bi bi-calendar-event"></i> Activities</a>
             <a href="manage_team.php"><i class="bi bi-people"></i> Team Members</a>
+            <a href="../budget_report.php" target="_blank"><i class="bi bi-currency-dollar"></i> Project Budget</a>
              <a href="manage_kb.php"><i class="bi bi-chat-dots"></i> Simple Q&A (Legacy)</a>
             <a href="logout.php" class="text-danger mt-5"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
@@ -70,6 +71,15 @@ checkAdminAuth();
                             <h5>Team Members</h5>
                             <p>Manage Team</p>
                             <a href="manage_team.php" class="btn btn-light btn-sm">Manage</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-dark mb-3">
+                        <div class="card-body">
+                            <h5>Budget Report</h5>
+                            <p>Financial Summary</p>
+                            <a href="../budget_report.php" target="_blank" class="btn btn-dark btn-sm">View Report</a>
                         </div>
                     </div>
                 </div>

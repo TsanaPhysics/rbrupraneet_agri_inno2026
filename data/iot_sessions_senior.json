@@ -1,0 +1,15 @@
+[
+    {
+        "id": "iot-s-1",
+        "title": "MQTT & Protocols",
+        "desc": "Wireless communication for Agri-Nodes",
+        "xr_image": "assets/images/cloud_lab.png",
+        "xr_caption": "XR: Data Stream Pipeline",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "client.publish('topic', payload)"
+            }
+        ]
+    }
+]

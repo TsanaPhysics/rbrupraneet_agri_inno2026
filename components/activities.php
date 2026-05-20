@@ -80,17 +80,18 @@ $activities_list = $db_activities->all();
                     <?php echo htmlspecialchars($desc); ?>
                 </p>
 
-                <div class="activity-actions" style="margin-top: auto; padding-top: 15px; display: flex; flex-direction: column; gap: 8px;">
+                <div class="activity-actions" style="margin-top: auto; padding-top: 15px;">
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <button class="activity-toggle">
-                            <span class="toggle-text">รายละเอียด</span>
-                            <span class="toggle-icon">+</span>
-                        </button>
-                        
                         <?php if($link): ?>
-                            <a href="<?php echo htmlspecialchars($link); ?>" target="_blank" class="btn-action btn-visit">
-                                🌐 Visit Website
+                            <a href="<?php echo htmlspecialchars($link); ?>" target="_blank" class="activity-toggle" style="text-decoration: none; padding: 10px 25px;">
+                                <span class="toggle-text">รายละเอียด</span>
+                                <span class="toggle-icon">↗️</span>
                             </a>
+                        <?php else: ?>
+                            <button class="activity-toggle">
+                                <span class="toggle-text">รายละเอียด</span>
+                                <span class="toggle-icon">+</span>
+                            </button>
                         <?php endif; ?>
 
                         <?php if($doc_path): ?>

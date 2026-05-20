@@ -15,19 +15,19 @@
 
 ## 📅 โครงสร้างการเรียนรู้ (Curriculum Overview)
 
-### 1. [Session 1: Computer Vision Basics](../notebooks/cnn_s1.ipynb)
+### 1. [Session 1: Computer Vision Basics](../notebooks/cnn/cnn_s1.ipynb)
 - **เรียนรู้:** การอ่านพิกเซล, การแปลงสี (Grayscale), และ OpenCV
 - **Highlight:** ฝึกประมวลผลใบไม้เพื่อหาพื้นที่โรคเบื้องต้น
 
-### 2. [Session 2: Advanced Data Augmentation](../notebooks/cnn_s2.ipynb)
+### 2. [Session 2: Advanced Data Augmentation](../notebooks/cnn/cnn_s2.ipynb)
 - **เรียนรู้:** เทคนิคการบิด หมุน ปรับแสง และการจัดสรรข้อมูล (Train/Val/Test Split)
 - **Highlight:** สร้าง Synthetic Data เพื่อให้ AI ทนทานต่อสภาพแสงที่แตกต่างกันในสวนจริง
 
-### 3. [Session 3: Transfer Learning Architecture](../notebooks/cnn_s3.ipynb)
+### 3. [Session 3: Transfer Learning Architecture](../notebooks/cnn/cnn_s3.ipynb)
 - **เรียนรู้:** การใช้งานโมเดลสำเร็จรูป (MobileNet-V2 / ResNet) และการทำ Fine-tuning
 - **Highlight:** ยืมพลังสมองกลระดับโลกมาช่วยจำแนกโรคทุเรียนเมืองจันท์
 
-### 4. [Session 4: Edge Optimization & TFLite](../notebooks/cnn_s4.ipynb)
+### 4. [Session 4: Edge Optimization & TFLite](../notebooks/cnn/cnn_s4.ipynb)
 - **เรียนรู้:** การทำ Quantization และการส่งออกโมเดลสำหรับอุปกรณ์เคลื่อนที่
 - **Highlight:** เปลี่ยนโมเดลขนาดใหญ่ให้กลายเป็นไฟล์จิ๋วที่พร้อมทำงานบนโดรนและสมาร์ทโฟน
 

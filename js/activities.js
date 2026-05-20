@@ -48,24 +48,24 @@ export function initActivityToggle() {
 export function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe all cards and sections
-    const animatedElements = document.querySelectorAll('.about-card, .activity-card, .stat-item');
+    // Observe all cards, sections, and reveal elements
+    const animatedElements = document.querySelectorAll('.reveal, .about-card, .activity-card, .stat-item');
     animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        if (!element.classList.contains('reveal')) {
+            element.classList.add('reveal');
+        }
         observer.observe(element);
     });
 }
@@ -73,11 +73,15 @@ export function initScrollAnimations() {
 // Counter Animation for Stats
 export function initCounterAnimation() {
     function animateCounter(element) {
-        const target = parseInt(element.textContent);
+        if (!element) return;
+        const target = parseInt(element.getAttribute('data-target') || '0');
+        if (target === 0) return;
+        
         let current = 0;
-        const increment = target / 50;
-        const duration = 1000;
-        const stepTime = duration / 50;
+        const duration = 1500;
+        const stepTime = 30;
+        const totalSteps = duration / stepTime;
+        const increment = target / totalSteps;
 
         const timer = setInterval(() => {
             current += increment;
@@ -94,11 +98,13 @@ export function initCounterAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const statNumber = entry.target.querySelector('.stat-number');
-                animateCounter(statNumber);
+                if (statNumber) {
+                    animateCounter(statNumber);
+                }
                 statsObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.stat-item').forEach(stat => {
         statsObserver.observe(stat);

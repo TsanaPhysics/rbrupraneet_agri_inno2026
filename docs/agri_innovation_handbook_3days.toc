@@ -1,0 +1,266 @@
+\contentsline {chapter}{\numberline {1}โครงการศูนย์พัฒนานวัตกรรมเกษตรดิจิทัลรำไพพรรณี ประณีตวิทยาคม}{14}{}%
+\contentsline {section}{\numberline {1.1}คู่มือนวัตกรเกษตรดิจิทัลรุ่นเยาว์: การบูรณาการปัญญาประดิษฐ์และอินเทอร์เน็ตของสรรพสิ่งในแปลงเกษตรแม่นยำ}{14}{}%
+\contentsline {subsection}{\numberline {1.1.1}คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏรำไพพรรณี}{14}{}%
+\contentsline {chapter}{สารบัญรายละเอียดวิชาเรียนอบรม 3 วัน}{15}{}%
+\contentsline {section}{\numberline {1.2}โครงการศูนย์พัฒนานวัตกรรมเกษตรดิจิทัลรำไพพรรณี ประณีตวิทยาคม}{15}{}%
+\contentsline {chapter}{หน้าปก คำนำ และการวิเคราะห์วัตถุประสงค์เชิงเป้าหมายการเรียนรู้ (Preface \& Educational Objectives Matrix)}{17}{}%
+\contentsline {chapter}{\numberline {2}คู่มือนวัตกรเกษตรดิจิทัลรุ่นเยาว์:}{18}{}%
+\contentsline {chapter}{\numberline {3}การบูรณาการปัญญาประดิษฐ์และอินเทอร์เน็ตของสรรพสิ่งในแปลงเกษตรแม่นยำ}{19}{}%
+\contentsline {section}{\numberline {3.1}คำนำ (Preface)}{19}{}%
+\contentsline {section}{\numberline {3.2}การวิเคราะห์วัตถุประสงค์เชิงเป้าหมายการเรียนรู้ (Educational Objectives Matrix)}{21}{}%
+\contentsline {section}{\numberline {3.3}โครงการปฏิบัติการ: การสร้าง "กล่องนวัตกรสมาร์ทฟาร์ม" (Smart Farm Innovator Box)}{23}{}%
+\contentsline {subsection}{\numberline {3.3.1}1. หลักการและเหตุผลเชิงวิชาการ (Academic Rationale)}{23}{}%
+\contentsline {subsection}{\numberline {3.3.2}2. องค์ประกอบทางฟิสิกส์และเทคโนโลยีที่ใช้ (Physical and Technological Components)}{23}{}%
+\contentsline {subsubsection}{2.1 ส่วนการรับรู้ (Sensing Layer)}{23}{}%
+\contentsline {subsubsection}{2.2 ส่วนการประมวลผลและควบคุม (Processing and Control Layer)}{24}{}%
+\contentsline {subsubsection}{2.3 ส่วนการตอบสนองและสั่งการ (Actuator Layer)}{25}{}%
+\contentsline {section}{\numberline {3.4}รายการสัญลักษณ์และตัวย่อทางวิชาการ (List of Symbols and Abbreviations)}{25}{}%
+\contentsline {chapter}{\numberline {4}บทที่ 1: ฟิสิกส์อุตุนิยมวิทยาเกษตรและการประมวลผลข้อมูลอนุกรมเวลา (Day 1)}{27}{}%
+\contentsline {section}{\numberline {4.1}1.1 ดุลภูมิอากาศและสรีรวิทยาของทุเรียนตะวันออก (Agro-Climatology and Eastern Durian Physiology)}{27}{}%
+\contentsline {chapter}{\numberline {5}ตำราวิชาการ: ฟิสิกส์เกษตรและระบบนิเวศดิจิทัล}{28}{}%
+\contentsline {section}{\numberline {5.1}บทที่ 1.1 ดุลภูมิอากาศและสรีรวิทยาของทุเรียนตะวันออก (Agro-Climatology and Eastern Durian Physiology)}{28}{}%
+\contentsline {subsection}{\numberline {5.1.1}บทนำ: ความสำคัญของการทำความเข้าใจปฏิสัมพันธ์ระหว่างสิ่งแวดล้อมกับสรีรวิทยาพืช}{28}{}%
+\contentsline {subsection}{\numberline {5.1.2}1. การวิเคราะห์กายภาพและสรีรวิทยาการเจริญเติบโตของทุเรียนในระยะวิกฤต}{29}{}%
+\contentsline {subsubsection}{1.1 ลักษณะสรีรวิทยาของทุเรียนในระยะออกดอกและติดผล}{29}{}%
+\contentsline {subsubsection}{1.2 กลไกการตอบสนองต่อความเครียดจากน้ำ (Water Stress Response Mechanism)}{30}{}%
+\contentsline {subsection}{\numberline {5.1.3}2. แนวคิดทางฟิสิกส์เกษตร: ดัชนีความตึงเครียดจากน้ำและอุณหภูมิเรือนยอด}{30}{}%
+\contentsline {subsubsection}{2.1 ดัชนีความตึงเครียดจากน้ำของพืช (Crop Water Stress Index: CWSI)}{30}{}%
+\contentsline {subsubsection}{2.2 อุณหภูมิเรือนยอด (Canopy Temperature)}{31}{}%
+\contentsline {subsection}{\numberline {5.1.4}3. การวิเคราะห์สมการดุลพลังงานของเรือนยอดพืช (Canopy Energy Balance Equation)}{31}{}%
+\contentsline {subsubsection}{3.1 คำอธิบายตัวแปรทางฟิสิกส์และนิยามเชิงลึก}{32}{}%
+\contentsline {subsection}{\numberline {5.1.5}4. ความสัมพันธ์ระหว่างอุณหภูมิ ความชื้น และความดันไอน้ำ (Vapor Pressure Deficit: VPD)}{34}{}%
+\contentsline {subsubsection}{4.1 แนวคิดพื้นฐานของความดันไอน้ำ (Vapor Pressure)}{34}{}%
+\contentsline {subsubsection}{4.2 ความแตกต่างของความดันไอน้ำ (Vapor Pressure Deficit: VPD)}{34}{}%
+\contentsline {subsection}{\numberline {5.1.6}5. ตัวอย่างการคำนวณและการจำลองทางคอมพิวเตอร์ (Computational Modeling Example)}{35}{}%
+\contentsline {section}{\numberline {5.2}1.2 พื้นฐาน Python Sandbox สำหรับนวัตกรเยาวชน (Introduction to Python Programming \& Variables)}{36}{}%
+\contentsline {chapter}{\numberline {6}ภาควิชาวิศวกรรมศาสตร์และเทคโนโลยีเกษตรอัจฉริยะ}{37}{}%
+\contentsline {chapter}{\numberline {7}สาขาวิชาปัญญาประดิษฐ์และการเกษตรดิจิทัล}{38}{}%
+\contentsline {chapter}{\numberline {8}ระดับปริญญาตรี/บัณฑิตศึกษา}{39}{}%
+\contentsline {section}{\numberline {8.1}บทที่ 1.2 พื้นฐานภาษาไพธอน (Python) สำหรับนวัตกรเยาวชน: การจัดการข้อมูลและตรรกะการเขียนโปรแกรม}{39}{}%
+\contentsline {subsection}{\numberline {8.1.1}คำนำเชิงวิชาการ (Academic Preface)}{39}{}%
+\contentsline {subsection}{\numberline {8.1.2}1.2.1 สภาพแวดล้อมการเขียนโปรแกรมไพธอน (Python Environment and Sandbox)}{40}{}%
+\contentsline {subsection}{\numberline {8.1.3}1.2.2 ชนิดข้อมูลพื้นฐานและโครงสร้างข้อมูล (Data Types and Data Structures)}{41}{}%
+\contentsline {subsubsection}{2.2.1 ชนิดข้อมูลพื้นฐาน (Primitive Data Types)}{41}{}%
+\contentsline {subsubsection}{2.2.2 โครงสร้างข้อมูลแบบลำดับ (Collection Data Structures)}{41}{}%
+\contentsline {subsection}{\numberline {8.1.4}1.2.3 โครงสร้างควบคุมทิศทางโปรแกรม (Control Flow Structures)}{43}{}%
+\contentsline {subsubsection}{3.2.1 โครงสร้างเงื่อนไข (Conditional Statements): \texttt {if-elif-else}}{43}{}%
+\contentsline {subsubsection}{3.2.2 การวนลูป (Loops): \texttt {for} และ \texttt {while}}{44}{}%
+\contentsline {subsection}{\numberline {8.1.5}1.2.4 การประยุกต์ใช้: การจำลองระบบตรวจจับสภาวะวิกฤตความชื้นดิน (Soil Moisture Crisis Detection Simulation)}{45}{}%
+\contentsline {subsubsection}{💻 โค้ด Python สำหรับการจำลองระบบ (Python Source Code)}{45}{}%
+\contentsline {section}{\numberline {8.2}1.3 การดึงข้อมูลสภาพอากาศ TMD Open Data API และโครงสร้าง JSON}{46}{}%
+\contentsline {chapter}{\numberline {9}1.3 การดึงข้อมูลสภาพอากาศจาก TMD Open Data API และโครงสร้าง JSON}{47}{}%
+\contentsline {section}{\numberline {9.1}1.3.1 แนวคิดพื้นฐานของคลังข้อมูลเปิด (Open Data Repository) และ Web API}{47}{}%
+\contentsline {subsection}{\numberline {9.1.1}1.3.1.1 คลังข้อมูลเปิด (Open Data Repository)}{48}{}%
+\contentsline {subsection}{\numberline {9.1.2}1.3.1.2 สถาปัตยกรรม Web API (Web Application Programming Interface)}{48}{}%
+\contentsline {section}{\numberline {9.2}1.3.2 กลไกการร้องขอข้อมูลผ่าน API (API Request Mechanism)}{49}{}%
+\contentsline {subsection}{\numberline {9.2.1}1.3.2.1 องค์ประกอบของการร้องขอ (Request Components)}{49}{}%
+\contentsline {subsection}{\numberline {9.2.2}1.3.2.2 การเปรียบเทียบ HTTP GET และ HTTP POST}{49}{}%
+\contentsline {subsubsection}{1. HTTP GET Method}{50}{}%
+\contentsline {subsubsection}{2. HTTP POST Method}{50}{}%
+\contentsline {subsection}{\numberline {9.2.3}1.3.2.3 การใช้ API Key (Authentication)}{50}{}%
+\contentsline {section}{\numberline {9.3}1.3.3 โครงสร้างข้อมูล JSON (JavaScript Object Notation)}{51}{}%
+\contentsline {subsection}{\numberline {9.3.1}1.3.3.1 โครงสร้างพื้นฐานของ JSON}{51}{}%
+\contentsline {subsection}{\numberline {9.3.2}1.3.3.2 การวิเคราะห์พารามิเตอร์สภาพอากาศใน JSON}{52}{}%
+\contentsline {subsection}{\numberline {9.3.3}1.3.3.3 กระบวนการแปลงค่า (JSON Parsing)}{52}{}%
+\contentsline {section}{\numberline {9.4}1.3.4 การประยุกต์ใช้เชิงปฏิบัติ: การดึงข้อมูลสภาพอากาศด้วย Python}{53}{}%
+\contentsline {subsection}{\numberline {9.4.1}1.3.4.1 โค้ด Python สำหรับการดึงและวิเคราะห์ข้อมูล}{53}{}%
+\contentsline {section}{\numberline {9.5}1.4 การวิเคราะห์อนุกรมเวลาสภาพอากาศด้วย Pandas (Weather Time Series Analysis with Pandas \& Seaborn)}{56}{}%
+\contentsline {chapter}{\numberline {10}ภาควิชาวิทยาศาสตร์การเกษตรดิจิทัลและฟิสิกส์ประยุกต์}{57}{}%
+\contentsline {chapter}{\numberline {11}หัวข้อ 1.4 การวิเคราะห์อนุกรมเวลาสภาพอากาศด้วย Pandas (Weather Time Series Analysis with Pandas \& Seaborn)}{58}{}%
+\contentsline {section}{\numberline {11.1}บทนำ: ความสำคัญของการวิเคราะห์อนุกรมเวลาในอุตุนิยมวิทยาการเกษตร}{58}{}%
+\contentsline {section}{\numberline {11.2}1. องค์ประกอบทางทฤษฎี: การจัดการข้อมูลอนุกรมเวลาด้วย Pandas}{59}{}%
+\contentsline {subsection}{\numberline {11.2.1}1.1 การโหลดและการจัดการโครงสร้างข้อมูล (Data Loading and Structure Management)}{60}{}%
+\contentsline {subsection}{\numberline {11.2.2}1.2 การจัดการข้อมูลสูญหาย (Handling Missing Values: NaN)}{60}{}%
+\contentsline {section}{\numberline {11.3}2. การวิเคราะห์แนวโน้มด้วยค่าเฉลี่ยเคลื่อนที่ (Rolling Moving Average)}{61}{}%
+\contentsline {subsection}{\numberline {11.3.1}2.1 หลักการทางคณิตศาสตร์ (Mathematical Principle)}{61}{}%
+\contentsline {section}{\numberline {11.4}3. การปฏิบัติการ: การวิเคราะห์อนุกรมเวลาด้วย Python}{62}{}%
+\contentsline {subsection}{\numberline {11.4.1}3.1 การเตรียมสภาพแวดล้อมและข้อมูลจำลอง}{62}{}%
+\contentsline {subsection}{\numberline {11.4.2}3.2 โค้ด Python สำหรับการวิเคราะห์ (Python Code for Analysis)}{62}{}%
+\contentsline {section}{\numberline {11.5}4. การวิเคราะห์เชิงลึกและข้อสรุปทางวิชาการ}{65}{}%
+\contentsline {section}{\numberline {11.6}1.5 แบบจำลอง Drought Risk Index (DRI) Dashboard และระบบสนับสนุนการตัดสินใจ (Decision Support System)}{65}{}%
+\contentsline {chapter}{\numberline {12}บทที่ 1.5 แบบจำลอง Drought Risk Index (DRI) Dashboard และระบบสนับสนุนการตัดสินใจ (Decision Support System)}{66}{}%
+\contentsline {section}{\numberline {12.1}บทนำเชิงทฤษฎี: ระบบสนับสนุนการตัดสินใจในการเกษตร (Farm Decision Support System: DSS)}{66}{}%
+\contentsline {subsection}{\numberline {12.1.1}1.5.1 องค์ประกอบหลักของ DSS ในการเกษตร}{67}{}%
+\contentsline {section}{\numberline {12.2}1.5.2 การพัฒนาแบบจำลอง Drought Risk Index (DRI)}{68}{}%
+\contentsline {subsection}{\numberline {12.2.1}1.5.2.1 การนิยามตัวแปรทางคณิตศาสตร์}{68}{}%
+\contentsline {subsection}{\numberline {12.2.2}1.5.2.2 การสร้างแบบจำลองเชิงคณิตศาสตร์ (Mathematical Model Derivation)}{69}{}%
+\contentsline {section}{\numberline {12.3}1.5.3 การประยุกต์ใช้เชิงปฏิบัติ: การสร้าง Dashboard และระบบสนับสนุนการตัดสินใจด้วย Python}{71}{}%
+\contentsline {subsection}{\numberline {12.3.1}1.5.3.1 โค้ด Python สำหรับการคำนวณ DRI และ DSS}{71}{}%
+\contentsline {section}{\numberline {12.4}1.5.4 การวิเคราะห์เปรียบเทียบเชิงวิพากษ์: TMD Open API กับระบบตรวจวัดในฟาร์ม (In-situ Sensors)}{74}{}%
+\contentsline {section}{\numberline {12.5}1.5.5 คำศัพท์สำคัญประจำบทเรียน (Key Terms)}{74}{}%
+\contentsline {section}{\numberline {12.6}1.5.6 แบบฝึกหัดทบทวนและโจทย์คิดวิเคราะห์ (Review Exercises)}{74}{}%
+\contentsline {chapter}{\numberline {13}บทที่ 2: คอมพิวเตอร์วิทัศน์เชิงแสงและโครงข่ายประสาทเทียมลึกวิเคราะห์โรคพืช (Day 2)}{77}{}%
+\contentsline {section}{\numberline {13.1}2.1 ดัชนีสเปกตรัมพืชพรรณ (NDVI, EVI) และหลักการของคอมพิวเตอร์วิทัศน์ (Spectral Vegetation Indices \& Computer Vision)}{77}{}%
+\contentsline {chapter}{\numberline {14}2.1 ดัชนีสเปกตรัมพืชพรรณ (Spectral Vegetation Indices) และหลักการของคอมพิวเตอร์วิทัศน์ (Computer Vision)}{78}{}%
+\contentsline {section}{\numberline {14.1}2.1.1 หลักการทางฟิสิกส์ของการแผ่รังสีและการปฏิสัมพันธ์กับพืชพรรณ}{79}{}%
+\contentsline {subsection}{\numberline {14.1.1}1. การดูดกลืนและการสะท้อนของคลื่นแม่เหล็กไฟฟ้า (Absorption and Reflection)}{79}{}%
+\contentsline {subsubsection}{คุณสมบัติเฉพาะของพืชพรรณในย่านสเปกตรัมที่สำคัญ:}{80}{}%
+\contentsline {section}{\numberline {14.2}2.1.2 ดัชนีพืชพรรณผลต่างปกติ (Normalized Difference Vegetation Index: NDVI)}{80}{}%
+\contentsline {subsection}{\numberline {14.2.1}1. สมการทางคณิตศาสตร์ (Mathematical Equation)}{81}{}%
+\contentsline {subsection}{\numberline {14.2.2}2. การตีความเชิงลึก (In-Depth Interpretation)}{81}{}%
+\contentsline {section}{\numberline {14.3}2.1.3 ดัชนีสเปกตรัมขั้นสูง (Advanced Spectral Indices)}{82}{}%
+\contentsline {subsection}{\numberline {14.3.1}1. ดัชนีพืชพรรณที่ปรับปรุงแล้ว (Enhanced Vegetation Index: EVI)}{82}{}%
+\contentsline {subsubsection}{สมการทางคณิตศาสตร์ (Mathematical Equation):}{82}{}%
+\contentsline {subsection}{\numberline {14.3.2}2. ดัชนีสเปกตรัมขอบเขตสีแดง (Normalized Difference Red Edge: NDRE)}{83}{}%
+\contentsline {subsubsection}{สมการทางคณิตศาสตร์ (Mathematical Equation):}{83}{}%
+\contentsline {section}{\numberline {14.4}2.1.4 การประยุกต์คอมพิวเตอร์วิทัศน์ในการเกษตร (Computer Vision in Agriculture)}{84}{}%
+\contentsline {subsection}{\numberline {14.4.1}1. หลักการทำงานของ Computer Vision ในการเกษตร}{84}{}%
+\contentsline {subsection}{\numberline {14.4.2}2. ขั้นตอนการวิเคราะห์โรคและสุขภาพพืชด้วย Computer Vision}{85}{}%
+\contentsline {section}{\numberline {14.5}2.1.5}{86}{}%
+\contentsline {section}{\numberline {14.6}2.2 โครงสร้างคณิตศาสตร์ของ CNN (Convolutional Neural Networks: Convolution, ReLU, Max Pooling, Softmax)}{86}{}%
+\contentsline {chapter}{\numberline {15}2.2 โครงสร้างคณิตศาสตร์ของโครงข่ายประสาทเทียมแบบคอนโวลูชัน (Mathematical Structure of Convolutional Neural Networks: CNN)}{87}{}%
+\contentsline {section}{\numberline {15.1}2.2.1 ภาพรวมสถาปัตยกรรม CNN}{88}{}%
+\contentsline {section}{\numberline {15.2}2.2.2 ชั้นคอนโวลูชัน (Convolutional Layer)}{88}{}%
+\contentsline {subsection}{\numberline {15.2.1}2.2.2.1 หลักการทางคณิตศาสตร์ของการสังวัตนาการ}{89}{}%
+\contentsline {section}{\numberline {15.3}2.2.3 ฟังก์ชันกระตุ้นค่าเชิงเส้นแบบปรับแก้ (Rectified Linear Unit: ReLU)}{90}{}%
+\contentsline {section}{\numberline {15.4}2.2.4 ชั้นลดขนาดพื้นที่สูงสุด (Max Pooling Layer)}{91}{}%
+\contentsline {section}{\numberline {15.5}2.2.5 ชั้นเชื่อมต่อสมบูรณ์และฟังก์ชันซอฟต์แมกซ์ (Fully Connected Layer and Softmax Function)}{92}{}%
+\contentsline {subsection}{\numberline {15.5.1}2.2.5.1 การคำนวณในชั้นเชื่อมต่อสมบูรณ์}{92}{}%
+\contentsline {subsection}{\numberline {15.5.2}2.2.5.2 ฟังก์ชันซอฟต์แมกซ์ (Softmax Function)}{93}{}%
+\contentsline {section}{\numberline {15.6}2.2.6 การประยุกต์ใช้ในโค้ด (Python Implementation Example)}{94}{}%
+\contentsline {section}{\numberline {15.7}2.3 ปฏิบัติการสะสมชุดภาพถ่าย การขยายข้อมูลภาพ การฝึกโมเดลบน Google Colab และการส่งออก TFLite}{96}{}%
+\contentsline {chapter}{\numberline {16}2.3 ปฏิบัติการสะสมชุดภาพถ่าย การขยายข้อมูลภาพ การฝึกโมเดลบน Google Colab และการส่งออก TFLite}{97}{}%
+\contentsline {section}{\numberline {16.1}บทนำเชิงทฤษฎี (Theoretical Introduction)}{97}{}%
+\contentsline {section}{\numberline {16.2}2.3.1 กระบวนการเตรียมและรวบรวมชุดข้อมูลภาพถ่ายใบพืช (Dataset Collection Protocol)}{98}{}%
+\contentsline {subsection}{\numberline {16.2.1}2.3.1.1 หลักการเก็บข้อมูลภาคสนาม (Field Data Acquisition Principles)}{98}{}%
+\contentsline {subsection}{\numberline {16.2.2}2.3.1.2 การจัดโครงสร้างชุดข้อมูล (Dataset Structure)}{99}{}%
+\contentsline {section}{\numberline {16.3}2.3.2 ปัญหาการเรียนรู้เกินและการแก้ไขด้วย Data Augmentation}{100}{}%
+\contentsline {subsection}{\numberline {16.3.1}2.3.2.1 ปัญหาการเรียนรู้เกิน (Overfitting)}{100}{}%
+\contentsline {subsection}{\numberline {16.3.2}2.3.2.2 หลักการเพิ่มขยายข้อมูลภาพ (Data Augmentation Theory)}{100}{}%
+\contentsline {section}{\numberline {16.4}2.3.3 การปฏิบัติการบน Google Colab: การสร้างและฝึกโมเดล (Implementation on Google Colab)}{101}{}%
+\contentsline {subsection}{\numberline {16.4.1}2.3.3.1 โค้ด Python สำหรับการเตรียมข้อมูลและการสร้างโมเดล}{102}{}%
+\contentsline {section}{\numberline {16.5}2.4 การประดิษฐ์แอปพลิเคชันมือถือ Doctor AI App บน Kodular/App Inventor (Client-Server and Mobile Block Logic)}{105}{}%
+\contentsline {chapter}{\numberline {17}2.4 การประดิษฐ์แอปพลิเคชันมือถือ Doctor AI App บน Kodular/App Inventor (Client-Server and Mobile Block Logic)}{106}{}%
+\contentsline {section}{\numberline {17.1}บทนำเชิงทฤษฎี: แนวคิดการประยุกต์ใช้ปัญญาประดิษฐ์ในการเกษตรปลายทาง (Agro-AI Deployment)}{106}{}%
+\contentsline {section}{\numberline {17.2}2.4.1 การออกแบบสถาปัตยกรรมของแอปพลิเคชันมือถือในการเกษตรปลายทาง (Agro-Mobile App Architecture)}{107}{}%
+\contentsline {subsection}{\numberline {17.2.1}1. ชั้นส่วนหน้า (Client Layer: Mobile Device)}{107}{}%
+\contentsline {subsection}{\numberline {17.2.2}2. ชั้นการสื่อสาร (Communication Layer: Internet/API)}{108}{}%
+\contentsline {subsection}{\numberline {17.2.3}3. ชั้นส่วนหลัง (Server Layer: Cloud Computing)}{108}{}%
+\contentsline {section}{\numberline {17.3}2.4.2 แนวทางการพัฒนารูปแบบไร้โค้ด (No-code / Low-code Mobile App)}{109}{}%
+\contentsline {section}{\numberline {17.4}2.4.3 กลไกการสื่อสารข้อมูล: Base64 Encoding และ HTTP POST Request}{110}{}%
+\contentsline {subsection}{\numberline {17.4.1}1. หลักการของ Base64 Encoding}{110}{}%
+\contentsline {subsection}{\numberline {17.4.2}2. การส่งข้อมูลด้วย HTTP POST Request}{110}{}%
+\contentsline {section}{\numberline {17.5}2.4.4 การจำลองโค้ดส่วนหลัง (Server-Side Backend Simulation)}{111}{}%
+\contentsline {section}{\numberline {17.6}2.4.5 การออกแบบผังการต่อบล็อกคำสั่งใน Kodular (Client-Side Block Logic)}{112}{}%
+\contentsline {subsection}{\numberline {17.6.1}องค์ประกอบหลัก (Components) ที่ต้องใช้:}{112}{}%
+\contentsline {subsection}{\numberline {17.6.2}1. บล็อกคำสั่งการเปิดกล้องและการเลือกรูปภาพ (Image Acquisition Logic)}{113}{}%
+\contentsline {subsection}{\numberline {17.6.3}2. บล็อกคำสั่งของ Web Component ในการแปลงภาพเป็น Base64 และโพสต์ส่งไปยัง API Endpoint (Encoding and Posting Logic)}{113}{}%
+\contentsline {subsection}{\numberline {17.6.4}3. บล็อกคำสั่งการรับผลลัพธ์ JSON ตอบกลับและแยกแยะระดับความน่าจะเป็น (Receiving and Parsing Response Logic)}{114}{}%
+\contentsline {section}{\numberline {17.7}2.4.6 การวิเคราะห์เปรียบเทียบเชิงวิพากษ์: การแบ่งสีระดับส้มเด่นชัด (Traditional Thresholding) กับโครงข่ายประสาทเทียมลึก (CNN Deep Learning)}{115}{}%
+\contentsline {section}{\numberline {17.8}2.4.7 คำศัพท์สำคัญประจำบทเรียน (Key Terms)}{117}{}%
+\contentsline {section}{\numberline {17.9}2.4.8 แบบฝึกหัดทบทวนและโจทย์คิดวิเคราะห์ (Review Exercises)}{117}{}%
+\contentsline {chapter}{\numberline {18}บทที่ 3: ชลศาสตร์เขตรากพืช ระบบสมองกลฝังตัว และระบบนำทางอัจฉริยะ (Day 3)}{119}{}%
+\contentsline {section}{\numberline {18.1}3.1 ฟิสิกส์โซลาร์เซลล์ ความนำสารกึ่งตัวนำ และระบบพลังงานเก็บกักแบตเตอรี่ (Photovoltaic Semiconductor Physics \& Battery Systems)}{119}{}%
+\contentsline {chapter}{\numberline {19}ภาควิชาวิศวกรรมพลังงานและเกษตรดิจิทัล}{120}{}%
+\contentsline {chapter}{\numberline {20}ตำราเรียน: ฟิสิกส์พลังงานทางเลือกและระบบเกษตรอัจฉริยะ}{121}{}%
+\contentsline {chapter}{\numberline {21}หัวข้อ 3.1: ฟิสิกส์โซลาร์เซลล์ ความนำสารกึ่งตัวนำ และระบบพลังงานเก็บกักแบตเตอรี่}{122}{}%
+\contentsline {section}{\numberline {21.1}3.1 ฟิสิกส์โซลาร์เซลล์ ความนำสารกึ่งตัวนำ และระบบพลังงานเก็บกักแบตเตอรี่}{122}{}%
+\contentsline {subsection}{\numberline {21.1.1}3.1.1 หลักการทางฟิสิกส์ของปรากฏการณ์โฟโตวอลเทอิก (Photovoltaic Effect)}{123}{}%
+\contentsline {subsubsection}{3.1.1.1 โครงสร้างสารกึ่งตัวนำแบบรอยต่อ p-n (p-n Junction)}{123}{}%
+\contentsline {subsubsection}{3.1.1.2 กลไกการสร้างกระแสไฟฟ้า (Photogeneration Mechanism)}{124}{}%
+\contentsline {subsection}{\numberline {21.1.2}3.1.2 การคำนวณกำลังไฟฟ้าสูงสุดของแผงโซลาร์เซลล์ (Solar Panel Power Output Modeling)}{125}{}%
+\contentsline {subsubsection}{การอธิบายตัวแปรทางฟิสิกส์และวิศวกรรม:}{125}{}%
+\contentsline {subsection}{\numberline {21.1.3}3.1.3 หลักการเคมีไฟฟ้าและระบบประจุพลังงานแบตเตอรี่ (Electrochemistry and Battery Charging)}{125}{}%
+\contentsline {subsubsection}{3.1.3.1 เคมีไฟฟ้าของแบตเตอรี่ลิเธียมฟอสเฟต (LiFePO$_4$)}{127}{}%
+\contentsline {subsection}{\numberline {21.1.4}3.1.4 พารามิเตอร์จำลองสถานะของแบตเตอรี่ (Battery State Parameters)}{128}{}%
+\contentsline {subsubsection}{3.1.4.1 สถานะการชาร์จ (State of Charge: SOC)}{128}{}%
+\contentsline {subsubsection}{3.1.4.2 ดัชนีสุขภาพของแบตเตอรี่ (State of Health: SOH)}{128}{}%
+\contentsline {subsection}{\numberline {21.1.5}3.1.5 การจำลองการทำงานของระบบพลังงาน (Python Simulation Example)}{129}{}%
+\contentsline {section}{\numberline {21.2}3.2 บอร์ดฝังตัว ESP32, ไดรเวอร์ CH340 และสิ่งแวดล้อมโปรแกรม Arduino IDE}{130}{}%
+\contentsline {chapter}{\numberline {22}3.2 บอร์ดฝังตัว ESP32, ไดรเวอร์ CH340 และสิ่งแวดล้อมโปรแกรม Arduino IDE}{131}{}%
+\contentsline {section}{\numberline {22.1}3.2.1 สถาปัตยกรรมของไมโครคอนโทรลเลอร์ ESP32}{131}{}%
+\contentsline {subsection}{\numberline {22.1.1}3.2.1.1 โครงสร้างทางสถาปัตยกรรม (Architectural Structure)}{132}{}%
+\contentsline {subsection}{\numberline {22.1.2}3.2.1.2 หลักการทำงานของ Wi-Fi และ Bluetooth}{133}{}%
+\contentsline {section}{\numberline {22.2}3.2.2 การทำความเข้าใจแผนผังขาพิน (Pinout Map) ของ ESP32}{133}{}%
+\contentsline {subsection}{\numberline {22.2.1}3.2.2.1 ประเภทของขาพิน (Pin Types)}{135}{}%
+\contentsline {subsection}{\numberline {22.2.2}3.2.2.2 การวิเคราะห์ขา GPIO และ ADC}{135}{}%
+\contentsline {section}{\numberline {22.3}3.2.3 ความสำคัญของชิปแปลงสัญญาณ USB-to-Serial (CH340 Driver)}{135}{}%
+\contentsline {subsection}{\numberline {22.3.1}3.2.3.1 บทบาทของ USB-to-Serial Converter}{136}{}%
+\contentsline {subsection}{\numberline {22.3.2}3.2.3.2 ขั้นตอนการติดตั้งไดรเวอร์ (Driver Installation)}{136}{}%
+\contentsline {section}{\numberline {22.4}3.2.4 การตั้งค่าสภาพแวดล้อมการพัฒนา Arduino IDE}{137}{}%
+\contentsline {subsection}{\numberline {22.4.1}3.2.4.1 การเพิ่มการรองรับบอร์ด ESP32 ผ่าน Boards Manager}{137}{}%
+\contentsline {subsection}{\numberline {22.4.2}3.2.4.2 โครงสร้างหลักของโค้ด (The Sketch Structure)}{138}{}%
+\contentsline {subsection}{\numberline {22.4.3}3.2.4.3 ตัวอย่างโค้ด C++ สำหรับการทดสอบการทำงานพื้นฐาน (Blink Test)}{139}{}%
+\contentsline {section}{\numberline {22.5}สรุปเชิงวิชาการ (Academic Summary)}{140}{}%
+\contentsline {section}{\numberline {22.6}3.3 การเขียนโค้ดอ่านเซนเซอร์ วิเคราะห์กราฟคาลิเบรตดินเหนียวตราด (Soil Moisture Sensor Calibration for Trat Clay)}{140}{}%
+\contentsline {chapter}{\numberline {23}3.3 การเขียนโค้ดอ่านเซนเซอร์ วิเคราะห์กราฟคาลิเบรตดินเหนียวตราด (Soil Moisture Sensor Calibration for Trat Clay)}{141}{}%
+\contentsline {section}{\numberline {23.1}3.3.1 หลักการทำงานทางฟิสิกส์ของเซนเซอร์วัดความชื้นแบบเก็บประจุ (Capacitive Principle)}{142}{}%
+\contentsline {subsection}{\numberline {23.1.1}3.3.1.1 ความแตกต่างระหว่างเซนเซอร์แบบต้านทานและแบบเก็บประจุ}{142}{}%
+\contentsline {subsection}{\numberline {23.1.2}3.3.1.2 กลไกทางฟิสิกส์ของการวัดค่าความจุไฟฟ้า}{143}{}%
+\contentsline {section}{\numberline {23.2}3.3.2 ทฤษฎีการสอบเทียบเซนเซอร์ (Sensor Calibration Theory)}{144}{}%
+\contentsline {subsection}{\numberline {23.2.1}3.3.2.1 การแปลงค่าความจุไฟฟ้าเป็นความชื้นเชิงปริมาตร (VWC)}{144}{}%
+\contentsline {subsection}{\numberline {23.2.2}3.3.2.2 การกำหนดจุดสอบเทียบ (Defining Calibration Points)}{145}{}%
+\contentsline {subsection}{\numberline {23.2.3}3.3.2.3 การคำนวณค่าความชันและจุดตัดแกน Y}{146}{}%
+\contentsline {section}{\numberline {23.3}3.3.3 การประยุกต์ใช้โค้ดและการกรองสัญญาณรบกวน (Implementation and Noise Filtering)}{146}{}%
+\contentsline {subsection}{\numberline {23.3.1}3.3.3.1 การกรองค่าเฉลี่ยเคลื่อนที่ (Moving Average Filter)}{147}{}%
+\contentsline {subsection}{\numberline {23.3.2}3.3.3.2 โค้ดตัวอย่าง C++ สำหรับ Arduino (ESP32)}{147}{}%
+\contentsline {section}{\numberline {23.4}3.4 ตรรกะระบบควบคุมป้อนกลับ (Feedback Control Loop) สั่งงานวงจรไฟฟ้าปั๊มน้ำด้วยรีเลย์}{149}{}%
+\contentsline {chapter}{\numberline {24}3.4 ตรรกะระบบควบคุมป้อนกลับ (Feedback Control Loop) สำหรับการสั่งงานวงจรไฟฟ้าปั๊มน้ำด้วยรีเลย์}{150}{}%
+\contentsline {section}{\numberline {24.1}บทนำเชิงทฤษฎี: หลักการควบคุมระบบอัตโนมัติ}{150}{}%
+\contentsline {subsection}{\numberline {24.1.1}3.4.1 หลักการควบคุมป้อนกลับ (Feedback Control Loop) และระบบ On-Off Controller}{151}{}%
+\contentsline {subsubsection}{3.4.1.1 แนวคิดพื้นฐานของวงจรควบคุมป้อนกลับ}{151}{}%
+\contentsline {subsubsection}{3.4.1.2 การควบคุมแบบสองตำแหน่ง (On-Off Control) และปรากฏการณ์ฮิสเทรีซิส (Hysteresis)}{152}{}%
+\contentsline {subsection}{\numberline {24.1.2}3.4.2 การเชื่อมต่อทางไฟฟ้า: รีเลย์และหลักการแยกสัญญาณ (Isolation)}{153}{}%
+\contentsline {subsubsection}{3.4.2.1 หลักการทำงานของรีเลย์ (Relay Operation)}{153}{}%
+\contentsline {subsubsection}{3.4.2.2 การแยกสัญญาณด้วยออปโตคัปเปลอร์ (Optocoupler Isolation)}{153}{}%
+\contentsline {subsubsection}{3.4.2.3 ปรากฏการณ์ Active Low}{154}{}%
+\contentsline {subsection}{\numberline {24.1.3}3.4.3 การออกแบบตรรกะระบบควบคุมเชิงปฏิบัติ (Algorithmic Design)}{154}{}%
+\contentsline {subsubsection}{3.4.3.1 โครงสร้างการทำงานของโปรแกรม (Program Flow)}{155}{}%
+\contentsline {subsection}{\numberline {24.1.4}3.4.4 การประยุกต์ใช้โค้ด (C++ Arduino Implementation)}{155}{}%
+\contentsline {section}{\numberline {24.2}3.5 แล็บวิจัยเกษตรขั้นสูง: 1D Richards Infiltration Solver (Python) และระบบนำทาง Extended Kalman Filter (EKF)}{158}{}%
+\contentsline {chapter}{\numberline {25}3.5 แล็บวิจัยเกษตรขั้นสูง: การจำลองการซึมผ่านน้ำในดิน 1 มิติด้วยสมการริชาร์ดส และระบบนำทางด้วย Extended Kalman Filter}{159}{}%
+\contentsline {section}{\numberline {25.1}บทนำ: หลักการบูรณาการทางวิศวกรรมและวิทยาศาสตร์ดิน (Introduction: Principles of Engineering and Soil Science Integration)}{159}{}%
+\contentsline {section}{\numberline {25.2}ส่วนที่ 1: การจำลองการซึมผ่านน้ำในดิน 1 มิติด้วยสมการริชาร์ดส (1D Richards Infiltration Solver)}{160}{}%
+\contentsline {subsection}{\numberline {25.2.1}1.1 ทฤษฎีพื้นฐาน: สมการริชาร์ดส (Richards Equation Theory)}{160}{}%
+\contentsline {subsection}{\numberline {25.2.2}1.2 ความสัมพันธ์ระหว่างตัวแปร (Constitutive Relationships)}{161}{}%
+\contentsline {subsubsection}{1.2.1 ความสัมพันธ์ระหว่างศักย์น้ำและความชื้น ($\psi - \theta $ Relationship)}{161}{}%
+\contentsline {subsubsection}{1.2.2 ความสัมพันธ์ระหว่างการนำความร้อนและความชื้น ($K - \theta $ Relationship)}{162}{}%
+\contentsline {subsection}{\numberline {25.2.3}1.3 การประยุกต์ใช้กรณีศึกษา: ดินเหนียวจันทบุรี (Chanthaburi Clay)}{162}{}%
+\contentsline {subsection}{\numberline {25.2.4}1.4 การแก้สมการด้วยระเบียบวิธีผลต่างอันดับสิ้นสุด (Finite Difference Method: FDM)}{162}{}%
+\contentsline {subsection}{\numberline {25.2.5}1.5 ซอร์สโค้ด Python: ChanthaburiClayDiffusionSolver}{163}{}%
+\contentsline {section}{\numberline {25.3}3.6 การประกอบกล่องภายนอกอาคารมาตรฐาน IP65 และ Telemetry ส่งพารามิเตอร์ขึ้น Cloud (MQTT)}{166}{}%
+\contentsline {chapter}{\numberline {26}3.6 การประกอบกล่องภายนอกอาคารมาตรฐาน IP65 และ Telemetry ส่งพารามิเตอร์ขึ้น Cloud (MQTT)}{167}{}%
+\contentsline {section}{\numberline {26.1}บทนำเชิงทฤษฎี: การออกแบบระบบ IoT สำหรับสภาพแวดล้อมภายนอกอาคาร (Outdoor IoT Deployments)}{167}{}%
+\contentsline {subsection}{\numberline {26.1.1}3.6.1 หลักการป้องกันการแทรกซึม (Ingress Protection: IP Rating)}{168}{}%
+\contentsline {subsection}{\numberline {26.1.2}3.6.2 แนวทางการประกอบกล่องภายนอกอาคารตามมาตรฐาน IP65}{169}{}%
+\contentsline {subsubsection}{1. การเลือกวัสดุและโครงสร้าง (Material Selection)}{169}{}%
+\contentsline {subsubsection}{2. การจัดการรอยต่อและการเดินสายไฟ (Cable Management and Sealing)}{170}{}%
+\contentsline {subsubsection}{3. การติดตั้งแหล่งพลังงาน (Solar Power Integration)}{170}{}%
+\contentsline {section}{\numberline {26.2}3.6.3 แนวคิดการสื่อสารข้อมูลระยะไกลด้วยโปรโตคอล MQTT (Telemetry via MQTT)}{171}{}%
+\contentsline {subsection}{\numberline {26.2.1}1. สถาปัตยกรรม Publish/Subscribe (Pub/Sub Architecture)}{171}{}%
+\contentsline {subsection}{\numberline {26.2.2}2. คุณสมบัติของ MQTT (MQTT Properties)}{172}{}%
+\contentsline {section}{\numberline {26.3}3.6.4 การประยุกต์ใช้โค้ด: การส่งข้อมูลเซนเซอร์ผ่าน MQTT (C++ Implementation)}{172}{}%
+\contentsline {subsection}{\numberline {26.3.1}โค้ดตัวอย่าง (Arduino IDE / C++)}{173}{}%
+\contentsline {section}{\numberline {26.4}3.6.5 การวิเคราะห์เปรียบเทียบเชิงวิพากษ์: ลูปควบคุมปิด-เปิด (On-Off Control) กับการควบคุมคาดการณ์เชิงชลศาสตร์ (Richards PDE-based Predictive Control)}{176}{}%
+\contentsline {section}{\numberline {26.5}3.6.6 คำศัพท์สำคัญประจำบทเรียน (Key Terms)}{176}{}%
+\contentsline {section}{\numberline {26.6}3.6.7 แบบฝึกหัดทบทวนและโจทย์คิดวิเคราะห์ (Review Exercises)}{178}{}%
+\contentsline {chapter}{บรรณานุกรมเชิงวิชาการมาตรฐานสากล (References - APA and IEEE Styles)}{180}{}%
+\contentsline {chapter}{\numberline {27}บทที่ 5: การจัดการข้อมูลและการสื่อสารทางวิชาการ}{181}{}%
+\contentsline {chapter}{ภาคผนวก: หลักการและรูปแบบการอ้างอิงเชิงวิชาการมาตรฐานสากล (Academic Citation Standards)}{182}{}%
+\contentsline {subsection}{\numberline {27.0.1}๕.๑ บทนำ: ความสำคัญของการอ้างอิงเชิงวิชาการ (Introduction to Academic Referencing)}{182}{}%
+\contentsline {subsection}{\numberline {27.0.2}๕.๒ กรอบแนวคิดทางทฤษฎีของการอ้างอิง (Theoretical Framework of Citation)}{183}{}%
+\contentsline {subsubsection}{๕.๒.๑ ความแตกต่างเชิงปรัชญาของรูปแบบ (Philosophical Difference between Styles)}{183}{}%
+\contentsline {subsection}{\numberline {27.0.3}๕.๓ การประยุกต์ใช้รูปแบบ APA 7th Edition (American Psychological Association)}{184}{}%
+\contentsline {subsubsection}{๕.๓.๑ โครงสร้างการอ้างอิงในเนื้อหา (In-text Citation Structure)}{184}{}%
+\contentsline {subsubsection}{๕.๓.๒ โครงสร้างรายการบรรณานุกรม (Reference List Structure)}{184}{}%
+\contentsline {subsection}{\numberline {27.0.4}๕.๔ การประยุกต์ใช้รูปแบบ IEEE Style (Institute of Electrical and Electronics Engineers)}{185}{}%
+\contentsline {subsubsection}{๕.๔.๑ โครงสร้างการอ้างอิงในเนื้อหา (In-text Citation Structure)}{185}{}%
+\contentsline {subsubsection}{๕.๔.๒ โครงสร้างรายการบรรณานุกรม (References List Structure)}{185}{}%
+\contentsline {subsection}{\numberline {27.0.5}๕.๕ การปฏิบัติการสร้างบรรณานุกรมเชิงวิชาการ (Practical Bibliography Construction)}{186}{}%
+\contentsline {subsubsection}{๕.๕.๑ รายการอ้างอิงที่ ๑: แบบจำลองน้ำในดิน (Soil Water Model)}{186}{}%
+\contentsline {subsubsection}{๕.๕.๒ รายการอ้างอิงที่ ๒: CNN สำหรับการจำแนกโรคพืช (CNN for Plant Disease)}{186}{}%
+\contentsline {subsubsection}{๕.๕.๓ รายการอ้างอิงที่ ๓: ระบบสมองกลฝังตัว (Embedded System)}{186}{}%
+\contentsline {subsubsection}{๕.๕.๔ รายการอ้างอิงที่ ๔: ดัชนีความตึงเครียดจากน้ำ (Water Stress Index)}{186}{}%
+\contentsline {subsubsection}{๕.๕.๕ รายการอ้างอิงที่ ๕: หนังสือพื้นฐานด้าน AI/Machine Learning}{187}{}%
+\contentsline {subsubsection}{๕.๕.๖ รายการอ้างอิงที่ ๖: บทความวารสารด้านฟิสิกส์ประยุกต์}{187}{}%
+\contentsline {subsection}{\numberline {27.0.6}📚 บรรณานุกรม (Bibliography)}{187}{}%
+\contentsline {subsubsection}{🅰️ รูปแบบ APA 7th Edition (สำหรับชีววิทยาและเกษตรศาสตร์)}{187}{}%
+\contentsline {subsubsection}{🅱️ รูปแบบ IEEE Style (สำหรับวิศวกรรมและคอมพิวเตอร์วิทัศน์)}{188}{}%
+\contentsline {subsection}{\numberline {27.0.7}๕.๖ การประยุกต์ใช้โค้ดเพื่อการจัดการข้อมูลอ้างอิง (Code Implementation for Citation Management)}{189}{}%
+\contentsline {chapter}{ภาคผนวก ก: ดัชนีคำศัพท์วิชาการ (Subject Index)}{192}{}%
+\contentsline {chapter}{ภาคผนวก ข: คู่มือแผนการจัดการติดตั้งกล่องภาคสนาม (Field Deployment Project Plan)}{194}{}%
+\contentsline {subsection}{\numberline {27.0.8}ณ โรงเรียนประณีตวิทยาคม อำเภอเขาสมิง จังหวัดตราด}{194}{}%
+\contentsline {subsubsection}{ขั้นตอนที่ 1: การประเมินสถานภาพทางภูมิศาสตร์และโครงสร้างพลังงาน (Site Assessment)}{194}{}%
+\contentsline {subsubsection}{ขั้นตอนที่ 2: การตรวจสอบความคงทนและซีลกันน้ำทางกายภาพ (IP65 Mechanical Validation)}{195}{}%
+\contentsline {subsubsection}{ขั้นตอนที่ 3: การวางระบบเซนเซอร์ในเขตรากดิน (Soil Sensor Placement)}{195}{}%
+\contentsline {subsubsection}{ขั้นตอนที่ 4: การลงทะเบียนเครือข่ายและระบบคลาวด์ส่งสัญญาณ (Network Registration \& Cloud Telemetry)}{195}{}%

@@ -4,11 +4,11 @@ $lang_code = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'th';
 require_once "languages/{$lang_code}.php";
 require_once "db_connect.php";
 
-// GitHub Configuration (Change this when you upload to your repo)
+// GitHub Configuration
 $github_user = "TsanaPhysics";
 $github_repo = "rbrupraneet_agri_inno2026";
-$github_base = "https://github.com/$github_user/$github_repo/blob/main/notebooks/";
-$colab_base = "https://colab.research.google.com/github/$github_user/$github_repo/blob/main/notebooks/";
+$github_base = "https://github.com/$github_user/$github_repo/blob/main/notebooks/climate/";
+$colab_base = "https://colab.research.google.com/github/$github_user/$github_repo/blob/main/notebooks/climate/";
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang_code; ?>">
@@ -16,28 +16,36 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Data Hacking | Interactive Workshop</title>
+    <title>Climate Data Hacking | AIDA xAI Center</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/sections.css">
     <!-- Prism.js for Code Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    
+
     <style>
         :root {
-            --code-bg: #1e1e1e;
+            --code-bg: #0f172a;
             --workshop-accent: #f97316;
+            --workshop-amber: #fbbf24;
+            --workshop-gold: #d97706;
+            --workshop-soft: rgba(249, 115, 22, 0.05);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-2xl: 32px;
         }
 
         .workshop-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/activities/climate_hacking.png');
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.9)), url('assets/images/manual_cover_orange_1775878501210.png');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,18 +59,18 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             border-radius: var(--radius-2xl);
             padding: 2.5rem;
             margin-bottom: 3rem;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .session-tag {
             background: var(--workshop-accent);
             color: white;
-            padding: 4px 12px;
+            padding: 4px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
             margin-bottom: 1rem;
         }
@@ -73,18 +81,18 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
             border-radius: var(--radius-lg);
             overflow: hidden;
             background: var(--code-bg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .code-header {
-            background: #2d2d2d;
-            padding: 10px 20px;
+            background: #1e293b;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: #eee;
             font-size: 0.8rem;
-            border-bottom: 1px solid #3d3d3d;
+            border-bottom: 1px solid #334155;
         }
 
         .code-actions {
@@ -94,10 +102,10 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         }
 
         .code-btn {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #ccc;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.75rem;
@@ -109,15 +117,9 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         }
 
         .code-btn:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             border-color: var(--workshop-accent);
-        }
-
-        .btn-colab:hover {
-            background: rgba(249, 115, 22, 0.1);
-            color: #f97316;
-            border-color: #f97316;
         }
 
         pre[class*="language-"] {
@@ -129,37 +131,218 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
 
         .interactive-guide {
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 100px 1fr;
             gap: 3rem;
             margin-top: 3rem;
         }
 
         .guide-nav {
             position: sticky;
-            top: 100px;
+            top: 120px;
             height: fit-content;
+            max-height: calc(100vh - 160px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-right: 15px;
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 20px;
         }
 
+        .guide-nav::-webkit-scrollbar {
+            width: 5px;
+        }
+        .guide-nav::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+            border-radius: 10px;
+        }
+        .guide-nav::-webkit-scrollbar-thumb {
+            background: var(--workshop-accent);
+            border-radius: 10px;
+        }
+
+
         .nav-item {
-            padding: 1.2rem;
+            padding: 10px;
             border-radius: var(--radius-lg);
-            margin-bottom: 0.8rem;
             cursor: pointer;
-            transition: all 0.3s;
-            border-left: 4px solid transparent;
-            background: rgba(0,0,0,0.02);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+            width: 90px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
         }
 
         .nav-item.active {
-            background: rgba(249, 115, 22, 0.08);
-            color: var(--workshop-accent);
-            border-left-color: var(--workshop-accent);
-            font-weight: 600;
+            background: var(--workshop-soft);
+            border-color: var(--workshop-accent);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 15px 25px rgba(249, 115, 22, 0.2);
         }
 
-        @media (max-width: 992px) {
-            .interactive-guide { grid-template-columns: 1fr; }
-            .guide-nav { display: none; }
+        .nav-icon {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 5px;
+        }
+
+        .nav-item span {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--slate);
+            text-transform: uppercase;
+        }
+        
+        .nav-item.active span {
+            color: var(--workshop-accent);
+        }
+
+        /* NEW: Reveal Solution Styles */
+        .reveal-box {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .solution-content {
+            display: none;
+            color: var(--workshop-gold);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .solution-content.show {
+            display: block;
+        }
+
+        .btn-reveal {
+            background: var(--workshop-accent);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-reveal:hover {
+            background: var(--workshop-gold);
+        }
+
+        /* NEW: Lab Tables */
+        .lab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+
+        .lab-table th {
+            background: var(--workshop-soft);
+            color: var(--workshop-gold);
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid var(--workshop-accent);
+        }
+
+        .lab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .btn-hologram {
+            position: relative;
+            padding: 14px 35px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #fff !important;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 2px solid rgba(249, 115, 22, 0.5);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.3), inset 0 0 15px rgba(249, 115, 22, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-hologram:hover {
+            transform: translateY(-5px) scale(1.05);
+            border-color: var(--workshop-amber);
+            box-shadow: 0 0 30px rgba(235, 120, 0, 0.6), inset 0 0 20px rgba(235, 120, 0, 0.4);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .theory-panel {
+            background: var(--workshop-soft);
+            border-left: 4px solid var(--workshop-accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-md);
+        }
+
+        .mag-img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+        .xr-simulator-box {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(249, 115, 22, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 2.5rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(249, 115, 22, 0.05);
+            text-align: center;
+        }
+
+        .xr-simulator-box::before {
+            content: '3D XR SIMULATOR';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--workshop-gold);
+            letter-spacing: 2px;
+            background: #1e293b;
+            border: 1px solid rgba(249, 115, 22, 0.4);
+            padding: 4px 15px;
+            border-radius: 20px;
+        }
+
+        .xr-simulator-box img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
+            border: 1px solid rgba(255,255,255,0.05);
         }
     </style>
 </head>
@@ -171,213 +354,78 @@ $colab_base = "https://colab.research.google.com/github/$github_user/$github_rep
         <!-- Workshop Hero -->
         <section class="workshop-hero">
             <div class="container">
-                <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Climate Data Hacking</h1>
-                <p style="font-size: 1.2rem; opacity: 0.9;">Workshop กิจกรรมที่ 1: การวิเคราะห์ข้อมูลสภาพภูมิอากาศด้วย Python สำหรับนักเรียน</p>
-                <div style="margin-top: 2rem; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="docs/climate_hacking_full_manual.md" class="btn btn-primary" style="background: var(--workshop-accent); color: white; border: none; box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">📖 Full Manual (คู่มือฉบับเต็ม)</a>
-                    <a href="scripts/climate_starter.py" class="btn btn-glass">🐍 Download Starter Script (.py)</a>
-                    <a href="data/chanthaburi_climate_sample.csv" class="btn btn-glass">📊 Dataset (.CSV)</a>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">Climate Data Hacking</h1>
+                <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.9; margin-bottom: 2.5rem;">
+                    เปลี่ยนพยากรณ์อากาศให้เป็นปัญญาประดิษฐ์ (Interactive Dashboard)
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+                    <a href="manual-pocketbook.php" target="_blank" class="btn-hologram">
+                        <span>📖</span> คู่มือพิมพ์ฉบับสมบูรณ์
+                    </a>
+                    <a href="scripts/climate_starter.py" class="btn-hologram" style="border-color: var(--workshop-gold);">
+                        <span>🔰</span> Starter Script
+                    </a>
+                    <a href="scripts/rbru_climate_master.py" target="_blank" class="btn-hologram" style="border-color: #ef4444; background: rgba(239, 68, 68, 0.1);">
+                        <span>🔥</span> Master Code (รวมดึง API & DSS)
+                    </a>
+                    <a href="data/chanthaburi_climate_sample.csv" class="btn-hologram" style="border-color: var(--workshop-amber);">
+                        <span>📊</span> DATASET (.CSV)
+                    </a>
                 </div>
             </div>
         </section>
 
+        <?php
+        $sessions_json = file_get_contents('data/climate_sessions.json');
+        $climate_sessions = json_decode($sessions_json, true) ?? [];
+        ?>
         <section class="container" style="padding: 4rem 1rem;">
             <div class="interactive-guide">
-                <!-- Side Nav -->
+                <!-- Side Nav with 3D Icons -->
                 <aside class="guide-nav">
-                    <div class="nav-item active" onclick="scrollToSession('session-1')">Session 1: Python Basics</div>
-                    <div class="nav-item" onclick="scrollToSession('session-2')">Session 2: API & TMD Data</div>
-                    <div class="nav-item" onclick="scrollToSession('session-3')">Session 3: Data Detective</div>
-                    <div class="nav-item" onclick="scrollToSession('session-4')">Session 4: Smart Advisor</div>
+                    <?php foreach($climate_sessions as $index => $s): ?>
+                        <div class="nav-item <?= $index===0?'active':'' ?>" onclick="scrollToSession('<?= $s['id'] ?>')" title="<?= htmlspecialchars($s['title']) ?>">
+                            <img src="<?= $s['xr_image'] ?>" class="nav-icon" alt="<?= $s['id'] ?>">
+                            <span>S.<?= $index+1 ?></span>
+                        </div>
+                    <?php endforeach; ?>
                 </aside>
 
                 <!-- Content Area -->
                 <div class="guide-content">
-                    
-                    <!-- Session 1 -->
-                    <div id="session-1" class="session-card">
-                        <span class="session-tag">Session 1 (3 Hours)</span>
-                        <h2>ปฐมบทนักโปรแกรมเมอร์เกษตร</h2>
-                        <p>เริ่มต้นเรียนรู้พื้นฐาน Python ที่จำเป็นสำหรับการจัดการข้อมูลเกษตร เช่น ตัวแปร (Variables) และการคำนวณพื้นฐาน</p>
-                        
-                        <div class="theory-panel" style="background: rgba(249, 115, 22, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: ดัชนีความร้อน (Heat Index)</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ดัชนีความร้อน คือ อุณหภูมิที่สิ่งมีชีวิตรู้สึกจริงจากการรวมกันของ "อุณหภูมิ" และ "ความชื้น" (Apparent Temperature) ในพื้นที่จันทบุรีที่มีความชื้นสูง ค่า HI จะสูงกว่าอุณหภูมิจริงมาก ซึ่งเป็นปัจจัยวิกฤตที่ทำให้ดอกทุเรียนร่วงได้</p>
+                    <?php foreach($climate_sessions as $index => $s): ?>
+                    <div id="<?= $s['id'] ?>" class="session-card">
+                        <span class="session-tag">Session <?= $index+1 ?> (1 Hour)</span>
+                        <h2 style="color: var(--workshop-gold);"><?= htmlspecialchars($s['title']) ?></h2>
+                        <p><?= htmlspecialchars($s['desc']) ?></p>
+
+                        <div class="theory-panel" style="background: var(--workshop-soft); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin: 2rem 0 1rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--workshop-gold); margin-bottom: 0.5rem;">🧠 ตัวอย่างการสร้างโค้ด (Learning Examples)</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 0;">ในบทนี้มี <?= count($s['examples']) ?> ตัวอย่างที่ไล่ระดับความซับซ้อน ให้นักเรียนลองฝึกพิมพ์ผ่าน Editor หรือ Colab</p>
                         </div>
 
-                        <div class="code-container">
+                        <?php foreach($s['examples'] as $ex_idx => $ex): ?>
+                        <h4 style="color: var(--workshop-amber); margin-top: 1.5rem;">🔹 <?= htmlspecialchars($ex['title']) ?></h4>
+                        <div class="code-container" style="margin-bottom: 1.5rem;">
                             <div class="code-header">
-                                <span>📁 session1_basics.ipynb</span>
+                                <span>📁 <?= $s['id'] ?>_ex<?= $ex_idx+1 ?>.py</span>
                                 <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>session1_basics.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>session1_basics.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
+                                    <a href="<?= $github_base ?><?= $s['id'] ?>_ex<?= $ex_idx+1 ?>.ipynb" target="_blank" class="code-btn">GitHub</a>
+                                    <a href="<?= $colab_base ?><?= $s['id'] ?>_ex<?= $ex_idx+1 ?>.ipynb" target="_blank" class="code-btn">Colab</a>
                                     <button class="code-btn" onclick="copyCode(this)">Copy</button>
                                 </div>
                             </div>
-                            <pre><code class="language-python"># โปรแกรมคำนวณดัชนีความร้อน (Heat Index) แบบง่าย
-temp = 32.5
-humidity = 80
-
-# ตรรกะการวิเคราะห์
-heat_index = temp + (0.05 * humidity)
-
-print(f"อุณหภูมิปัจจุบัน: {temp} °C")
-print(f"ความรู้สึกจริง: {heat_index:.2f} °C")
-
-if heat_index > 35:
-    print("แจ้งเตือน: อากาศร้อนเกินไปสำหรับทุเรียนอ่อน!")</code></pre>
+                            <pre><code class="language-python"><?= htmlspecialchars($ex['code']) ?></code></pre>
                         </div>
-
-                        <div class="code-walkthrough" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
-                            <h5 style="color: var(--text-primary); margin-bottom: 0.5rem;">🔍 เจาะลึกโค้ด (Code Walkthrough)</h5>
-                            <ul style="padding-left: 1.2rem;">
-                                <li><code>temp</code> & <code>humidity</code>: การประกาศตัวแปรเพื่อเก็บค่าคงที่จากเซ็นเซอร์</li>
-                                <li><code>heat_index</code>: การคำนวณปรับแต่งอุณหภูมิด้วยค่าความชื้น (Mathematical Modeling)</li>
-                                <li><code>if heat_index > 35</code>: การใช้ตรรกะตัดสินใจแบบอัตโนมัติ (Automated Decision Making)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Session 2 -->
-                    <div id="session-2" class="session-card">
-                        <span class="session-tag">Session 2 (3 Hours)</span>
-                        <h2>เชื่อมต่อฟาร์มเข้ากับโลกข้อมูล</h2>
-                        <p>เรียนรู้การใช้ Python ดึงข้อมูลพยากรณ์อากาศแบบ Real-time จากกรมอุตุนิยมวิทยา (TMD) ผ่าน API</p>
+                        <?php endforeach; ?>
                         
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 session2_api.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>session2_api.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>session2_api.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
-                            </div>
-                            <pre><code class="language-python">import requests
-
-def get_weather():
-    # ตัวอย่างการส่งคำขอไปยัง API กรมอุตุฯ
-    url = "https://data.tmd.go.th/api/v1/daily?station_id=48480"
-    
-    # หมายเหตุ: ในโรงเรียนเราจะใช้ API Key ที่ทีมวิทยากรเตรียมไว้ให้
-    print("กำลังดึงข้อมูลจากสถานีจันทบุรี...")
-    
-    # จำลองข้อมูลที่ได้จาก API
-    data = {
-        "status": "Rainy",
-        "rain_mm": 45.5,
-        "wind_speed": 12.0
-    }
-    return data
-
-weather = get_weather()
-print(f"ปริมาณฝนวันนี้: {weather['rain_mm']} mm")</code></pre>
+                        <div class="xr-simulator-box">
+                            <h4 style="color: white; margin-bottom: 0.5rem; text-transform: uppercase;">XR Output: ผลลัพธ์ที่จับต้องได้</h4>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 0.5rem;"><?= htmlspecialchars($s['xr_caption']) ?></p>
+                            <img src="<?= $s['xr_image'] ?>" alt="XR Simulator Preview">
                         </div>
                     </div>
-
-                    <!-- Session 3 -->
-                    <div id="session-3" class="session-card">
-                        <span class="session-tag">Session 3 (3 Hours)</span>
-                        <h2>นักสืบข้อมูล (Data Detective)</h2>
-                        <p>ใช้ห้องสมุด Pandas เพื่ออ่านและวิเคราะห์ข้อมูลพยากรณ์อากาศย้อนหลัง 10 ปี เพื่อหาความผิดปกติของฤดูกาล</p>
-                        
-                        <div class="theory-panel" style="background: rgba(79, 172, 254, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: การวิเคราะห์ความผิดปกติ (Anomaly Detection)</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการวิเคราะห์ข้อมูลเกษตรแม่นยำ (Precision Agri) เราต้องหาข้อมูลที่ "ผิดปกติ" (Outliers) เช่น ปีที่ฝนตกหนักเกินปกติ หรือช่วงที่อุณหภูมิพุ่งสูงกะทันหัน ซึ่งอาจบ่งบอกถึงความเสี่ยงของศัตรูพืช การใช้ค่าเฉลี่ยเคลื่อนที่ (Moving Average) จะช่วยให้เราเห็นเทรนด์ที่แท้จริงท่ามกลางข้อมูลที่ผันผวน</p>
-                        </div>
-
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 session3_data.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>session3_data.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>session3_data.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
-                            </div>
-                            <pre><code class="language-python">import pandas as pd
-import numpy as np
-
-# อ่านข้อมูลและคำนวณค่าเฉลี่ยเคลื่อนที่ (Moving Average)
-df = pd.read_csv('chanthaburi_climate_sample.csv')
-df['Moving_Avg'] = df['Rainfall_mm'].rolling(window=3).mean()
-
-# ค้นหาช่วงที่ฝนตก "เกินปกติ" (Anomaly)
-threshold = df['Rainfall_mm'].mean() + (2 * df['Rainfall_mm'].std())
-anomalies = df[df['Rainfall_mm'] > threshold]
-
-print("--- ตรวจพบความผิดปกติของปริมาณฝน ---")
-print(anomalies[['Year', 'Month', 'Rainfall_mm']])</code></pre>
-                        </div>
-                    </div>
-
-                    <!-- Session 4 -->
-                    <div id="session-4" class="session-card">
-                        <span class="session-tag">Session 4 (3 Hours)</span>
-                        <h2>สร้างระบบแจ้งเตือนอัจฉริยะ</h2>
-                        <p>โปรเจกต์จบ: เขียนโปรแกรมวิเคราะห์แนวโน้มล่วงหน้าและส่งคำแนะนำให้กับเกษตรกร</p>
-                        
-                        <div class="theory-panel" style="background: rgba(79, 172, 254, 0.05); border-left: 4px solid var(--workshop-accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius-md);">
-                            <h4 style="color: var(--workshop-accent); margin-bottom: 0.5rem;">📚 ทฤษฎี: ระบบสนับสนุนการตัดสินใจ (Decision Support System)</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-secondary);">หัวใจของ "Digital Farmer" คือการเปลี่ยนข้อมูลเป็น "คำสั่งการ" ระบบ DSS จะใช้ตรรกะแบบ Fuzzy หรือ Decision Tree เพื่อพิจารณาทั้งระยะการเจริญเติบโตของพืชและสภาพอากาศพร้อมกัน เพื่อส่งคำแนะนำที่แม่นยำที่สุดผ่าน LINE หรือ Dashboard</p>
-                        </div>
-
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>📁 session4_advisor.ipynb</span>
-                                <div class="code-actions">
-                                    <a href="<?php echo $github_base; ?>session4_advisor.ipynb" target="_blank" class="code-btn">GitHub</a>
-                                    <a href="<?php echo $colab_base; ?>session4_advisor.ipynb" target="_blank" class="code-btn btn-colab">Open in Colab</a>
-                                    <button class="code-btn" onclick="copyCode(this)">Copy</button>
-                                </div>
-                            </div>
-                            <pre><code class="language-python">def farm_advisor(rain_prediction, humidity, crop_stage):
-    # ตรรกะแบบผสมผสาน (Hybrid Logic)
-    if crop_stage == "flowering":
-        if rain_prediction > 50 or humidity > 85:
-            return "🚨 ALERT: สภาพอากาศเสี่ยงต่อการเกิดเชื้อราและดอกร่วง! รีบฉีดพ่นสารป้องกัน"
-        return "✨ OPTIMAL: สภาพอากาศดีมากสำหรับการผสมเกสร"
-    
-    elif crop_stage == "fruiting":
-        if rain_prediction < 10:
-            return "💧 ADVISE: ต้องการน้ำสม่ำเสมอเพื่อการขยายขนาดผล"
-        return "✅ STATUS: สภาพอากาศปกติ"
-
-# ทดสอบระบบ Advisor
-message = farm_advisor(65, 90, "flowering")
-print(f"RBRU-AI Advisor: {message}")</code></pre>
-                        </div>
-                    </div>
-
-                    <!-- 3D XR Simulator Preview -->
-                    <div class="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-indigo-950 text-white relative overflow-hidden group border border-white/10">
-                        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
-                            <img src="assets/images/simulators/climate_3d_preview.png" alt="3D Climate Simulator" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-                                <div class="w-20 h-20 rounded-3xl bg-blue-500/20 backdrop-filter blur-xl flex items-center justify-center text-4xl shadow-inner border border-white/20">👓</div>
-                                <div class="text-center md:text-left">
-                                    <h3 class="text-3xl font-black mb-2">3D Climate XR Simulator</h3>
-                                    <p class="text-blue-300">สัมผัสโมเดลพยากรณ์อากาศในโลกเสมือนจริง</p>
-                                </div>
-                            </div>
-                            <p class="text-slate-300 mb-10 leading-relaxed text-lg max-width: 600px;">
-                                ข้อมูลที่คุณวิเคราะห์ด้วย Python จะถูกส่งต่อไปยังระบบจำลอง 3D Twin เพื่อให้นักเรียนสามารถมองเห็นภาพ "ความร้อนสะสม" และ "ทิศทางลม" 
-                                ในสวนทุเรียนจำลองได้แบบ 360 องศา ช่วยให้ตัดสินใจวางแผนการเพาะปลูกในโลกจริงได้อย่างแม่นยำยิ่งขึ้น
-                            </p>
-                            <div class="flex flex-wrap items-center gap-6">
-                                <a href="virtual-lab.php?scenario=climate" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border: none; padding: 15px 35px; border-radius: 50px;">
-                                    <span class="mr-2">🕹️</span> Enter Simulation
-                                </a>
-                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-blue-400">
-                                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                                    Real-time Data Ready
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -388,39 +436,42 @@ print(f"RBRU-AI Advisor: {message}")</code></pre>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-    
+
     <script>
         function copyCode(btn) {
+
             const pre = btn.parentElement.nextElementSibling;
             const code = pre.textContent;
             navigator.clipboard.writeText(code).then(() => {
                 const originalText = btn.textContent;
                 btn.textContent = 'Copied!';
-                btn.style.borderColor = '#4facfe';
+                btn.style.color = '#fbbf24';
                 setTimeout(() => {
                     btn.textContent = originalText;
-                    btn.style.borderColor = '#555';
+                    btn.style.color = '#ccc';
                 }, 2000);
             });
         }
 
         function scrollToSession(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-            
-            // Update active nav
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
-                if(item.textContent.includes(id.replace('session-', '').toUpperCase())) {
-                    // This logic is a bit simple, can be improved
-                }
+            const el = document.getElementById(id);
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = el.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
 
-        // Simple scroll spy logic
+        // Scroll spy logic
         window.addEventListener('scroll', () => {
             const sessions = ['session-1', 'session-2', 'session-3', 'session-4'];
             let current = '';
-            
+
             sessions.forEach(id => {
                 const element = document.getElementById(id);
                 const rect = element.getBoundingClientRect();

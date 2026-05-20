@@ -210,8 +210,8 @@ return "
     <div class='shape-accent'></div>
 
     <div class='logo-text'>
-        ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล รำไพพรรณี-ประณีตวิทยาคม<br>
-        RBRU-Praneet Digital Agri-Innovation Center
+        ศูนย์พัฒนานวัตกรรมดิจิทัล-ปัญญาประดิษฐ์เพื่อการเกษตรและสิ่งแวดล้อม<br>Center for AI Innovation & Development in Agriculture and Environment<br>
+        AIDA xAI Center — RBRU-Praneet
     </div>
 
     <div class='content-wrapper'>

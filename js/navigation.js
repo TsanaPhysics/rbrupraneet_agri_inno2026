@@ -47,14 +47,13 @@ export function initNavbarActiveState() {
 // Navbar Background on Scroll
 export function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
     });
 }

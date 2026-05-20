@@ -32,7 +32,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายชื่อผู้เข้าร่วมกิจกรรม | RBRU-Praneet Digital Agri-Innovation Center</title>
+    <title>รายชื่อผู้เข้าร่วมกิจกรรม | AIDA xAI Center — RBRU-Praneet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link

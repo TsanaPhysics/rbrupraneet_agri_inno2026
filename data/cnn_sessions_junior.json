@@ -1,0 +1,41 @@
+[
+    {
+        "id": "cnn-j-1",
+        "title": "Pixels: สีของพืช",
+        "desc": "เรียนรู้ว่าคอมพิวเตอร์มองภาพเป็นตัวเลข RGB",
+        "xr_image": "assets/images/sim/tree_healthy.png",
+        "xr_caption": "XR: อาเรย์สี 3 มิติ",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "print('Red=255, Green=100, Blue=50')"
+            }
+        ]
+    },
+    {
+        "id": "cnn-j-2",
+        "title": "Dataset: นักสะสมรูปภาพ",
+        "desc": "การรวบรวมภาพใบไม้ดีและใบไม้เป็นโรค",
+        "xr_image": "assets/images/activities/cnn_lab.png",
+        "xr_caption": "XR: คลังภาพเสมือน",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "print('พบรูปภาพ 100 รูป ในโฟลเดอร์')"
+            }
+        ]
+    },
+    {
+        "id": "cnn-j-3",
+        "title": "AI Concept: สมองกลจดจำ",
+        "desc": "เข้าใจหลักการที่ AI แยกแยะรูปภาพ",
+        "xr_image": "assets/images/sim/agri_bot.png",
+        "xr_caption": "XR: โครงข่ายประสาทจำลอง",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "print('AI กำลังทายว่า: เป็นโรคใบไหม้')"
+            }
+        ]
+    }
+]

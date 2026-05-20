@@ -18,19 +18,19 @@
 
 กิจกรรมนี้แบ่งออกเป็น 4 เซสชันหลัก โดยใช้เวลาเรียนรวมประมาณ 12 ชั่วโมง
 
-### 1. [Session 1: ปฐมบทนักโปรแกรมเมอร์เกษตร](../notebooks/session1_basics.ipynb)
+### 1. [Session 1: ปฐมบทนักโปรแกรมเมอร์เกษตร](../notebooks/climate/session1_basics.ipynb)
 - **เจาะลึก:** ตัวแปร (Variables), ประเภทข้อมูล และการคำนวณทางคณิตศาสตร์
 - **Highlight:** สร้างสูตรคำนวณ **Heat Index** เพื่อพยากรณ์ความเสี่ยงต่อต้นทุเรียน
 
-### 2. [Session 2: เชื่อมต่อฟาร์มเข้ากับโลกข้อมูล](../notebooks/session2_api.ipynb)
+### 2. [Session 2: เชื่อมต่อฟาร์มเข้ากับโลกข้อมูล](../notebooks/climate/session2_api.ipynb)
 - **เจาะลึก:** รูปแบบข้อมูล JSON และการใช้งาน Library `requests`
 - **Highlight:** จำลองการดึงข้อมูลสด (Real-time) จาก API กรมอุตุนิยมวิทยา
 
-### 3. [Session 3: นักสืบข้อมูลขั้นสูง (Digital Forensics)](../notebooks/session3_data.ipynb)
+### 3. [Session 3: นักสืบข้อมูลขั้นสูง (Digital Forensics)](../notebooks/climate/session3_data.ipynb)
 - **เจาะลึก:** การใช้เทคนิค Moving Average และ Standard Deviation เพื่อวิเคราะห์แนวโน้มข้อมูล
 - **Highlight:** ค้นหาจุดผิดปกติ (Anomaly) ในสถิติฝน 10 ปี เพื่อระบุปีที่ประสบภัยแล้งหรือน้ำท่วมที่ไม่ได้มาตามฤดูกาล
 
-### 4. [Session 4: ระบบสนับสนุนการตัดสินใจอัจฉริยะ (DSS)](../notebooks/session4_advisor.ipynb)
+### 4. [Session 4: ระบบสนับสนุนการตัดสินใจอัจฉริยะ (DSS)](../notebooks/climate/session4_advisor.ipynb)
 - **เจาะลึก:** การออกแบบระบบ Logic แบบหลายเงื่อนไข (Multi-conditional logic) เพื่อพิจารณาสภาพอากาศร่วมกับระยะการเติบโตของทุเรียน
 - **Highlight:** **Capstone Project!** พัฒนา AI Advisor ที่สามารถส่งคำแจ้งเตือนล่วงหน้า (Early Warning) ได้แบบอัตโนมัติ
 

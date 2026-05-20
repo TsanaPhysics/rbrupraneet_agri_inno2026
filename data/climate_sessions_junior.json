@@ -1,0 +1,54 @@
+[
+    {
+        "id": "c-j-1",
+        "title": "Variables: เก็บข้อมูลสวน",
+        "desc": "เรียนรู้วิธีเก็บชื่อพืชและจำนวนต้น",
+        "xr_image": "assets/images/xr_sim_heat_stress_1775883976084.png",
+        "xr_caption": "XR: โฮโลแกรมชื่อพืช",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "tree = 'หมอนทอง'\nprint(tree)"
+            }
+        ]
+    },
+    {
+        "id": "c-j-2",
+        "title": "Agri-Math: บวกลบคูณหาร",
+        "desc": "คำนวณปริมาณน้ำง่ายๆ",
+        "xr_image": "assets/images/xr_sim_weather_api_1775883991320.png",
+        "xr_caption": "XR: ปริมาณน้ำ 3D",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "total = 10 * 5\nprint(total)"
+            }
+        ]
+    },
+    {
+        "id": "c-j-3",
+        "title": "Logic: ถ้าร้อน ให้เปิดน้ำ",
+        "desc": "ฝึกสร้างเงื่อนไข If-Else",
+        "xr_image": "assets/images/xr_sim_heat_stress_1775883976084.png",
+        "xr_caption": "XR: แจ้งเตือนสีแดง",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "if temp > 35: print('Hot!')"
+            }
+        ]
+    },
+    {
+        "id": "c-j-4",
+        "title": "Loops: รดน้ำทีละต้น",
+        "desc": "ใช้ For Loop ทำงานซ้ำ",
+        "xr_image": "assets/images/xr_sim_automated_irrigation_1775884023508.png",
+        "xr_caption": "XR: ลำดับการรดน้ำ",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "for i in range(5): print(i)"
+            }
+        ]
+    }
+]

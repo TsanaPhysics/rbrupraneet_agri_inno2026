@@ -1,0 +1,15 @@
+[
+    {
+        "id": "cnn-s-1",
+        "title": "CNN Architecture",
+        "desc": "Conv2D and Pooling layers",
+        "xr_image": "assets/images/sim/agri_bot.png",
+        "xr_caption": "XR: Neural Blueprint",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "model.add(Conv2D(32, (3,3)))"
+            }
+        ]
+    }
+]

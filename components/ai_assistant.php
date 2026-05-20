@@ -14,14 +14,14 @@
                         <span class="ai-icon">🤖</span>
                     </div>
                     <div class="ai-info">
-                        <h3>RBRU-AgriBot</h3>
+                        <h3>AIDA</h3>
                         <span class="status-dot"></span> Online
                     </div>
                 </div>
                 <div class="chat-messages">
                     <div class="message ai-message">
                         <div class="message-content">
-                            สวัสดีครับ! ผมคือ AI ผู้ช่วยด้านนวัตกรรมเกษตร มีอะไรให้ผมช่วยวันนี้ครับ?
+                            สวัสดีจ๊ะ! ผมคือ AIDA (เอ-ด้า) ผู้ช่วยอัจฉริยะจาก มรภ.รำไพพรรณี มีอะไรให้คนจันท์ช่วยวันนี้ไหมฮิ?
                             <br><br>
                             ตัวอย่างคำถาม:
                             <ul>

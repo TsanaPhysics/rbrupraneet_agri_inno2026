@@ -1,5 +1,7 @@
 <!-- Animated Background -->
 <div class="animated-bg">
+    <div class="thorn-grid"></div>
+    <div class="thorn-pattern"></div>
     <div class="gradient-orb orb-1"></div>
     <div class="gradient-orb orb-2"></div>
     <div class="gradient-orb orb-3"></div>
@@ -10,12 +12,17 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-badge">
-                <span class="badge-icon">✨</span>
+                <span class="badge-ping"></span>
+                <span class="badge-icon">⚡</span>
                 <span>Digital Agriculture Innovation</span>
             </div>
             <h1 class="hero-title">
-                <span class="gradient-text"><?php echo $lang['hero_title']; ?></span><br>
-                <!-- <span class="highlight-text">เกษตรดิจิทัล</span> -->
+                <div class="line-1">
+                    <span class="gradient-text"><?php echo $lang['hero_title_1']; ?><span class="x-small">x</span></span>
+                </div>
+                <div class="line-2">
+                    <span class="sub-line"><?php echo $lang['hero_title_2']; ?></span>
+                </div>
             </h1>
             <h2 class="hero-subtitle">
                 <?php echo $lang['hero_subtitle']; ?>
@@ -33,16 +40,16 @@
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">4</div>
+                <div class="stat-item glass-card">
+                    <div class="stat-number" data-target="4">0</div>
                     <div class="stat-label">Activities</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
+                <div class="stat-item glass-card">
+                    <div class="stat-number" data-target="3">0</div>
                     <div class="stat-label">Core Skills</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">1</div>
+                <div class="stat-item glass-card">
+                    <div class="stat-number" data-target="1">0</div>
                     <div class="stat-label">Prototype</div>
                 </div>
             </div>

@@ -16,15 +16,15 @@ require_once "languages/{$lang_code}.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBRU-Praneet Digital Agri-Innovation Center | ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล</title>
+    <title>AIDA xAI Center — RBRU-Praneet | ศูนย์พัฒนานวัตกรรมดิจิทัล-ปัญญาประดิษฐ์เพื่อการเกษตรและสิ่งแวดล้อม</title>
     <meta name="description"
-        content="ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัลรำไพพรรณี-ประณีตวิทยาคม - พัฒนาทักษะด้าน AI, IoT และ Data Science เพื่อเกษตรสมัยใหม่">
+        content="AIDA xAI Center — ศูนย์พัฒนานวัตกรรมดิจิทัล-ปัญญาประดิษฐ์เพื่อการเกษตรและสิ่งแวดล้อม - พัฒนาทักษะด้าน AI, IoT และ Data Science เพื่อเกษตรสมัยใหม่">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=2.0">
 </head>
 
 <body>
@@ -40,7 +40,6 @@ require_once "languages/{$lang_code}.php";
     
     <?php include 'components/ai_assistant.php'; ?>
     
-    <?php include 'components/ai-agent.php'; ?>
     
     <?php include 'components/responsible1.php'; ?>
     
@@ -49,7 +48,7 @@ require_once "languages/{$lang_code}.php";
     <?php include 'components/footer.php'; ?>
 
     <script type="module" src="js/main.js"></script>
-    <script src="js/ai_agent_widget.js"></script>
+    <script src="js/ai_agent_widget.js?v=AIDAv2"></script>
 </body>
 
 </html>

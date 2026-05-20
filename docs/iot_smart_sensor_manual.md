@@ -17,19 +17,19 @@
 
 ## 📅 โครงสร้างการเรียนรู้ (Curriculum Overview)
 
-### 1. [Session 1: ESP32 & MicroPython](../notebooks/iot_s1.ipynb)
+### 1. [Session 1: ESP32 & MicroPython](../notebooks/iot/iot_s1.ipynb)
 - **เรียนรู้:** พื้นฐาน MicroPython และการควบคุม Digital I/O
 - **Highlight:** โปรแกรมไฟกระพริบเพื่อทดสอบสถานะสมองกล
 
-### 2. [Session 2: Sensor Integration](../notebooks/iot_s2.ipynb)
+### 2. [Session 2: Sensor Integration](../notebooks/iot/iot_s2.ipynb)
 - **เรียนรู้:** การอ่านค่า Analog (ADC) และการสอบเทียบค่า (Calibration)
 - **Highlight:** เปลี่ยนค่าไฟฟ้าให้เป็นค่าเปอร์เซ็นต์ความชื้นในดิน
 
-### 3. [Session 3: Secure Cloud & MQTT](../notebooks/iot_s3.ipynb)
+### 3. [Session 3: Secure Cloud & MQTT](../notebooks/iot/iot_s3.ipynb)
 - **เรียนรู้:** โปรโตคอล MQTT และการทำ Data Hashing (SHA-256) เพื่อความปลอดภัย
 - **Highlight:** ส่งข้อมูลฟาร์มเข้าสู่ระบบ Secure Cloud พร้อมระบบยืนยันตัวตนระดับอุตสาหกรรม
 
-### 4. [Session 4: Power Optimization & Digital Twin](../notebooks/iot_s4.ipynb)
+### 4. [Session 4: Power Optimization & Digital Twin](../notebooks/iot/iot_s4.ipynb)
 - **เรียนรู้:** การใช้โหมด Deep Sleep และการเชื่อมต่อข้อมูลกับ XR Simulation
 - **Highlight:** **Capstone Project!** ระบบรดน้ำไร้สายที่ทำงานได้หลายเดือนด้วยแบตเตอรี่ พร้อมการควบคุมผ่าน Digital Twin
 
@@ -37,7 +37,7 @@
 
 ## 🖥️ วิธีการรันและส่งโค้ด
 
-1.  น้องๆ สามารถแก้ไขโค้ดผ่าน [Google Colab](../notebooks/iot_s1.ipynb) หรือโปรแกรม Thonny IDE
+1.  น้องๆ สามารถแก้ไขโค้ดผ่าน [Google Colab](../notebooks/iot/iot_s1.ipynb) หรือโปรแกรม Thonny IDE
 2.  คัดลอกโค้ดและส่งข้อมูลลงบอร์ด ESP32 ผ่านสาย USB
 3.  ตรวจสอบผลลัพธ์ผ่าน Serial Monitor หรือทาง LINE ของน้องๆ เอง!
 

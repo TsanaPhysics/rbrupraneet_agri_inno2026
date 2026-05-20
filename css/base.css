@@ -1,24 +1,29 @@
 /* ===== CSS Variables ===== */
 :root {
     /* Colors */
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --warm-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --secondary-gradient: linear-gradient(135deg, #f472b6 0%, #db2777 100%);
+    --success-gradient: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    --warm-gradient: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+    
+    --neon-orange: #f97316;
+    --neon-purple: #8b5cf6;
+    --neon-cyan: #22d3ee;
+    --glow-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
 
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f5576c;
-    --success-color: #00f2fe;
+    --primary-color: #4f46e5;
+    --secondary-color: #7c3aed;
+    --accent-color: #ec4899;
+    --success-color: #06b6d4;
 
-    --text-primary: #1a202c;
-    --text-secondary: #4a5568;
-    --text-muted: #718096;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
     --text-light: #ffffff;
 
     --bg-primary: #ffffff;
-    --bg-secondary: #f7fafc;
-    --bg-dark: #1a202c;
+    --bg-secondary: #f1f5f9;
+    --bg-dark: #0f172a;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -31,6 +36,8 @@
 
     /* Typography */
     --font-primary: 'Inter', 'Noto Sans Thai', sans-serif;
+    --font-digital: 'Orbitron', 'Noto Sans Thai', sans-serif;
+    --font-tech: 'Rajdhani', 'Noto Sans Thai', sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;

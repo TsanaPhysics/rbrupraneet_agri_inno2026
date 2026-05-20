@@ -152,12 +152,12 @@ return "
 <body>
     <div class='border-pattern'></div>
     <div class='inner-border'></div>
-    <div class='bg-watermark'>RBRU-PRANEET</div>
+    <div class='bg-watermark'>AIDA xAI Center</div>
 
     <div class='container'>
         <div class='logo-area'>
-            <div class='logo-text'>ศูนย์พัฒนานวัตกรรมเกษตรดิจิทัล รำไพพรรณี-ประณีตวิทยาคม</div>
-            <div class='logo-text'>RBRU-Praneet Digital Agri-Innovation Center</div>
+            <div class='logo-text'>ศูนย์พัฒนานวัตกรรมดิจิทัล-ปัญญาประดิษฐ์เพื่อการเกษตรและสิ่งแวดล้อม</div>
+            <div class='logo-text'>AIDA xAI Center — RBRU-Praneet</div>
         </div>
     
         <div class='header-text'>Certificate of Participation</div>

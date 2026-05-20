@@ -1,0 +1,41 @@
+[
+    {
+        "id": "iot-j-1",
+        "title": "Blink: ไฟดวงแรก",
+        "desc": "หัดสั่งงาน ESP32 ให้ไฟกะพริบ",
+        "xr_image": "assets/images/activities/iot_smart_sensor.png",
+        "xr_caption": "XR: โครงสร้างชิป",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "led.value(1)"
+            }
+        ]
+    },
+    {
+        "id": "iot-j-2",
+        "title": "Sensors: วัดความชื้น",
+        "desc": "อ่านค่าจากเซ็นเซอร์ดินแบบง่าย",
+        "xr_image": "assets/images/activities/iot_orchard.png",
+        "xr_caption": "XR: กราฟความชื้น",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "val = soil.read()"
+            }
+        ]
+    },
+    {
+        "id": "iot-j-3",
+        "title": "OLED: หน้าจออัจฉริยะ",
+        "desc": "แสดงผลตัวเลขบนหน้าจอจิ๋ว",
+        "xr_image": "assets/images/activities/tech_showcase.png",
+        "xr_caption": "XR: หน้าจอโฮโลแกรม",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "display.text('Hello', 0, 0)"
+            }
+        ]
+    }
+]

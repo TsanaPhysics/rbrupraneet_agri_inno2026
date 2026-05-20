@@ -1,0 +1,35 @@
+[
+    {
+        "zone": "A1-North",
+        "description": "ดินร่วนปนทราย ใกล้แหล่งน้ำ",
+        "readings": {
+            "nitrogen": 15,
+            "phosphorus": 12,
+            "potassium": 25,
+            "ph": 5.8
+        },
+        "last_updated": "2026-04-12 10:30:00"
+    },
+    {
+        "zone": "B2-Hillside",
+        "description": "ดินลูกรัง พื้นที่ลาดชัน",
+        "readings": {
+            "nitrogen": 8,
+            "phosphorus": 5,
+            "potassium": 12,
+            "ph": 5.2
+        },
+        "last_updated": "2026-04-12 11:15:00"
+    },
+    {
+        "zone": "C3-Lowland",
+        "description": "ดินเหนียว อุ้มน้ำสูง",
+        "readings": {
+            "nitrogen": 22,
+            "phosphorus": 18,
+            "potassium": 30,
+            "ph": 6.5
+        },
+        "last_updated": "2026-04-12 14:00:00"
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "id": "c-s-1",
+        "title": "Data Engineering",
+        "desc": "Advanced Variables and types",
+        "xr_image": "assets/images/xr_sim_heat_stress_1775883976084.png",
+        "xr_caption": "XR: GPS Data Viz",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "lat, lon = 12.6, 102.1"
+            }
+        ]
+    },
+    {
+        "id": "c-s-2",
+        "title": "Pandas Analysis",
+        "desc": "Dataframes and Statistics",
+        "xr_image": "assets/images/xr_sim_data_timelapse_1775884006573.png",
+        "xr_caption": "XR: Data Matrix",
+        "examples": [
+            {
+                "title": "Ex 1",
+                "code": "import pandas as pd\ndf = pd.read_csv('data.csv')"
+            }
+        ]
+    }
+]
